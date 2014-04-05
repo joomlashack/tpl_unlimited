@@ -370,13 +370,19 @@ code{
 }
 
 
+.display-table{
+	display: table;
+}
 
 #main-content{
+	display: table-row;
 	margin-left: 0;
 
 	> *{
 		.box-sizing(border-box);
 		border-right: 1px solid @color_three;
+		display: table-cell;
+		float: none;
 		margin-left: 0;
 		padding-left: 10px;
 		padding-right: 10px;

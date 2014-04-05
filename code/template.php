@@ -24,45 +24,52 @@ defined('_JEXEC') or die('Restricted access');
 </head>
 <body class="<?php echo $responsive ?>">
     <?php if ($this->countModules('toolbar')) : ?>
-    <!-- menu -->
-	<w:nav containerClass="<?php echo $containerClass ?>" rowClass="<?php echo $gridMode;?>" wrapClass="navbar-fixed-top navbar-inverse" type="toolbar" name="toolbar" />
-    <?php endif; ?>
-    <div class="<?php echo $containerClass ?>">
-        <!-- header -->
-        <header id="header">
-        	<div class="<?php echo $gridMode; ?> clearfix">
-        		<w:logo name="top" />
-        		<div class="clear"></div>
-        	</div>
-        </header>
-        <?php if ($this->countModules('menu')) : ?>
         <!-- menu -->
-   		<w:nav name="menu" />
-        <?php endif; ?>
-        <!-- featured -->
-        <?php if ($this->countModules('featured')) : ?>
-        <div id="featured">
-            <w:module type="none" name="featured" chrome="xhtml" />
-        </div>
-        <?php endif; ?>
-        <!-- grid-top -->
-        <?php if ($this->countModules('grid-top')) : ?>
-        <div id="grid-top">
-            <w:module type="<?php echo $gridMode; ?>" name="grid-top" chrome="wrightflexgrid" />
-        </div>
-        <?php endif; ?>
-        <?php if ($this->countModules('grid-top2')) : ?>
-        <!-- grid-top2 -->
-        <div id="grid-top2">
-            <w:module type="<?php echo $gridMode; ?>" name="grid-top2" chrome="wrightflexgrid" />
-        </div>
+    	<w:nav containerClass="<?php echo $containerClass ?>" rowClass="<?php echo $gridMode;?>" wrapClass="navbar-fixed-top navbar-inverse" type="toolbar" name="toolbar" />
+    <?php endif; ?>
+
+    <div class="<?php echo $containerClass ?>">
+        <header id="header">
+            <div class="<?php echo $gridMode; ?> clearfix">
+                <w:logo name="top" />
+                <div class="clear"></div>
+            </div>
+        </header>
+
+        <?php if ($this->countModules('menu')) : ?>
+            <!-- menu -->
+            <w:nav name="menu" />
         <?php endif; ?>
 
-    	<?php if ($this->countModules('breadcrumbs')) : ?>
-        	<div id="breadcrumbs">
-        		<w:module type="single" name="breadcrumbs" chrome="none" />
-        	</div>
-    	<?php endif; ?>
+        <?php if ($this->countModules('featured')) : ?>
+            <!-- featured -->
+            <div id="featured">
+                <w:module type="none" name="featured" chrome="xhtml" />
+            </div>
+        <?php endif; ?>
+
+        <?php if ($this->countModules('grid-top')) : ?>
+            <!-- grid-top -->
+            <div id="grid-top">
+                <w:module type="<?php echo $gridMode; ?>" name="grid-top" chrome="wrightflexgrid" />
+            </div>
+        <?php endif; ?>
+
+        <?php if ($this->countModules('grid-top2')) : ?>
+            <!-- grid-top2 -->
+            <div id="grid-top2">
+                <w:module type="<?php echo $gridMode; ?>" name="grid-top2" chrome="wrightflexgrid" />
+            </div>
+        <?php endif; ?>
+
+        <?php if ($this->countModules('breadcrumbs')) : ?>
+            <div id="breadcrumbs">
+                <w:module type="single" name="breadcrumbs" chrome="none" />
+            </div>
+        <?php endif; ?>
+    </div>
+
+    <div class="<?php echo $containerClass ?> display-table">
 
         <div id="main-content" class="<?php echo $gridMode; ?>">
             <!-- sidebar1 -->
@@ -124,8 +131,6 @@ defined('_JEXEC') or die('Restricted access');
 
         </footer>
     </div>
-
-    <script type="text/javascript" src="<?php echo JURI::root(true) ?>/templates/js_unlimited/js/unlimited.js"></script>
 
 </body>
 </html>
