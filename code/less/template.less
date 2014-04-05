@@ -221,6 +221,62 @@ code{
 			border-color: @btnInverseBackground;
 		}
 	}
+	&.btn-link{
+		border: 0;
+		&:hover,
+		&:focus{
+			background-color: transparent;
+			border: 0;
+			color: @black;
+		}
+	}
+	&[disabled],
+	&.disabled{
+		&:hover,
+		&:focus{
+			background-color: @black;
+			border-color: @black;
+			color: @grayDark;
+		}
+
+		&.btn-primary{
+			&:hover,
+			&:focus{
+				color: @white
+			}
+		}
+
+		&.btn-danger{
+			&:hover,
+			&:focus{
+				color: @white;
+			}
+		}
+		&.btn-info{
+			&:hover,
+			&:focus{
+				color: @white;
+			}
+		}
+		&.btn-success{
+			&:hover,
+			&:focus{
+				color: @white;
+			}
+		}
+		&.btn-warning{
+			&:hover,
+			&:focus{
+				color: @white;
+			}
+		}
+		&.btn-inverse{
+			&:hover,
+			&:focus{
+				color: @white;
+			}
+		}
+	}
 }
 
 .dropup{
