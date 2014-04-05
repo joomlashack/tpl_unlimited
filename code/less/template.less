@@ -149,6 +149,126 @@ code{
 		}
 	}
 }
+.btn{
+	.box-shadow(none);
+	background-color: transparent;
+	background-image: none;
+	border-color: @black;
+	color: @black;
+	filter: none;
+	text-shadow: none;
+
+	&.dropdown-toggle{
+		.caret{
+			border-top-color: @black ;
+		}
+		&:hover,
+		&:focus{
+			.caret{
+				border-top-color: @white;
+			}
+		}
+	}
+
+	&:hover,
+	&:focus{
+		background-color: @color_one;
+		border-color: @color_one;
+		color: @white;
+		filter: none;
+	}
+
+	&.btn-primary{
+		&:hover,
+		&:focus{
+			background-color: @color_one;
+			border-color: @color_one;
+		}
+	}
+
+	&.btn-danger{
+		&:hover,
+		&:focus{
+			background-color: @btnDangerBackground;
+			border-color: @btnDangerBackground;
+		}
+	}
+	&.btn-info{
+		&:hover,
+		&:focus{
+			background-color: @btnInfoBackground;
+			border-color: @btnInfoBackground;
+		}
+	}
+	&.btn-success{
+		&:hover,
+		&:focus{
+			background-color: @btnSuccessBackground;
+			border-color: @btnSuccessBackground;
+		}
+	}
+	&.btn-warning{
+		&:hover,
+		&:focus{
+			background-color: @btnWarningBackground;
+			border-color: @btnWarningBackground;
+		}
+	}
+	&.btn-inverse{
+		&:hover,
+		&:focus{
+			background-color: @btnInverseBackground;
+			border-color: @btnInverseBackground;
+		}
+	}
+}
+
+.dropup{
+	.btn.dropdown-toggle{
+		.caret{
+			border-bottom-color: @black;
+		}
+		&:hover,
+		&:focus{
+			.caret{
+				border-bottom-color: @white;
+			}
+		}
+	}
+}
+
+.btn-group.open .dropdown-toggle{
+	.box-shadow(none);
+}
+.btn-group.open {
+	.btn.dropdown-toggle,
+	.btn-primary.dropdown-toggle{
+		background-color: @color_one;
+	}
+	.btn-primary.dropdown-toggle{
+		background-color: @color_one;
+	}
+	.btn-danger.dropdown-toggle{
+		background-color: @btnDangerBackground;
+		border-color: @btnDangerBackground;
+	}
+	.btn-info.dropdown-toggle{
+		background-color: @btnInfoBackground;
+		border-color: @btnInfoBackground;
+	}
+	.btn-success.dropdown-toggle{
+		background-color: @btnSuccessBackground;
+		border-color: @btnSuccessBackground;
+	}
+	.btn-warning.dropdown-toggle{
+		background-color: @btnWarningBackground;
+		border-color: @btnWarningBackground;
+	}
+	.btn-inverse.dropdown-toggle{
+		background-color: @btnInverseBackground;
+		border-color: @btnInverseBackground;
+	}
+}
 
 #main-content{
 	margin-left: 0;
