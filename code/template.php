@@ -18,7 +18,9 @@ defined('_JEXEC') or die('Restricted access');
 <html>
 <head>
 
-<w:head />
+    <w:head />
+    <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700' rel='stylesheet' type='text/css'>
+
 </head>
 <body class="<?php echo $responsive ?>">
     <?php if ($this->countModules('toolbar')) : ?>
@@ -55,11 +57,19 @@ defined('_JEXEC') or die('Restricted access');
             <w:module type="<?php echo $gridMode; ?>" name="grid-top2" chrome="wrightflexgrid" />
         </div>
         <?php endif; ?>
+
+    	<?php if ($this->countModules('breadcrumbs')) : ?>
+        	<div id="breadcrumbs">
+        		<w:module type="single" name="breadcrumbs" chrome="none" />
+        	</div>
+    	<?php endif; ?>
+
         <div id="main-content" class="<?php echo $gridMode; ?>">
             <!-- sidebar1 -->
             <aside id="sidebar1">
-            	<w:module name="sidebar1" chrome="xhtml" />
+                <w:module name="sidebar1" chrome="xhtml" />
             </aside>
+
             <!-- main -->
             <section id="main">
                 <?php if ($this->countModules('above-content')) : ?>
@@ -68,12 +78,6 @@ defined('_JEXEC') or die('Restricted access');
                     <w:module type="none" name="above-content" chrome="xhtml" />
                 </div>
                 <?php endif; ?>
-            	<?php if ($this->countModules('breadcrumbs')) : ?>
-                <!-- breadcrumbs -->
-            	<div id="breadcrumbs">
-            			<w:module type="single" name="breadcrumbs" chrome="none" />
-            	</div>
-            	<?php endif; ?>
             	<!-- component -->
             	<w:content />
                 <?php if ($this->countModules('below-content')) : ?>
@@ -83,22 +87,22 @@ defined('_JEXEC') or die('Restricted access');
                 </div>
                 <?php endif; ?>
             </section>
+
             <!-- sidebar2 -->
             <aside id="sidebar2">
             	<w:module name="sidebar2" chrome="xhtml" />
             </aside>
         </div>
+
         <?php if ($this->countModules('grid-bottom')) : ?>
-        <!-- grid-bottom -->
-        <div id="grid-bottom" >
-    			<w:module type="<?php echo $gridMode; ?>" name="grid-bottom" chrome="wrightflexgrid" />
-        </div>
+            <div id="grid-bottom" >
+        		<w:module type="<?php echo $gridMode; ?>" name="grid-bottom" chrome="wrightflexgrid" />
+            </div>
         <?php endif; ?>
         <?php if ($this->countModules('grid-bottom2')) : ?>
-        <!-- grid-bottom2 -->
-        <div id="grid-bottom2" >
-    			<w:module type="<?php echo $gridMode; ?>" name="grid-bottom2" chrome="wrightflexgrid" />
-        </div>
+            <div id="grid-bottom2" >
+        		<w:module type="<?php echo $gridMode; ?>" name="grid-bottom2" chrome="wrightflexgrid" />
+            </div>
         <?php endif; ?>
 
     </div>
@@ -108,8 +112,7 @@ defined('_JEXEC') or die('Restricted access');
 	    <footer id="footer" <?php if ($this->params->get('stickyFooter',1)) : ?> class="sticky"<?php endif;?>>
 
             <?php if ($this->countModules('bottom-menu')) : ?>
-            <!-- bottom-menu -->
-            <w:nav containerClass="<?php echo $containerClass ?>" rowClass="<?php echo $gridMode;?>" name="bottom-menu" wrapClass="navbar-inverse navbar-transparent" />
+               <w:nav containerClass="<?php echo $containerClass ?>" rowClass="<?php echo $gridMode;?>" name="bottom-menu" wrapClass="navbar-inverse navbar-transparent" />
             <?php endif; ?>
 
 	    	 <div class="<?php echo $containerClass ?> footer-content">
@@ -118,8 +121,11 @@ defined('_JEXEC') or die('Restricted access');
 			 	<?php endif; ?>
 				<w:footer />
 			</div>
-	    </footer>
+
+        </footer>
     </div>
+
+    <script type="text/javascript" src="<?php echo JURI::root(true) ?>/templates/js_unlimited/js/unlimited.js"></script>
 
 </body>
 </html>

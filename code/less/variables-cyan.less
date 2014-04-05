@@ -2,6 +2,9 @@
 // Variables
 // --------------------------------------------------
 
+@color_one : #08c;
+@color_two : #AAD7EE;
+@color_three : #bbb;
 
 // Global values
 // --------------------------------------------------
@@ -33,18 +36,18 @@
 // Scaffolding
 // -------------------------
 @bodyBackground:        @white;
-@textColor:             @grayDark;
+@textColor:             @grayLight;
 
 
 // Links
 // -------------------------
-@linkColor:             #08c;
+@linkColor:             @color_one;
 @linkColorHover:        darken(@linkColor, 15%);
 
 
 // Typography
 // -------------------------
-@sansFontFamily:        "Helvetica Neue", Helvetica, Arial, sans-serif;
+@sansFontFamily:        'Source Sans Pro', Helvetica, Arial, sans-serif;
 @serifFontFamily:       Georgia, "Times New Roman", Times, serif;
 @monoFontFamily:        Monaco, Menlo, Consolas, "Courier New", monospace;
 
@@ -54,8 +57,8 @@
 @altFontFamily:         @serifFontFamily;
 
 @headingsFontFamily:    inherit; // empty to use BS default, @baseFontFamily
-@headingsFontWeight:    bold;    // instead of browser default, bold
-@headingsColor:         inherit; // empty to use BS default, @textColor
+@headingsFontWeight:    400;    // instead of browser default, bold
+@headingsColor:         @black; // empty to use BS default, @textColor
 
 
 // Component sizing
