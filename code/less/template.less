@@ -149,6 +149,7 @@ code{
 		}
 	}
 }
+
 .btn{
 	.box-shadow(none);
 	background-color: transparent;
@@ -325,6 +326,50 @@ code{
 		border-color: @btnInverseBackground;
 	}
 }
+
+.table{
+	th, td{
+		padding: @baseFontSize 8px;
+		text-align: center;
+	}
+	th{
+		color: @black;
+		a{
+			color: @black;
+		}
+	}
+	&.table-condensed{
+		th, td{
+			padding: 4px 5px;
+		}
+	}
+}
+
+.table-striped{
+	tbody>tr:nth-child(odd){
+		> td, > th{
+			color: @color_one;
+		}
+	}
+}
+
+.table-hover {
+	tbody tr:hover{
+		>td, >th{
+			color: @color_one;
+		}
+	}
+}
+
+.input-prepend,
+.input-append{
+	.add-on,
+	textarea, input[type="text"], input[type="password"], input[type="datetime"], input[type="datetime-local"], input[type="date"], input[type="month"], input[type="time"], input[type="week"], input[type="number"], input[type="email"], input[type="url"], input[type="search"], input[type="tel"], input[type="color"], .uneditable-input{
+		border-color: @black;
+	}
+}
+
+
 
 #main-content{
 	margin-left: 0;
