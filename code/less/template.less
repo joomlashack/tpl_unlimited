@@ -101,13 +101,34 @@ code{
 		}
 	}
 	> li , h3 , p{
-		a{
+		> a{
 			border: 0;
 			color: @textColor;
 			display: block;
 			font-size: @baseFontSize;
 			padding: 1em 1.5em;
 			padding: 1rem 1.5rem;
+
+			&:hover,
+			&:focus{
+				background-color: transparent;
+				text-decoration: underline;
+			}
+		}
+		&.dropdown{
+
+			a{
+				.caret{
+					border-top-color: @textColor;
+				}
+				&:hover,
+				&:focus{
+					.caret{
+						border-top-color: @textColor;
+					}
+				}
+			}
+
 		}
 	}
 
@@ -126,13 +147,111 @@ code{
 					width: 100%;
 				}
 
-				&:hover{
+				&:hover,
+				&:focus{
 					text-decoration: none;
 				}
 			}
 		}
 	}
+	> li.active{
+		> a{
+			border: 0;
+			color: @textColor;
+			position: relative;
 
+			&:after{
+				border-bottom: 2px solid @color_one;
+				bottom: 0;
+				content: '';
+				left: 0;
+				position: absolute;
+				width: 100%;
+			}
+
+			&:hover,
+			&:focus{
+				background-color: transparent;
+				border: 0;
+				text-decoration: none;
+			}
+		}
+	}
+
+}
+
+.tabs-below{
+	>.nav-tabs{
+		>li{
+			margin-top: 0;
+		}
+	}
+}
+
+.tabbable {
+	&.tabs-left,
+	&.tabs-right{
+		.nav-tabs{
+			border: 0;
+			border-left: 1px solid @textColor;
+			border-right: 1px solid @textColor;
+		}
+	}
+	&.tabs-left{
+		.nav-tabs{
+			> li.active{
+				> a{
+					&:after{
+						border-right: 2px solid @color_one;
+						bottom: 0;
+						height: 100%;
+						left: auto;
+						right: 0;
+						width: auto;
+					}
+
+					&:hover,
+					&:focus{
+						background-color: transparent;
+						border: 0;
+						text-decoration: none;
+					}
+				}
+			}
+		}
+	}
+	&.tabs-right{
+		.nav-tabs{
+			> li.active{
+				> a{
+					&:after{
+						border-left: 2px solid @color_one;
+						bottom: 0;
+						height: 100%;
+						width: auto;
+					}
+
+					&:hover,
+					&:focus{
+						background-color: transparent;
+						border: 0;
+						text-decoration: none;
+					}
+				}
+			}
+		}
+	}
+}
+
+.nav.nav-list {
+	li.active{
+		>a{
+			&:hover,
+			&:focus{
+				color: @white;
+			}
+		}
+	}
 }
 
 // ---------------------------------------------
@@ -385,6 +504,7 @@ code{
 .table-bordered thead:last-child tr:last-child>th:last-child, .table-bordered tbody:last-child tr:last-child>td:last-child, .table-bordered tbody:last-child tr:last-child>th:last-child, .table-bordered tfoot:last-child tr:last-child>td:last-child, .table-bordered tfoot:last-child tr:last-child>th:last-child{
 	.border-radius(0);
 }
+
 // ---------------------------------------------
 
 .input-prepend,
