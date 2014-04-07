@@ -135,6 +135,7 @@ code{
 
 }
 
+// ---------------------------------------------
 .breadcrumb{
 	background-color: transparent;
 	border-bottom: 1px solid @color_three;
@@ -149,6 +150,7 @@ code{
 		}
 	}
 }
+// ---------------------------------------------
 
 .btn{
 	.box-shadow(none);
@@ -327,6 +329,7 @@ code{
 	}
 }
 
+// ---------------------------------------------
 .table{
 	th, td{
 		padding: @baseFontSize 8px;
@@ -361,6 +364,29 @@ code{
 	}
 }
 
+.table-bordered{
+	.border-radius(0);
+}
+.table-bordered caption+thead tr:first-child th:first-child, .table-bordered caption+tbody tr:first-child td:first-child, .table-bordered colgroup+thead tr:first-child th:first-child, .table-bordered colgroup+tbody tr:first-child td:first-child{
+	.border-radius(0);
+}
+.table-bordered caption+thead tr:first-child th:last-child, .table-bordered caption+tbody tr:first-child td:last-child, .table-bordered colgroup+thead tr:first-child th:last-child, .table-bordered colgroup+tbody tr:first-child td:last-child{
+	.border-radius(0);
+}
+.table-bordered thead:first-child tr:first-child>th:first-child, .table-bordered tbody:first-child tr:first-child>td:first-child, .table-bordered tbody:first-child tr:first-child>th:first-child{
+	.border-radius(0);
+}
+.table-bordered thead:first-child tr:first-child>th:last-child, .table-bordered tbody:first-child tr:first-child>td:last-child, .table-bordered tbody:first-child tr:first-child>th:last-child{
+	.border-radius(0);
+}
+.table-bordered thead:last-child tr:last-child>th:first-child, .table-bordered tbody:last-child tr:last-child>td:first-child, .table-bordered tbody:last-child tr:last-child>th:first-child, .table-bordered tfoot:last-child tr:last-child>td:first-child, .table-bordered tfoot:last-child tr:last-child>th:first-child{
+	.border-radius(0);
+}
+.table-bordered thead:last-child tr:last-child>th:last-child, .table-bordered tbody:last-child tr:last-child>td:last-child, .table-bordered tbody:last-child tr:last-child>th:last-child, .table-bordered tfoot:last-child tr:last-child>td:last-child, .table-bordered tfoot:last-child tr:last-child>th:last-child{
+	.border-radius(0);
+}
+// ---------------------------------------------
+
 .input-prepend,
 .input-append{
 	.add-on,
@@ -368,7 +394,6 @@ code{
 		border-color: @black;
 	}
 }
-
 
 .display-table{
 	display: table;
