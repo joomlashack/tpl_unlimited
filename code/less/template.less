@@ -859,6 +859,7 @@ code{
 
 .navbar-inner{
 	.border-radius(0);
+	.box-shadow(none);
 }
 
 .navbar-transparent .navbar-inner{
@@ -866,12 +867,58 @@ code{
 }
 
 .wrapp-logo-menu{
+	.box-sizing(border-box);
 	border: 1px solid @navbarBorder;
-	margin-left: 0;
+	margin-bottom: 20px;
+	margin-left: 0 !important;
 	margin-top: 20px;
+	padding: 10px;
 
+	> [class*="span"]{
+		.box-sizing(border-box);
+		margin-left: 0;
+	}
+	> .span12 {
+	    width: 100%;
+	}
+	> .span11 {
+	    width: 91.6667%;
+	}
+	> .span10 {
+	    width: 83.3333%;
+	}
+	> .span9 {
+	    width: 75%;
+	}
+	> .span8 {
+	    width: 66.6667%;
+	}
+	> .span7 {
+	    width: 58.3333%;
+	}
+	> .span6 {
+	    width: 50%;
+	}
+	> .span5 {
+	    width: 41.6667%;
+	}
+	> .span4 {
+	    width: 33.3333%;
+	}
+	> .span3 {
+	    width: 25%;
+	}
+	> .span2 {
+	    width: 16.6667%;
+	}
+	> .span1 {
+	    width: 8.33333%;
+	}
 	.navbar-inner{
 		border: 0;
+	}
+	#menu{
+		margin: 0;
 	}
 }
 
