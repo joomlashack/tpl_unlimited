@@ -640,86 +640,6 @@ code{
 	}
 }
 
-#grid-top,
-#grid-bottom{
-	margin-bottom: 0;
-}
-
-#footer{
-	background-image: none;
-	background-color: transparent;
-	color: @textColor;
-	filter:none;
-	font-size: @baseFontSize - 1;
-
-	.container,
-	.container-fluid{
-		.box-sizing(border-box);
-		padding-left: 20px;
-		padding-right: 20px;
-
-		.row,
-		.row-fluid{
-			margin-left: auto;
-			margin-right: auto;
-			width: 75%;
-
-			> *{
-				margin-left: 0;
-			}
-
-			> .span12 {
-			    width: 100%;
-			}
-			> .span11 {
-			    width: 91.6667%;
-			}
-			> .span10 {
-			    width: 83.3333%;
-			}
-			> .span9 {
-			    width: 75%;
-			}
-			> .span8 {
-			    width: 66.6667%;
-			}
-			> .span7 {
-			    width: 58.3333%;
-			}
-			> .span6 {
-			    width: 50%;
-			}
-			> .span5 {
-			    width: 41.6667%;
-			}
-			> .span4 {
-			    width: 33.3333%;
-			}
-			> .span3 {
-			    width: 25%;
-			}
-			> .span2 {
-			    width: 16.6667%;
-			}
-			> .span1 {
-			    width: 8.33333%;
-			}
-		}
-	}
-	#bottom-menu{
-		.navbar-inner{
-			padding: 0;
-		}
-	}
-}
-
-.navbar-transparent .navbar-inner{
-	.box-shadow(none);
-}
-
-.footer1, .footer2{
-	text-align: left;
-}
 
 .container-padding{
 	.box-sizing(border-box);
@@ -845,3 +765,104 @@ code{
 		}
 	}
 }
+
+// ---------------------------------------------
+
+#grid-top,
+#grid-bottom{
+	margin-bottom: 0;
+}
+
+#footer{
+	background-image: none;
+	background-color: transparent;
+	color: @textColor;
+	filter:none;
+	font-size: @baseFontSize - 1;
+
+	.container,
+	.container-fluid{
+		.box-sizing(border-box);
+		padding-left: 20px;
+		padding-right: 20px;
+
+		.row,
+		.row-fluid{
+			margin-left: auto;
+			margin-right: auto;
+			width: 75%;
+
+			> *{
+				margin-left: 0;
+			}
+
+			> .span12 {
+			    width: 100%;
+			}
+			> .span11 {
+			    width: 91.6667%;
+			}
+			> .span10 {
+			    width: 83.3333%;
+			}
+			> .span9 {
+			    width: 75%;
+			}
+			> .span8 {
+			    width: 66.6667%;
+			}
+			> .span7 {
+			    width: 58.3333%;
+			}
+			> .span6 {
+			    width: 50%;
+			}
+			> .span5 {
+			    width: 41.6667%;
+			}
+			> .span4 {
+			    width: 33.3333%;
+			}
+			> .span3 {
+			    width: 25%;
+			}
+			> .span2 {
+			    width: 16.6667%;
+			}
+			> .span1 {
+			    width: 8.33333%;
+			}
+		}
+	}
+	#bottom-menu{
+		.navbar-inner{
+			padding: 0;
+		}
+	}
+}
+
+.footer1, .footer2{
+	text-align: left;
+}
+
+// ---------------------------------------------
+
+.module_ms1,
+.moduletable_ms1,
+.moduletext_ms1{
+	background-color: @color_two;
+	color: @color_one;
+	padding: 10px;
+}
+
+// ---------------------------------------------
+
+.navbar-inner{
+	.border-radius(0);
+}
+
+.navbar-transparent .navbar-inner{
+	.box-shadow(none);
+}
+
+// ---------------------------------------------
