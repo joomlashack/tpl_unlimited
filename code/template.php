@@ -28,27 +28,18 @@ defined('_JEXEC') or die('Restricted access');
     	<w:nav containerClass="<?php echo $containerClass ?>" rowClass="<?php echo $gridMode;?>" wrapClass="navbar-fixed-top navbar-inverse" type="toolbar" name="toolbar" />
     <?php endif; ?>
 
-    <div class="<?php echo $containerClass ?>">
-        <header id="header">
-            <div class="<?php echo $gridMode; ?> clearfix">
-                <w:logo name="top" />
-                <div class="clear"></div>
-            </div>
-        </header>
-
-        <?php if ($this->countModules('menu')) : ?>
-            <!-- menu -->
-            <w:nav name="menu" />
-        <?php endif; ?>
+    <div id="header" class="<?php echo $containerClass ?>">
+        <div class="<?php echo $gridMode; ?> wrapp-logo-menu">
+            <w:logo name="menu" />
+        </div>
 
         <?php if ($this->countModules('featured')) : ?>
-            <!-- featured -->
             <div id="featured">
                 <w:module type="none" name="featured" chrome="xhtml" />
             </div>
         <?php endif; ?>
-
     </div>
+
     <?php if ($this->countModules('grid-top')) : ?>
         <div id="grid-top" class="<?php echo $containerClass ?> container-table">
             <w:module type="<?php echo $gridMode; ?>" name="grid-top" chrome="wrightflexgrid" />
