@@ -879,6 +879,9 @@ code{
 	background-color: @color_two;
 	color: @color_one;
 	padding: 10px;
+	div.lifestream ul.stream{
+		color: @color_one;
+	}
 }
 
 // ---------------------------------------------
@@ -1070,6 +1073,39 @@ code{
 
 #header{
 	margin-bottom: 0;
+}
+
+// Lifestream
+// ---------------------------------------------
+
+div {
+
+	div.lifestream ul.stream{
+		box-shadow: none;
+		background-color: transparent;
+		background-image: none;
+		border: 0;
+		filter: none;
+		padding: 0;
+		color: @textColor;
+		li{
+			box-shadow: none;
+			background-color: transparent;
+			background-image: none;
+			border: 0;
+			filter: none;
+			font-size: 24px;
+			margin-bottom: 15px;
+			padding: 0;
+		}
+	}
+
+}
+
+[id*="lifestream_rss-"]{
+	margin-left: auto;
+	margin-right: auto;
+	width: 80%;
 }
 
 // ---------------------------------------------
