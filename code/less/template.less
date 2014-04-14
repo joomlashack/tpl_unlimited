@@ -106,6 +106,7 @@ code{
 			color: @textColor;
 			display: block;
 			font-size: @baseFontSize;
+			font-weight: 400;
 			padding: 1em 1.5em;
 			padding: 1rem 1.5rem;
 
@@ -589,10 +590,14 @@ code{
 		border-top: 0;
 	}
 
+	&.container-fluid{
+		width: 100%;
+	}
+
 	> .row , > .row-fluid{
 		display: table-row;
 		margin-left: 0;
-		> *{
+		> [class*="span"]{
 			.box-sizing(border-box);
 			border-left: 1px solid @color_three;
 			display: table-cell;
@@ -666,7 +671,7 @@ code{
 
 	> div {
 		margin-left: 0;
-		> *{
+		> [class*="span"]{
 			margin-bottom: 0;
 			margin-left: 0;
 			padding-bottom: 10px;
@@ -729,9 +734,10 @@ code{
 
 	> div {
 		margin-left: 0;
-		> *{
+		> [class*="span"]{
 			.box-sizing(border-box);
 			margin-bottom: 0;
+			margin-left: 0;
 			margin-left: 0;
 			padding: 10px;
 
@@ -818,7 +824,7 @@ code{
 			margin-right: auto;
 			width: 75%;
 
-			> *{
+			> [class*="span"]{
 				margin-left: 0;
 			}
 
@@ -992,6 +998,15 @@ code{
 	}
 }
 
+.container-fluid{
+	.wrapp-logo-menu{
+		#logo{
+			margin-bottom: 13px;
+			margin-top: 13px;
+		}
+	}
+}
+
 .navbar {
 	.nav{
 		>.active{
@@ -1033,6 +1048,48 @@ code{
 						&:before,
 						&:after{
 							display: none;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+.navbar-inverse{
+	.nav,
+	.navbar-inner,
+	.nav .navbar-inner,
+	.navbar .nav,
+	.navbar .nav .navbar-inner {
+		li {
+			&.dropdown {
+				.dropdown-menu {
+					border: 1px solid @black;
+
+					&:before,
+					&:after{
+						display: none;
+					}
+					> li {
+						a{
+							&:hover,
+							&:focus{
+								background-image: none;
+								background-color: transparent;
+								filter: none;
+							}
+						}
+						&.active{
+							a{
+								background-color: transparent;
+							}
+						}
+						.sub-menu{
+							&:before,
+							&:after{
+								display: none;
+							}
 						}
 					}
 				}
@@ -1109,3 +1166,13 @@ div {
 }
 
 // ---------------------------------------------
+
+.counter{
+	line-height: 30px;
+}
+
+#contact-form{
+	input, textarea{
+		margin-bottom: 10px;
+	}
+}
