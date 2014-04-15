@@ -24,21 +24,29 @@ defined('_JEXEC') or die('Restricted access');
 </head>
 <body class="<?php echo $responsive ?>">
     <?php if ($this->countModules('toolbar')) : ?>
-        <!-- menu -->
     	<w:nav containerClass="<?php echo $containerClass ?>" rowClass="<?php echo $gridMode;?>" wrapClass="navbar-fixed-top navbar-inverse" type="toolbar" name="toolbar" />
     <?php endif; ?>
 
-    <div id="header" class="<?php echo $containerClass ?>">
-        <div class="<?php echo $gridMode; ?> wrapp-logo-menu">
-            <w:logo name="menu" />
+    <header id="header">
+
+        <div class="header-bg-content">
+            <img class="full-width header-filter" src="<?php echo JURI::root(true) . '/templates/js_unlimited/images/filter-bg.png' ?>" />
+            <img class="full-widht header-bg" src="<?php echo JURI::root(true) . $bg ?>" />
         </div>
 
-        <?php if ($this->countModules('featured')) : ?>
-            <div id="featured">
-                <w:module type="none" name="featured" chrome="xhtml" />
+        <div class="<?php echo $containerClass ?>">
+            <div class="<?php echo $gridMode; ?> wrapp-logo-menu">
+                <w:logo name="menu" />
             </div>
-        <?php endif; ?>
-    </div>
+
+            <?php if ($this->countModules('featured')) : ?>
+                <div id="featured">
+                    <w:module type="none" name="featured" chrome="xhtml" />
+                </div>
+            <?php endif; ?>
+        </div>
+
+    </header>
 
     <?php if ($this->countModules('grid-top')) : ?>
         <div id="grid-top" class="<?php echo $containerClass ?> container-table">
