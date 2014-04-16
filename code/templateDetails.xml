@@ -104,7 +104,7 @@
 				</field>
                 <!-- End of default Wright params -->
 			</fieldset>
-			<fieldset name="COM_TEMPLATES_unlimited_FIELDSET_LABEL">
+			<fieldset name="TPL_JS_UNLIMITED_OPTIONS">
 				<field name="backgroundImage" type="imagelist" default="" directory="images" label="TPL_JS_UNLIMITED_BACKGROUND_IMAGE" description="TPL_JS_UNLIMITED_BACKGROUND_IMAGE_DESC" />
 			</fieldset>
 		</fields>
