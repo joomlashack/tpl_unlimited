@@ -1,4 +1,55 @@
+
+.flexbox() {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+}
+
+@media (max-width: 979px) {
+
+	.navbar{
+		.btn-navbar{
+			.box-shadow(none);
+			border: 0;
+		}
+	}
+	.wrapp-logo-menu{
+		.navbar{
+			.navbar-inner{
+				.btn-navbar{
+					margin-top: 12px;
+				}
+			}
+		}
+	}
+	.nav-collapse .nav>li>a, .nav-collapse .dropdown-menu a{
+		.border-radius(0);
+	}
+
+}
 @media (max-width: 767px) {
+	.wrapp-logo-menu{
+		#logo, #menu{
+			width: auto;
+		}
+		#logo{
+			text-align: center;
+			a{
+				display: block;
+			}
+		}
+	}
+
+	#toolbar .nav-collapse, #menu .nav-collapse{
+		.box-sizing(border-box);
+		.flexbox();
+		justify-content: center;
+		padding-left: 20px;
+		padding-right: 20px;
+		width: 100%;
+	}
 
 	#footer .container,
 	#footer .container-fluid,
