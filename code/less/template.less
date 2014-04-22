@@ -1316,14 +1316,46 @@ div {
 				font-size: 24px;
 				margin-bottom: 15px;
 				padding: 0;
+
+				.icon{
+					margin-right: 20px;
+				}
+
+				&.list_twitter,
+				&.list_rss{
+					img{
+						display: none;
+					}
+				}
+				&.list_twitter{
+					.icon{
+						&:before{
+							border-radius: 60px;
+							border: 2px solid;
+							content: "\f099";
+							display: inline-block;
+							font-family: FontAwesome;
+							height: 30px;
+							line-height: 30px;
+							padding: 8px;
+							text-align: center;
+							width: 30px;
+						}
+					}
+				}
 				&.list_rss{
 					.icon{
 						&:before{
-							font-family: FontAwesome;
+							border-radius: 60px;
+							border: 2px solid;
 							content: "\f09e";
-						}
-						img{
-							display: none;
+							display: inline-block;
+							font-family: FontAwesome;
+							height: 30px;
+							line-height: 30px;
+							padding: 8px;
+							text-align: center;
+							width: 30px;
 						}
 					}
 				}
