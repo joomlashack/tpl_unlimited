@@ -1498,4 +1498,34 @@ div {
 			}
 		}
 	}
+	.items-row,
+	.items-leading {
+		.item,
+		[class*="leading-"]{
+			> h2{
+				line-height: 1.9rem;
+				a{
+					color: @black;
+					padding-right: 55px;
+					position: relative;
+
+					&:hover,
+					&:focus{
+						color: @color_one;
+						text-decoration: none;
+					}
+					&:after{
+						content: "\f105";
+						font-family: FontAwesome;
+						font-size: 45px;
+						height: 45px;
+						line-height: 45px;
+						position: absolute;
+						right: 0;
+						top: 0;
+					}
+				}
+			}
+		}
+	}
 }
