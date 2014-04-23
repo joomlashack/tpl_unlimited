@@ -23,6 +23,7 @@ if ($responsivePage == 0) {
     $responsive = ' no-responsive';
 }
 
+// Image Background
 
 function checkImage($img, $default) {
         if ($img == "") {
@@ -45,3 +46,28 @@ function checkImage($img, $default) {
 $bg = checkImage($this->params->get("backgroundImage", ""), "templates/js_unlimited/images/default-bg.jpg");
 
 if ($bg != "-1") $bg = str_replace(JPATH_BASE, '', $bg);
+
+// Add class for blog/featured view
+
+$blog = (JRequest::getVar('layout','') == 'blog' ? JRequest::getVar('layout','') : '');
+$blogFtOption = (JRequest::getVar('option','') == 'com_content' ? JRequest::getVar('option','') : '');
+$blogFt = false;
+$viewFt = '';
+
+if ($blogFtOption == "com_content"){
+    $viewFt = (JRequest::getVar('view','') == 'featured' ? JRequest::getVar('view','') : '');
+    if($viewFt == 'featured'){
+        $blogFt = true;
+    }
+}
+
+$blogs = false;
+if ($blog == 'blog' || $blogFt){
+    $blogs = true;
+}
+
+$blogClass = '';
+
+if ($blogs){
+    $blogClass = ' viewBlog';
+}

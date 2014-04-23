@@ -22,7 +22,7 @@ defined('_JEXEC') or die('Restricted access');
     <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700' rel='stylesheet' type='text/css'>
 
 </head>
-<body class="<?php echo $responsive ?>">
+<body class="<?php echo $responsive . $blogClass ?>">
     <?php if ($this->countModules('toolbar')) : ?>
     	<w:nav containerClass="<?php echo $containerClass ?>" rowClass="<?php echo $gridMode;?>" wrapClass="navbar-fixed-top navbar-inverse" type="toolbar" name="toolbar" />
     <?php endif; ?>
@@ -66,7 +66,7 @@ defined('_JEXEC') or die('Restricted access');
         </div>
     <?php endif; ?>
 
-    <div class="<?php echo $containerClass ?> container-table">
+    <div class="<?php echo $containerClass ?> container-table main-wrapp">
         <div id="main-content" class="<?php echo $gridMode; ?>">
             <!-- sidebar1 -->
             <aside id="sidebar1">
