@@ -15,10 +15,11 @@
 			border: 0;
 		}
 	}
-	.wrapp-logo-menu{
+	.logo-menu{
 		.navbar{
 			.navbar-inner{
 				.btn-navbar{
+					margin-bottom: 12px;
 					margin-top: 12px;
 				}
 			}
@@ -30,7 +31,7 @@
 
 }
 @media (max-width: 767px) {
-	.wrapp-logo-menu{
+	.logo-menu{
 		#logo, #menu{
 			width: auto;
 		}
@@ -39,6 +40,9 @@
 			a{
 				display: block;
 			}
+		}
+		.nav{
+			background-color: @dropdownBackground;
 		}
 	}
 
@@ -50,7 +54,8 @@
 		padding-right: 20px;
 		width: 100%;
 	}
-
+	.blog,
+	.blog-featured,
 	#footer .container,
 	#footer .container-fluid,
 	.container-table,
@@ -64,6 +69,8 @@
 		}
 	}
 
+	.blog,
+	.blog-featured,
 	.container-table{
 		> .row , > .row-fluid{
 			> [class*="span"]{

@@ -106,7 +106,12 @@
 			</fieldset>
 			<fieldset name="TPL_JS_UNLIMITED_OPTIONS">
 				<field name="backgroundImage" type="imagelist" default="" directory="images" label="TPL_JS_UNLIMITED_BACKGROUND_IMAGE" description="TPL_JS_UNLIMITED_BACKGROUND_IMAGE_DESC" />
+				<field name="unlimited_logo_on_featured" type="radio" default="0" label="TPL_JS_UNLIMITED_LOGO_ON_FEATURED" description="TPL_JS_MONDRIAN_LOGO_ON_FEATURED_DESC">
+					<option value="0">JNo</option>
+					<option value="1">JYes</option>
+				</field>
 			</fieldset>
+
 		</fields>
 	</config>
 </extension>

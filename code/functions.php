@@ -71,3 +71,7 @@ $blogClass = '';
 if ($blogs){
     $blogClass = ' viewBlog';
 }
+
+// Logo-menu absolute mode
+
+$logoAbsolute = ($this->params->get('unlimited_logo_on_featured','0') == '1' ? true : false);
