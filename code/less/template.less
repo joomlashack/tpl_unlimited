@@ -274,7 +274,7 @@ code{
 
 	li{
 		a, span{
-			color: @black;
+			color: @color_four;
 			display: inline-block;
 			font-size: 12px;
 			vertical-align: middle;
@@ -306,7 +306,7 @@ code{
 		h2{
 			font-size: 24px;
 			a{
-				color: @black;
+				color: @color_four;
 			}
 		}
 	}
@@ -333,14 +333,14 @@ code{
 	.box-shadow(none);
 	background-color: transparent;
 	background-image: none;
-	border-color: @black;
-	color: @black;
+	border-color: @color_four;
+	color: @color_four;
 	filter: none;
 	text-shadow: none;
 
 	&.dropdown-toggle{
 		.caret{
-			border-top-color: @black ;
+			border-top-color: @color_four ;
 		}
 		&:hover,
 		&:focus{
@@ -407,15 +407,15 @@ code{
 		&:focus{
 			background-color: transparent;
 			border: 0;
-			color: @black;
+			color: @color_four;
 		}
 	}
 	&[disabled],
 	&.disabled{
 		&:hover,
 		&:focus{
-			background-color: @black;
-			border-color: @black;
+			background-color: @color_four;
+			border-color: @color_four;
 			color: @grayDark;
 		}
 
@@ -462,7 +462,7 @@ code{
 .dropup{
 	.btn.dropdown-toggle{
 		.caret{
-			border-bottom-color: @black;
+			border-bottom-color: @color_four;
 		}
 		&:hover,
 		&:focus{
@@ -514,9 +514,9 @@ code{
 		text-align: center;
 	}
 	th{
-		color: @black;
+		color: @color_four;
 		a{
-			color: @black;
+			color: @color_four;
 		}
 	}
 	&.table-condensed{
@@ -570,7 +570,7 @@ code{
 .input-append{
 	.add-on,
 	textarea, input[type="text"], input[type="password"], input[type="datetime"], input[type="datetime-local"], input[type="date"], input[type="month"], input[type="time"], input[type="week"], input[type="number"], input[type="email"], input[type="url"], input[type="search"], input[type="tel"], input[type="color"], .uneditable-input{
-		border-color: @black;
+		border-color: @color_four;
 	}
 }
 
@@ -895,7 +895,7 @@ code{
 }
 
 #featured{
-	color: @black;
+	color: @color_four;
 
 	h1,h2,h3,h4,h5,h6{
 		color: @white;
@@ -1101,22 +1101,26 @@ code{
 						padding-right: 0;
 					}
 				}
-				&.dropdown {
-					.dropdown-menu {
-						> li {
-							a{
-								&:hover,
-								&:focus{
-									// color: @white;
-								}
-							}
-						}
-					}
-				}
 			}
 		}
 	}
 }
+
+// ---------------------------------------------
+
+.navbar-inner{
+	.border-radius(0);
+	.box-shadow(none);
+}
+
+.navbar-transparent .navbar-inner{
+	.box-shadow(none);
+}
+
+.navbar-fixed-top .navbar-inner, .navbar-static-top .navbar-inner{
+	.box-shadow(none);
+}
+
 
 .container-fluid{
 	.wrapp-logo-menu{
@@ -1138,30 +1142,6 @@ code{
 				}
 			}
 		}
-		>li{
-			&.dropdown{
-				.dropdown-menu{
-					&:before{
-						-webkit-filter: blur(3px);
-						-moz-filter: blur(3px);
-						filter: blur(3px);
-						background-color: @white;
-						.opacity(75);
-						border: 0;
-						display: block !important;
-						height: 100%;
-						width: 100%;
-						top: 0;
-						left: 0;
-						z-index: 1;
-					}
-					li{
-						position: relative;
-						z-index: 2;
-					}
-				}
-			}
-		}
 	}
 }
 
@@ -1171,7 +1151,6 @@ code{
 			>li{
 				&.dropdown{
 					.dropdown-menu{
-						background-color: transparent;
 					}
 				}
 			}
@@ -1185,9 +1164,23 @@ code{
 .navbar .nav,
 .navbar .nav .navbar-inner {
 	li {
+		> a{
+			&.item-desc{
+				.border-radius(5px);
+				background-color: @color_one;
+				color: @white;
+				padding: 5px 20px !important;
+				margin-bottom: 13px;
+				margin-top: 13px;
+				&:hover,
+				&:focus{
+					background-color: darken(@color_one, 10%);
+				}
+			}
+		}
 		&.dropdown {
 			.dropdown-menu {
-				border: 1px solid @black;
+				border: 1px solid @color_four;
 
 				&:before,
 				&:after{
@@ -1223,7 +1216,7 @@ code{
 		li {
 			&.dropdown {
 				.dropdown-menu {
-					border: 1px solid @black;
+					border: 1px solid @color_four;
 
 					&:before,
 					&:after{
@@ -1236,6 +1229,10 @@ code{
 								background-image: none;
 								background-color: transparent;
 								filter: none;
+								.caret{
+									border-bottom-color: transparent;
+									border-top-color: transparent;
+								}
 							}
 						}
 						&.active{
@@ -1254,12 +1251,13 @@ code{
 			}
 		}
 	}
+
 }
 
 .dropdown-menu {
 	.box-shadow(none);
 	.border-radius(0);
-	border: 1px solid @black;
+	border: 1px solid @color_four;
 
 	&:before,
 	&:after{
@@ -1268,7 +1266,7 @@ code{
 
 	> li{
 		a{
-			border-top: 1px solid @black;
+			border-top: 1px solid @color_four;
 		}
 		&:first-child{
 			a{
@@ -1525,7 +1523,7 @@ div {
 						line-height: 1.9rem;
 						margin: 0 0 15px;
 						a{
-							color: @black;
+							color: @color_four;
 							padding-right: 55px;
 							position: relative;
 

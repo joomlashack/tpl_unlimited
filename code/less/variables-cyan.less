@@ -5,6 +5,8 @@
 @color_one : #08c;
 @color_two : #AAD7EE;
 @color_three : #bbb;
+@color_four : @black;
+@color_five : fade(@grayLight, 70%);
 
 // Global values
 // --------------------------------------------------
@@ -122,14 +124,14 @@
 
 // Dropdowns
 // -------------------------
-@dropdownBackground:            @white;
+@dropdownBackground:            @color_five;
 @dropdownBorder:                rgba(0,0,0,.2);
 @dropdownDividerTop:            #e5e5e5;
 @dropdownDividerBottom:         @white;
 
-@dropdownLinkColor:             @black;
-@dropdownLinkColorHover:        @linkColor;
-@dropdownLinkColorActive:       @linkColor;
+@dropdownLinkColor:             @color_four;
+@dropdownLinkColorHover:        @white;
+@dropdownLinkColorActive:       @white;
 
 @dropdownLinkBackgroundActive:  transparent;
 @dropdownLinkBackgroundHover:   transparent;
@@ -186,10 +188,10 @@
 @navbarHeight:                    40px;
 @navbarBackgroundHighlight:       transparent;
 @navbarBackground:                transparent;
-@navbarBorder:                    @black;
+@navbarBorder:                    @color_four;
 
-@navbarText:                      @black;
-@navbarLinkColor:                 @black;
+@navbarText:                      @color_four;
+@navbarLinkColor:                 @color_four;
 @navbarLinkColorHover:            @linkColor;
 @navbarLinkColorActive:           @linkColor;
 @navbarLinkBackgroundHover:       transparent;
