@@ -25,9 +25,7 @@ if ($this->item->wrightType == 'leading') {
 				"div." . $classFloat,
 					"div.visible-phone",
 						"div.article-image",
-							"div.img-peak",
-								"image",
-							"/div",
+							"image",
 						"/div",
 					"/div",
 
@@ -40,9 +38,7 @@ if ($this->item->wrightType == 'leading') {
 
 					"div.hidden-phone",
 						"div.article-image",
-							"div.img-peak",
-								"image",
-							"/div",
+							"image",
 						"/div",
 					"/div",
 				"/div"
@@ -55,9 +51,7 @@ if ($this->item->wrightType == 'leading') {
 
 				"div." . $classFloat,
 					"div.article-image",
-						"div.img-peak",
-							"image",
-						"/div",
+						"image",
 					"/div",
 
 					"div.article-content",
