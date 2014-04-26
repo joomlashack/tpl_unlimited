@@ -1134,10 +1134,26 @@ code{
 #toolbar{
 	.navbar {
 		.nav{
+			display: table;
+			float: none;
+			margin: 0 auto;
 			>li{
-				&.dropdown{
-					.dropdown-menu{
+				margin-left: 45px;
+				margin-right: 45px;
+				> a{
+					text-transform: uppercase;
+					padding-left: 0;
+					padding-right: 0;
+					&.item-desc{
+						margin-bottom: 5px;
+						margin-top: 5px;
 					}
+				}
+				&:first-child{
+					margin-left: 0;
+				}
+				&:last-child{
+					margin-right: 0;
 				}
 			}
 		}
