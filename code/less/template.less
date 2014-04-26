@@ -893,15 +893,7 @@ code{
 		color: @color_one;
 	}
 }
-
 #featured{
-	color: @color_four;
-	margin-bottom: 0;
-
-	h1,h2,h3,h4,h5,h6{
-		color: @white;
-	}
-
 	.moduletable,
 	.module{
 		&:last-child{
@@ -916,13 +908,18 @@ code{
 			}
 		}
 	}
-
 }
 
 #header{
 	border-bottom: 1px solid @color_three;
 	margin-bottom: 0;
 	position: relative;
+	color: @color_four;
+	margin-bottom: 0;
+
+	h1,h2,h3,h4,h5,h6{
+		color: @white;
+	}
 
 	+ .container-table,
 	+ .container-padding,
@@ -952,12 +949,6 @@ code{
 			z-index: 2;
 		}
 	}
-
-	> #featured{
-		position: relative;
-		z-index: 4;
-	}
-
 	.navbar .nav{
 		>li{
 			>a{
@@ -1012,6 +1003,7 @@ code{
 		border: 1px solid @navbarBorder;
 		padding: 0 10px;
 		margin-bottom: 20px;
+		margin-left: 0 !important;
 		margin-top: 20px;
 		> [class*="span"]{
 			.box-sizing(border-box);
@@ -1090,6 +1082,11 @@ code{
 			}
 		}
 	}
+}
+
+.header-content{
+	position: relative;
+	z-index: 4;
 }
 
 // ---------------------------------------------

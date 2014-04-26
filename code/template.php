@@ -41,9 +41,16 @@ defined('_JEXEC') or die('Restricted access');
                 <w:logo name="menu" />
             </div>
         </div>
-
+        <?php if (!$this->countModules('featured')) : ?>
+            <div class="<?php echo $containerClass ?> header-content">
+                <div id="current-menu-item"><h1><?php echo $menu_itemActive; ?></h1></div>
+            </div>
+        <?php endif; ?>
         <?php if ($this->countModules('featured')) : ?>
-            <div id="featured">
+            <div id="featured" class="header-content">
+                <!-- <div class="header-bg-content">
+                    <img class="full-width header-filter" src="<?php echo JURI::root(true) . '/templates/js_unlimited/images/filter-bg.png' ?>" />
+                </div> -->
                 <w:module type="none" name="featured" chrome="xhtml" />
             </div>
         <?php endif; ?>

@@ -72,3 +72,8 @@ if ($blogs){
     $blogClass = ' viewBlog';
 }
 
+// Item Active
+
+$JoomlaApp = JFactory::getApplication();
+$menu_itemActive = $JoomlaApp->getMenu()->getActive()->title;
+
