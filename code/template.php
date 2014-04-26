@@ -27,12 +27,14 @@ defined('_JEXEC') or die('Restricted access');
     	<w:nav containerClass="<?php echo $containerClass ?>" rowClass="<?php echo $gridMode;?>" wrapClass="navbar-fixed-top navbar-inverse" type="toolbar" name="toolbar" />
     <?php endif; ?>
 
-    <header id="header" class="<?php if ($logoAbsolute): ?>logo-menu-absolute<?php endif; ?>">
+    <header id="header" class="<?php if ($this->countModules('featured')): ?>logo-menu-absolute<?php endif; ?>">
 
-        <div class="header-bg-content">
-            <img class="full-width header-filter" src="<?php echo JURI::root(true) . '/templates/js_unlimited/images/filter-bg.png' ?>" />
-            <img class="full-widht header-bg" src="<?php echo JURI::root(true) . $bg ?>" />
-        </div>
+        <?php if (!$this->countModules('featured')) : ?>
+            <div class="header-bg-content">
+                <img class="full-width header-filter" src="<?php echo JURI::root(true) . '/templates/js_unlimited/images/filter-bg.png' ?>" />
+                <img class="full-widht header-bg" src="<?php echo JURI::root(true) . $bg ?>" />
+            </div>
+        <?php endif; ?>
 
         <div class="<?php echo $containerClass ?> logo-menu">
             <div class="<?php echo $gridMode; ?> logo-menu-inner">
