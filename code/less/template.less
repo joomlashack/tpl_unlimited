@@ -895,20 +895,6 @@ code{
 }
 #featured{
 	margin-bottom: 0;
-	.moduletable,
-	.module{
-		&:last-child{
-			margin-bottom: 0;
-		}
-
-		&.hero-unit{
-			padding-top: 138px;
-			.hero-unit{
-				padding: 0;
-				margin-bottom: 0;
-			}
-		}
-	}
 }
 
 #header{
@@ -994,6 +980,12 @@ code{
 		}
 	}
 
+	.moduletable,
+	.module{
+		&:last-child{
+			margin-bottom: 0;
+		}
+	}
 }
 
 .logo-menu{
@@ -1368,6 +1360,14 @@ div {
 
 .well{
 	.box-shadow(none);
+}
+
+.hero-unit{
+	.border-radius(0);
+	.hero-unit{
+		padding: 0;
+		margin-bottom: 0;
+	}
 }
 
 // ---------------------------------------------

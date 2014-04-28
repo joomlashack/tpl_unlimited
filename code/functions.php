@@ -77,3 +77,10 @@ if ($blogs){
 $JoomlaApp = JFactory::getApplication();
 $menu_itemActive = $JoomlaApp->getMenu()->getActive()->title;
 
+// No Slider no Featured
+
+$showItemActive = false;
+
+if (!$this->countModules('slider') && !$this->countModules('featured')) {
+    $showItemActive = true;
+}

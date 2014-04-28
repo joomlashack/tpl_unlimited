@@ -41,6 +41,7 @@
 		<position>logo</position>
 		<position>menu</position>
 		<position>featured</position>
+		<position>slider</position>
 		<position>grid-top</position>
 		<position>grid-top2</position>
 		<position>above-content</position>
