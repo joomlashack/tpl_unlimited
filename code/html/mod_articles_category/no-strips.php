@@ -1,0 +1,20 @@
+<?php
+/**
+ * @package     Voyage
+ * @subpackage  Overrider
+ *
+ * @copyright   Copyright (C) 2005 - 2014 Joomlashack. Meritage Assets.  All rights reserved.
+ * @license     GNU General Public License version 2 or later; see LICENSE.txt
+ */
+
+// No direct access.
+defined('_JEXEC') or die;
+
+$app = JFactory::getApplication();
+
+$wrightTypeList = ' unstyled';
+$wrightEnableIcons = false;
+
+require_once(JPATH_THEMES.'/'.$app->getTemplate().'/'.'wright'.'/'.'html'.'/'.'overrider.php');
+include(Overrider::getOverride('mod_articles_category'));
+?>
