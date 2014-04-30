@@ -126,7 +126,7 @@ defined('_JEXEC') or die('Restricted access');
 	    <footer id="footer" <?php if ($this->params->get('stickyFooter',1)) : ?> class="sticky"<?php endif;?>>
 
             <?php if ($this->countModules('bottom-menu')) : ?>
-               <w:nav containerClass="<?php echo $containerClass ?>" rowClass="<?php echo $gridMode;?>" name="bottom-menu" wrapClass="navbar-inverse navbar-transparent" />
+               <w:nav containerClass="<?php echo $containerClass ?>" rowClass="<?php echo $gridMode;?>" name="bottom-menu" wrapClass="navbar-transparent" />
             <?php endif; ?>
 
 	    	 <div class="<?php echo $containerClass ?> footer-content">

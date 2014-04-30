@@ -88,6 +88,7 @@ code{
 
 // ---------------------------------------------
 
+#bottom-menu .nav,
 .nav.nav-tabs{
 	border-bottom: 1px solid @textColor;
 	border-top: 1px solid @textColor;
@@ -100,6 +101,18 @@ code{
 			margin-top: 0;
 		}
 	}
+	li{
+		> a{
+			&.item-desc{
+				margin-bottom: 11px;
+				margin-top: 11px;
+				&:hover,
+				&:focus{
+					text-decoration: none;
+				}
+			}
+		}
+	}
 	> li , h3 , p{
 		> a{
 			border: 0;
@@ -110,10 +123,17 @@ code{
 			padding: 1em 1.5em;
 			padding: 1rem 1.5rem;
 
+			[class^="icon-"],[class*=" icon-"]{
+				color: @textColor;
+			}
+
 			&:hover,
 			&:focus{
 				background-color: transparent;
 				text-decoration: underline;
+				[class^="icon-"],[class*=" icon-"]{
+					text-decoration: underline;
+				}
 			}
 		}
 		&.dropdown{
@@ -196,6 +216,24 @@ code{
 			border: 0;
 			border-left: 1px solid @textColor;
 			border-right: 1px solid @textColor;
+			>li{
+				a.item-desc{
+					margin-left: 20px;
+					margin-right: 20px;
+				}
+				&.dropdown {
+					a{
+						.caret {
+							margin-top: 19px;
+							margin-right: 15px;
+						}
+					}
+					.dropdown-menu{
+						margin: 0 auto;
+						width: 80%;
+					}
+				}
+			}
 		}
 	}
 	&.tabs-left{
@@ -586,6 +624,7 @@ code{
 
 	+ .container-padding,
 	+ .container-table,
+	+ .wrapper-footer #bottom-menu .navbar-inner,
 	+ #breadcrumbs .breadcrumb{
 		border-top: 0;
 	}
@@ -1097,7 +1136,6 @@ code{
 	.box-shadow(none);
 }
 
-
 .container-fluid{
 	.wrapp-logo-menu{
 		#logo{
@@ -1160,13 +1198,17 @@ code{
 			&.item-desc{
 				.border-radius(5px);
 				background-color: @color_one;
-				color: @white;
+				color: @white !important;
 				padding: 5px 20px !important;
-				margin-bottom: 13px;
-				margin-top: 13px;
+				margin-bottom: 5px;
+				margin-top: 5px;
 				&:hover,
 				&:focus{
-					background-color: darken(@color_one, 10%);
+					background-color: darken(@color_one, 10%) !important;
+					color: @white !important;
+					[class^="icon-"],[class*=" icon-"]{
+						color: @white !important;
+					}
 				}
 			}
 		}
@@ -1268,12 +1310,84 @@ code{
 	}
 }
 
-// ---------------------------------------------
 
-.wrapper-footer{
-	margin-top: 10px;
+.module{
+	.nav{
+		li{
+			> a{
+				&:hover,
+				&:focus{
+					color: @textColor;
+					[class^="icon-"],[class*=" icon-"]{
+						color: @textColor;
+					}
+					.caret{
+						border-top-color: @textColor;
+					}
+				}
+				&.item-desc{
+					margin-bottom: 0;
+					margin-top: 0;
+				}
+			}
+			&.dropdown{
+				.dropdown-menu{
+					li{
+						>a{
+							&:hover,
+							&:focus{
+								color: @textColor;
+								[class^="icon-"],[class*=" icon-"]{
+									color: @textColor;
+								}
+								.caret{
+									border-top-color: @textColor;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		&.nav-pills,
+		&.nav-list{
+			>.active{
+				>a,
+				>a:hover,
+				>a:focus{
+					background-color: @color_one;
+				}
+			}
+		}
+	}
 }
-
+// ---------------------------------------------
+#bottom-menu{
+	margin-left: -20px;
+	margin-right: -20px;
+	.navbar-inner{
+		border-bottom: 1px solid @textColor;
+		border-top: 1px solid @textColor;
+		.nav{
+			border: 0;
+			display: table;
+			float: none;
+			margin: 0 auto;
+			li{
+				>a{
+					padding-left: 3em;
+					padding-right: 3em;
+					&.item-desc{
+						&:hover,
+						&:focus{
+							text-decoration: none;
+						}
+					}
+				}
+			}
+		}
+	}
+}
 // Lifestream
 // ---------------------------------------------
 
