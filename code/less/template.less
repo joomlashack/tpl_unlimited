@@ -975,9 +975,43 @@ code{
 	position: relative;
 	color: @color_four;
 	margin-bottom: 0;
+	
+	&.headerBg{
+		h1,h2,h3,h4,h5,h6{
+			color: @white;
+		}
+		.navbar .nav{
+			>li{
+				>a{ 
+					&:focus, &:hover{
+						color: @white;
 
-	h1,h2,h3,h4,h5,h6{
-		color: @white;
+						[class^="icon-"],
+						[class*=" icon-"]{
+							color: @white;
+						}
+						.caret{
+							border-top-color: @white;
+						}
+					}
+				}
+
+				&.active{
+					> a{
+						color: @white;
+
+						[class^="icon-"],
+						[class*=" icon-"]{
+							color: @white;
+						}
+						.caret{
+							border-top-color: @white;
+						}
+					}
+				}
+
+			}
+		}
 	}
 
 	+ .container-table,
@@ -995,50 +1029,26 @@ code{
 		.full-width{
 			width: 100%;
 		}
-		.header-filter,
-		.header-bg{
-			position: absolute;
-			top: 0;
+		.full-height{
+			height: 100%;
 		}
-		.header-filter{
-			z-index: 3;
-		}
-		.header-bg{
-			.opacity(80);
-			z-index: 2;
-		}
-	}
-	.navbar .nav{
-		>li{
-			>a{
-				&:focus, &:hover{
-					color: @white;
 
-					[class^="icon-"],
-					[class*=" icon-"]{
-						color: @white;
-					}
-					.caret{
-						border-top-color: @white;
-					}
-				}
-			}
+        .header-filter,
+        .header-bg{
+            position: absolute;
+            top: 0;
+        }
+        .header-filter{
+            z-index: 3;
+        }
+        .header-bg{
+            .opacity(80);
+            background-repeat: no-repeat;
+            -webkit-background-size: cover;
+            background-size: cover;
+            z-index: 2;
+        }
 
-			&.active{
-				> a{
-					color: @white;
-
-					[class^="icon-"],
-					[class*=" icon-"]{
-						color: @white;
-					}
-					.caret{
-						border-top-color: @white;
-					}
-				}
-			}
-
-		}
 	}
 
 	&.logo-menu-absolute{

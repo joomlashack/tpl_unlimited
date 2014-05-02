@@ -20,19 +20,25 @@ defined('_JEXEC') or die('Restricted access');
 
     <w:head />
     <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700' rel='stylesheet' type='text/css'>
-
+    <?php if($bg != -1): ?>
+        <style>
+            .header-bg{
+                background-image: url(<?php echo JURI::root(true) . $bg ?>);
+            }
+        </style>
+    <?php endif; ?>
 </head>
 <body class="<?php echo $responsive . $blogClass ?>">
     <?php if ($this->countModules('toolbar')) : ?>
-    	<w:nav containerClass="<?php echo $containerClass ?>" rowClass="<?php echo $gridMode;?>" wrapClass="navbar-fixed-top navbar-inverse" type="toolbar" name="toolbar" />
+        <w:nav containerClass="<?php echo $containerClass ?>" rowClass="<?php echo $gridMode;?>" wrapClass="navbar-fixed-top navbar-inverse" type="toolbar" name="toolbar" />
     <?php endif; ?>
 
-    <header id="header" class="<?php if ($this->countModules('slider')): ?>logo-menu-absolute<?php endif; ?>">
+    <header id="header" class="<?php echo $headerBg; if ($this->countModules('slider')) { echo 'logo-menu-absolute'; } ?>">
 
-        <?php if (!$this->countModules('slider')) : ?>
+        <?php if($bg != -1): ?>
             <div class="header-bg-content">
                 <img class="full-width header-filter" src="<?php echo JURI::root(true) . '/templates/js_unlimited/images/filter-bg.png' ?>" />
-                <img class="full-widht header-bg" src="<?php echo JURI::root(true) . $bg ?>" />
+                <div class="full-width full-height header-bg"></div>
             </div>
         <?php endif; ?>
 
