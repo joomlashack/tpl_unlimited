@@ -67,13 +67,13 @@ defined('_JEXEC') or die('Restricted access');
     </header>
 
     <?php if ($this->countModules('grid-top')) : ?>
-        <div id="grid-top" class="<?php echo $containerClass ?> container-table">
+        <div id="grid-top" class="<?php echo $containerClass ?> container-flexbox unlimited-grid">
             <w:module type="<?php echo $gridMode; ?>" name="grid-top" chrome="wrightflexgrid" />
         </div>
     <?php endif; ?>
 
     <?php if ($this->countModules('grid-top2')) : ?>
-        <div id="grid-top2" class="<?php echo $containerClass ?> container-padding">
+        <div id="grid-top2" class="<?php echo $containerClass ?> container-padding unlimited-grid">
             <w:module type="<?php echo $gridMode; ?>" name="grid-top2" chrome="wrightflexgrid" />
         </div>
     <?php endif; ?>
@@ -84,7 +84,7 @@ defined('_JEXEC') or die('Restricted access');
         </div>
     <?php endif; ?>
 
-    <div class="<?php echo $containerClass ?> container-table main-wrapp">
+    <div class="<?php echo $containerClass ?> container-flexbox unlimited-grid main-wrapp">
         <div id="main-content" class="<?php echo $gridMode; ?>">
             <!-- sidebar1 -->
             <aside id="sidebar1">
@@ -117,13 +117,13 @@ defined('_JEXEC') or die('Restricted access');
     </div>
 
     <?php if ($this->countModules('grid-bottom')) : ?>
-        <div id="grid-bottom" class="<?php echo $containerClass; ?> container-full">
+        <div id="grid-bottom" class="<?php echo $containerClass; ?> container-full unlimited-grid">
             <w:module type="<?php echo $gridMode; ?>" name="grid-bottom" chrome="wrightflexgrid" />
         </div>
     <?php endif; ?>
 
     <?php if ($this->countModules('grid-bottom2')) : ?>
-        <div id="grid-bottom2" class="<?php echo $containerClass; ?> container-table">
+        <div id="grid-bottom2" class="<?php echo $containerClass; ?> container-flexbox unlimited-grid">
     		<w:module type="<?php echo $gridMode; ?>" name="grid-bottom2" chrome="wrightflexgrid" />
         </div>
     <?php endif; ?>
