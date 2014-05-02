@@ -79,6 +79,14 @@
 			padding-right: 10px;
 		}
 	}
+	.item-page{
+		.img-fulltext-left,
+		.img-fulltext-right{
+			img{
+				max-width: 200px;
+			}
+		}
+	}
 
 }
 @media (max-width: 767px) {
@@ -114,7 +122,9 @@
 	.container-table,
 	.container-full,
 	.container-padding{
+		display: block;
 		> .row , > .row-fluid{
+			display: block;
 			> [class*="span"]{
 				display: block;
 				width: 100%;
@@ -134,6 +144,15 @@
 				&:last-child{
 					border-bottom: 0;
 				}
+			}
+		}
+	}
+
+	.item-page{
+		.img-fulltext-left,
+		.img-fulltext-right{
+			img{
+				max-width: 100%;
 			}
 		}
 	}
