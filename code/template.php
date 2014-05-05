@@ -20,7 +20,7 @@ defined('_JEXEC') or die('Restricted access');
 
     <w:head />
     <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700' rel='stylesheet' type='text/css'>
-    <?php if($bg != -1): ?>
+    <?php if($bg != -1 && !$this->countModules('slider')): ?>
         <style>
             .header-bg{
                 background-image: url(<?php echo JURI::root(true) . $bg ?>);
@@ -33,7 +33,7 @@ defined('_JEXEC') or die('Restricted access');
         <w:nav containerClass="<?php echo $containerClass ?>" rowClass="<?php echo $gridMode;?>" wrapClass="navbar-fixed-top navbar-inverse" type="toolbar" name="toolbar" />
     <?php endif; ?>
 
-    <header id="header" class="<?php echo $headerBg; if ($this->countModules('slider')) { echo 'logo-menu-absolute'; } ?>">
+    <header id="header" class="<?php echo $headerBg; if ($this->countModules('slider')) { echo ' logo-menu-absolute'; } ?>">
 
         <?php if($bg != -1): ?>
             <div class="header-bg-content">
@@ -53,7 +53,7 @@ defined('_JEXEC') or die('Restricted access');
         <?php endif; ?>
 
         <?php if ($this->countModules('featured')) : ?>
-            <div id="featured" class="header-content">
+            <div id="featured" class="header-content <?php echo $containerClass ?>">
                 <w:module type="none" name="featured" chrome="xhtml" />
             </div>
         <?php endif; ?>

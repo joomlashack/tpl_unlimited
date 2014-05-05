@@ -48,7 +48,7 @@ $bg = checkImage($this->params->get("backgroundImage", ""), "templates/js_unlimi
 if ($bg != "-1") $bg = str_replace(JPATH_BASE, '', $bg);
 
 $headerBg = '';
-if($bg != "-1"){
+if($bg != "-1" ){
     $headerBg = ' headerBg';
 }
 
