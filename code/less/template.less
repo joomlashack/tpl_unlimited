@@ -996,6 +996,14 @@ code{
 			margin-bottom: 0;
 		}
 	}
+	#featured{
+		.moduletable,
+		.module{
+			&:last-child{
+				margin-bottom: 20px;
+			}
+		}	
+	}
 }
 
 .logo-menu{
@@ -1440,6 +1448,12 @@ div {
 .counter{
 	line-height: 30px;
 	margin-bottom: 0;
+
+	&.pull-right{
+		display: inline-block;
+		float: none;
+		vertical-align: top;
+	}
 }
 
 #contact-form{
