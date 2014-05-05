@@ -6,7 +6,18 @@
 	display: -webkit-flex;     /* NEW - Chrome */
 	display: flex;   
 }
-
+@media (min-width: 1200px) {
+	#toolbar{
+		.navbar {
+			.nav{
+				>li{
+					margin-left: 45px;
+					margin-right: 45px;
+				}
+			}
+		}
+	}	
+}
 @media (max-width: 979px) {
 
 	.navbar{
