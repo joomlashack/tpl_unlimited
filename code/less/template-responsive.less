@@ -1,4 +1,12 @@
 
+.flexbox-content(){
+	display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+	display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+	display: -ms-flexbox;      /* TWEENER - IE 10 */
+	display: -webkit-flex;     /* NEW - Chrome */
+	display: flex;   
+}
+
 @media (max-width: 979px) {
 
 	.navbar{
@@ -84,7 +92,7 @@
 
 	#toolbar .nav-collapse, #menu .nav-collapse{
 		.box-sizing(border-box);
-		.flexbox();
+		.flexbox-content();
 		justify-content: center;
 		padding-left: 20px;
 		padding-right: 20px;
