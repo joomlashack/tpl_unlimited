@@ -1762,3 +1762,37 @@ div {
 		display: none;
 	}
 }
+// -------------------------------------
+
+.is_internet.v_8,
+.is_internet.v_9{
+	.container-flexbox{
+		> .row , > .row-fluid{
+			display: block;
+
+			> [class*="span"]{
+				float: left;
+				overflow: visible !important;
+			}
+		}
+	}
+
+	.blog,
+	.blog-featured{
+		.items-row{
+			display: block;
+			.item{
+				float: left;
+				overflow: visible !important;
+			}
+		}
+		.items-leading {
+			display: block;
+
+			[class*="leading-"]{		
+				overflow: visible !important;
+			}
+		}
+		
+	}
+}
