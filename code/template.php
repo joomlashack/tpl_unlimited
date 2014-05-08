@@ -144,12 +144,12 @@ defined('_JEXEC') or die('Restricted access');
 
         </footer>
     </div>
-    
+
 
     <!--[if gte IE]>
         <script type="text/javascript" src="<?php echo JURI::root(true) . '/templates/js_unlimited/js/jquery.equalheights.js';?>"></script>
         <script type="text/javascript" src="<?php echo JURI::root(true) . '/templates/js_unlimited/js/fallback.js';?>"></script>
-    <![endif]--> 
+    <![endif]-->
 
 </body>
 </html>
