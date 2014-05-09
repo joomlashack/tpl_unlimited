@@ -145,11 +145,20 @@ defined('_JEXEC') or die('Restricted access');
         </footer>
     </div>
 
+    <?php
+        $browser = JBrowser::getInstance();
 
-    <!--[if gte IE]>
-        <script type="text/javascript" src="<?php echo JURI::root(true) . '/templates/js_unlimited/js/jquery.equalheights.js';?>"></script>
-        <script type="text/javascript" src="<?php echo JURI::root(true) . '/templates/js_unlimited/js/fallback.js';?>"></script>
-    <![endif]-->
+        if ($browser->getBrowser() == 'msie')
+        {
+            $major = $browser->getMajor();
+
+            if ((int)$major <= 9) {
+                echo "<script type='text/javascript' src='" . JURI::root() .  "templates/" . $this->document->template . "/js/jquery.equalheights.js'></script>";
+                echo "<script type='text/javascript' src='" . JURI::root() .  "templates/" . $this->document->template . "/js/fallback.js'></script>";
+            }
+
+        }
+    ?>
 
 </body>
 </html>

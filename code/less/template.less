@@ -797,57 +797,18 @@ code{
 	filter:none;
 	font-size: @baseFontSize - 1;
 
+	&.sticky{
+		left: 0;
+	}
+	.container{
+		> .row{
+			margin-left: 0;
+		}
+	}
 	.container,
 	.container-fluid{
 		.box-sizing(border-box);
-
-		.row,
-		.row-fluid{
-			margin-left: auto;
-			margin-right: auto;
-			width: 75%;
-
-			> [class*="span"]{
-				margin-left: 0;
-			}
-
-			> .span12 {
-			    width: 100%;
-			}
-			> .span11 {
-			    width: 91.6667%;
-			}
-			> .span10 {
-			    width: 83.3333%;
-			}
-			> .span9 {
-			    width: 75%;
-			}
-			> .span8 {
-			    width: 66.6667%;
-			}
-			> .span7 {
-			    width: 58.3333%;
-			}
-			> .span6 {
-			    width: 50%;
-			}
-			> .span5 {
-			    width: 41.6667%;
-			}
-			> .span4 {
-			    width: 33.3333%;
-			}
-			> .span3 {
-			    width: 25%;
-			}
-			> .span2 {
-			    width: 16.6667%;
-			}
-			> .span1 {
-			    width: 8.33333%;
-			}
-		}
+		.unlimited-grid;
 	}
 	#bottom-menu{
 		.navbar{
@@ -858,7 +819,10 @@ code{
 		}
 	}
 	.footer-content{
+		margin-left: auto;
+		margin-right: auto;
 		margin-top: 10px;
+		width: 75%;
 		.nav{
 			li{
 				float: left;
@@ -1008,7 +972,8 @@ code{
 
 .logo-menu{
 	position: relative;
-	z-index: 5;
+	z-index: 100;
+	.unlimited-grid;
 	.logo-menu-inner{
 		.box-sizing(border-box);
 		border: 1px solid @navbarBorder;
@@ -1019,42 +984,6 @@ code{
 		> [class*="span"]{
 			.box-sizing(border-box);
 			margin-left: 0;
-		}
-		> .span12 {
-		    width: 100%;
-		}
-		> .span11 {
-		    width: 91.6667%;
-		}
-		> .span10 {
-		    width: 83.3333%;
-		}
-		> .span9 {
-		    width: 75%;
-		}
-		> .span8 {
-		    width: 66.6667%;
-		}
-		> .span7 {
-		    width: 58.3333%;
-		}
-		> .span6 {
-		    width: 50%;
-		}
-		> .span5 {
-		    width: 41.6667%;
-		}
-		> .span4 {
-		    width: 33.3333%;
-		}
-		> .span3 {
-		    width: 25%;
-		}
-		> .span2 {
-		    width: 16.6667%;
-		}
-		> .span1 {
-		    width: 8.33333%;
 		}
 	}
 
@@ -1784,6 +1713,23 @@ div {
 			}
 		}
 	}
+
+	#grid-top,
+	#grid-bottom2{
+		&.container-flexbox{
+			border-bottom: 0;
+			display: block;
+			> .row , > .row-fluid{
+				display: block;
+
+				> [class*="span"]{
+					display: block;
+					float: left;
+				}
+			}
+		}
+	}
+
 	.blog,
 	.blog-featured{
 		.items-row{
