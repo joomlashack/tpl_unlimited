@@ -916,6 +916,7 @@ code{
 		height: 100%;
 		overflow: hidden;
 		position: absolute;
+		top: 0;
 		width: 100%;
 		z-index: 1;
 		.full-width{
@@ -1751,4 +1752,69 @@ div {
 		}
 	}
 
+}
+// -------------------------------------
+
+// Toolbar Swich
+
+.fixed{
+	position:fixed;
+	width:100%;
+    z-index: 1031;
+}
+
+.fixed .container,.fixed .container-fluid{
+	position:relative
+}
+
+.fixed-top{
+	top:0
+}
+
+.toolbar-switch {
+    .transition(none 0s ease 0s);
+	color: @black;
+    box-sizing: border-box;
+    margin-top: 10px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 1031;
+	.icon-angle-down {
+		font-size: 40px;
+		&:before{
+			line-height: @baseLineHeight;
+			vertical-align: top;
+		}
+	}
+}
+
+.wrappToolbar{
+	&.collapsedToolbar{
+		.navbar-inner{
+			.collapsedToolbarInner {
+			    height: 0;
+			    overflow: hidden;
+			}
+		}
+	}
+	.navbar-inner{
+		background-color: transparent;
+		background-image: none;
+		border: 0;
+		filter: none;
+	}
+}
+
+.wrapper-toolbar{
+
+	.toolbar-container{
+		background-color: @navbarBackground;
+	}
+
+	.navbar-inverse{
+		.toolbar-container{
+			background-color: @navbarInverseBackground;
+		}
+	}
 }

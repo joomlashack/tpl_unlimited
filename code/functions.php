@@ -89,3 +89,7 @@ $showItemActive = false;
 if (!$this->countModules('slider') && !$this->countModules('featured')) {
     $showItemActive = true;
 }
+
+// Toolbar Displayed
+$toolbarDisplayed = ($this->params->get('unlimited_toolbar_displayed','1') == '1' ? true : false);
+$toolbarDisplayedClass = (!$toolbarDisplayed) ? " tollbarNoDisplayed" : "" ;

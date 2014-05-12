@@ -29,9 +29,6 @@ defined('_JEXEC') or die('Restricted access');
     <?php endif; ?>
 </head>
 <body class="<?php echo $responsive . $blogClass ?>">
-    <?php if ($this->countModules('toolbar')) : ?>
-        <w:nav containerClass="<?php echo $containerClass ?>" rowClass="<?php echo $gridMode;?>" wrapClass="navbar-fixed-top navbar-inverse" type="toolbar" name="toolbar" />
-    <?php endif; ?>
 
     <header id="header" class="<?php echo $headerBg; if ($this->countModules('slider')) { echo ' logo-menu-absolute'; } ?>">
 
@@ -40,6 +37,23 @@ defined('_JEXEC') or die('Restricted access');
                 <img class="full-width header-filter" src="<?php echo JURI::root(true) . '/templates/js_unlimited/images/filter-bg.png' ?>" />
                 <div class="full-width full-height header-bg"></div>
             </div>
+        <?php endif; ?>
+
+        <?php if (!$toolbarDisplayed) : ?>
+            <div class="fixed fixed-top">
+                <div class="<?php echo $containerClass ?> visible-desktop">
+                    <a class="toolbar-switch" >
+                        <i class="icon-angle-down"></i>
+                    </a>
+                </div>
+            </div>
+        <?php endif; ?>
+        <?php if ($this->countModules('toolbar')) : ?>
+
+            <div class="wrappToolbar<?php echo ' border-toolbar-' . $containerClass . ($toolbarDisplayed ? '' : ' collapsedToolbar'); ?>">
+                <w:nav containerClass="toolbar-container<?php echo ($toolbarDisplayed ? '' : ' collapsedToolbarInner'); ?>" rowClass="<?php echo $gridMode;?>" wrapClass="navbar-fixed-top navbar-inverse" type="toolbar" name="toolbar" />
+            </div>
+
         <?php endif; ?>
 
         <div class="<?php echo $containerClass ?> logo-menu">
@@ -159,6 +173,10 @@ defined('_JEXEC') or die('Restricted access');
 
         }
     ?>
+    <?php if(!$toolbarDisplayed): ?>
+        <script type='text/javascript' src='<?php echo JURI::root(true) ?>/templates/js_unlimited/js/jquery.animate-colors-min.js'></script>
+        <script type='text/javascript' src='<?php echo JURI::root(true) ?>/templates/js_unlimited/js/toolbarDisplayed.js'></script>
+    <?php endif; ?>
 
 </body>
 </html>
