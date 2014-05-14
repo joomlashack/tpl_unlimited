@@ -63,7 +63,9 @@ defined('_JEXEC') or die('Restricted access');
         </div>
 
         <?php if ($this->countModules('slider')) : ?>
-            <w:module type="none" name="slider" chrome="xhtml" />
+            <div id="slider-position">
+                <w:module type="none" name="slider" chrome="xhtml" />
+            </div>
         <?php endif; ?>
 
         <?php if ($this->countModules('featured')) : ?>
@@ -176,6 +178,9 @@ defined('_JEXEC') or die('Restricted access');
     <?php if(!$toolbarDisplayed): ?>
         <script type='text/javascript' src='<?php echo JURI::root(true) ?>/templates/js_unlimited/js/jquery.animate-colors-min.js'></script>
         <script type='text/javascript' src='<?php echo JURI::root(true) ?>/templates/js_unlimited/js/toolbarDisplayed.js'></script>
+    <?php endif; ?>
+    <?php if($this->countModules('slider')): ?>
+        <script type='text/javascript' src='<?php echo JURI::root(true) ?>/templates/js_unlimited/js/unlimited.js'></script>
     <?php endif; ?>
 
 </body>
