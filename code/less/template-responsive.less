@@ -169,15 +169,6 @@
         margin-left: -20px;
         margin-right: -20px;
 
-        &.logo-menu-absolute {
-        	.logo-menu {
-				.logo-menu-inner{
-					left: 10%;
-					width: 80%;
-				}
-	        }
-
-        }
 		.logo-menu{
 			#logo, #menu{
 				float: left;
@@ -210,8 +201,23 @@
 					} 
 				} 
 			}
+			.logo-menu-inner{
+				margin-left: 10px !important;
+				margin-right: 10px;
+				position: relative;
+				width: auto;
+			}
 		}
 
+        &.logo-menu-absolute {
+        	.logo-menu {
+				.logo-menu-inner{
+					left: 10%;
+					width: 80%;
+				}
+	        }
+
+        }
     }
 
 }
