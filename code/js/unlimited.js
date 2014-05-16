@@ -1,14 +1,29 @@
 jQuery(document).ready(function($) {
 
-	jQuery(window).load(function(){
+	function sliderAlign(){
 		var toolbar =jQuery(".wrappToolbar");
+		var sliderPosition = jQuery("#slider-position");
+		var toolbarHeight = toolbar.height();
+
 		if(toolbar.length){
-			var sliderPosition = jQuery("#slider-position");
-			var toolbarHeight = toolbar.height();
 			sliderPosition.css({
 				'margin-top' : '-' + toolbarHeight + 'px'
 			});
 		}
+
+		if (jQuery(window).width() <= 767) {
+			sliderPosition.css({
+				'margin-top' : '0'
+			});
+		};
+	}
+
+	jQuery(window).load(function(){
+		sliderAlign();
+	});
+
+	jQuery(window).resize(function(){
+		sliderAlign();
 	});
 
 });
