@@ -1,3 +1,10 @@
+.flexbox-content(){
+	display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+	display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+	display: -ms-flexbox;      /* TWEENER - IE 10 */
+	display: -webkit-flex;     /* NEW - Chrome */
+	display: flex;
+}
 
 .font-size(@sizeValue) {
   @remValue: @sizeValue;
@@ -738,13 +745,6 @@ code{
 	}
 }
 
-.flexbox-content(){
-	display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
-	display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
-	display: -ms-flexbox;      /* TWEENER - IE 10 */
-	display: -webkit-flex;     /* NEW - Chrome */
-	display: flex;
-}
 
 .container-flexbox{
 
@@ -780,6 +780,10 @@ code{
 		[class*="module"]{
 			> h3{
 				margin-top: 0;
+			}
+			[class*="newsflash-horiz"]{
+				margin-bottom: -10px;
+				margin-top: -10px;
 			}
 		}
 	}
@@ -981,10 +985,10 @@ code{
 	.logo-menu-inner{
 		.box-sizing(border-box);
 		border: 1px solid @navbarBorder;
-		padding: 0 10px;
 		margin-bottom: 20px;
 		margin-left: 0 !important;
 		margin-top: 20px;
+		padding: 0 10px;
 		> [class*="span"]{
 			.box-sizing(border-box);
 			margin-left: 0;
@@ -1753,6 +1757,18 @@ div {
 		.navbar-inner{
 			filter : progid:DXImageTransform.Microsoft.gradient(startColorstr='#b3000000', endColorstr='#b3000000', GradientType=0)
 		}
+	}
+	#footer{
+		.footer-content{
+			.nav{
+				li{
+					border-left-color: @grayLight;
+				}
+			}
+		}
+	}
+	.dropdown-menu{
+		background-color: @grayLight;
 	}
 
 }
