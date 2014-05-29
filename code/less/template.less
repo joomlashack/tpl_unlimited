@@ -872,6 +872,7 @@ code{
 	position: relative;
 	color: @color_four;
 	margin-bottom: 0;
+	z-index: 1;
 
 	&.headerBg{
 		h1,h2,h3,h4,h5,h6{
@@ -925,7 +926,7 @@ code{
 		position: absolute;
 		top: 0;
 		width: 100%;
-		z-index: 1;
+		z-index: 2;
 		.full-width{
 			width: 100%;
 		}
@@ -939,27 +940,17 @@ code{
             top: 0;
         }
         .header-filter{
-            z-index: 3;
+			height: 259px;
+            z-index: 4;
         }
         .header-bg{
             .opacity(80);
             background-repeat: no-repeat;
             -webkit-background-size: cover;
             background-size: cover;
-            z-index: 2;
+            z-index: 3;
         }
 
-	}
-
-	&.logo-menu-absolute{
-		.logo-menu{
-			.logo-menu-inner{
-				position: absolute;
-				top: 0;
-				width: 100%;
-				z-index: 5;
-			}
-		}
 	}
 
 	.moduletable,
@@ -980,7 +971,7 @@ code{
 
 .logo-menu{
 	position: relative;
-	z-index: 100;
+	z-index: 15000;
 	.unlimited-grid;
 	.logo-menu-inner{
 		.box-sizing(border-box);
@@ -1040,7 +1031,7 @@ code{
 	.box-sizing(border-box);
 	padding: 0 20px;
 	position: relative;
-	z-index: 4;
+	z-index: 5;
 }
 
 // ---------------------------------------------
@@ -1836,4 +1827,11 @@ div {
 			background-color: @navbarInverseBackground;
 		}
 	}
+}
+
+#slider-position{
+	position: absolute;
+	z-index: 1;
+	top: 0;
+	left: 0;
 }

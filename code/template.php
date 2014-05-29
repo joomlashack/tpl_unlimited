@@ -30,11 +30,12 @@ defined('_JEXEC') or die('Restricted access');
 </head>
 <body class="<?php echo $responsive . $blogClass ?>">
 
-    <header id="header" class="<?php echo $headerBg; if ($this->countModules('slider')) { echo ' logo-menu-absolute'; } ?>">
+    <header id="header" class="<?php echo $headerBg?>">
 
         <?php if($bg != -1): ?>
             <div class="header-bg-content">
-                <img class="full-width header-filter" src="<?php echo JURI::root(true) . '/templates/js_unlimited/images/filter-bg.png' ?>" />
+                <div style="background-image: url(<?php echo 'templates/js_unlimited/images/filter-bg.png' ?>)"
+                class="full-width header-filter"></div>
                 <div class="full-width full-height header-bg"></div>
             </div>
         <?php endif; ?>
