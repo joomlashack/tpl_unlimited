@@ -16,31 +16,27 @@ defined('_JEXEC') or die('Restricted access');
 ?>
 <doctype>
 <html>
-<head>
-
-    <w:head />
-    <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700' rel='stylesheet' type='text/css'>
-    <?php if($bg != -1 && !$this->countModules('slider')): ?>
+    <head>
+        <w:head />
+        <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700' rel='stylesheet' type='text/css'>
+        <?php if($bg != -1 && !$this->countModules('slider')): ?>
         <style>
             .header-bg{
                 background-image: url(<?php echo JURI::root(true) . $bg ?>);
             }
         </style>
-    <?php endif; ?>
-</head>
-<body class="<?php echo $responsive . $blogClass ?>">
+        <?php endif; ?>
+    </head>
+    <body class="<?php echo $responsive . $blogClass ?>">
 
-    <header id="header" class="<?php echo $headerBg?>">
-
-        <?php if($bg != -1): ?>
+        <header id="header" class="<?php echo $headerBg?>">
+            <?php if($bg != -1): ?>
             <div class="header-bg-content">
-                <div style="background-image: url(<?php echo 'templates/js_unlimited/images/filter-bg.png' ?>)"
-                class="full-width header-filter"></div>
+                <div style="background-image: url(<?php echo 'templates/js_unlimited/images/filter-bg.png' ?>)" class="full-width header-filter"></div>
                 <div class="full-width full-height header-bg"></div>
             </div>
-        <?php endif; ?>
-
-        <?php if (!$toolbarDisplayed) : ?>
+            <?php endif; ?>
+            <?php if (!$toolbarDisplayed) : ?>
             <div class="fixed fixed-top">
                 <div class="<?php echo $containerClass ?> visible-desktop">
                     <a class="toolbar-switch" >
@@ -48,121 +44,108 @@ defined('_JEXEC') or die('Restricted access');
                     </a>
                 </div>
             </div>
-        <?php endif; ?>
-        <?php if ($this->countModules('toolbar')) : ?>
-
+            <?php endif; ?>
+            <?php if ($this->countModules('toolbar')) : ?>
             <div class="wrappToolbar<?php echo ' border-toolbar-' . $containerClass . ($toolbarDisplayed ? '' : ' collapsedToolbar'); ?>">
                 <w:nav containerClass="toolbar-container<?php echo ($toolbarDisplayed ? '' : ' collapsedToolbarInner'); ?>" rowClass="<?php echo $gridMode;?>" wrapClass="navbar-fixed-top navbar-inverse" type="toolbar" name="toolbar" />
             </div>
-
-        <?php endif; ?>
-
-        <div class="<?php echo $containerClass ?> logo-menu">
-            <div class="<?php echo $gridMode; ?> logo-menu-inner">
-                <w:logo name="menu" />
+            <?php endif; ?>
+            <div class="<?php echo $containerClass ?> logo-menu">
+                <div class="<?php echo $gridMode; ?> logo-menu-inner">
+                    <w:logo name="menu" />
+                </div>
             </div>
-        </div>
-
-        <?php if ($this->countModules('slider')) : ?>
+            <?php if ($this->countModules('slider')) : ?>
             <div id="slider-position">
                 <w:module type="none" name="slider" chrome="xhtml" />
             </div>
-        <?php endif; ?>
-
-        <?php if ($this->countModules('featured')) : ?>
+            <?php endif; ?>
+            <?php if ($this->countModules('featured')) : ?>
             <div id="featured" class="header-content <?php echo $containerClass ?>">
                 <w:module type="none" name="featured" chrome="xhtml" />
             </div>
-        <?php endif; ?>
-
-        <?php if ($showItemActive) : ?>
+            <?php endif; ?>
+            <?php if ($showItemActive) : ?>
             <div class="<?php echo $containerClass ?> header-content">
                 <div id="current-menu-item"><h1><?php echo $menu_itemActive; ?></h1></div>
             </div>
-        <?php endif; ?>
+            <?php endif; ?>
+        </header>
 
-    </header>
-
-    <?php if ($this->countModules('grid-top')) : ?>
+        <?php if ($this->countModules('grid-top')) : ?>
         <div id="grid-top" class="<?php echo $containerClass ?> container-flexbox unlimited-grid">
             <w:module type="<?php echo $gridMode; ?>" name="grid-top" chrome="wrightflexgrid" />
         </div>
-    <?php endif; ?>
+        <?php endif; ?>
 
-    <?php if ($this->countModules('grid-top2')) : ?>
+        <?php if ($this->countModules('grid-top2')) : ?>
         <div id="grid-top2" class="<?php echo $containerClass ?> container-padding unlimited-grid">
             <w:module type="<?php echo $gridMode; ?>" name="grid-top2" chrome="wrightflexgrid" />
         </div>
-    <?php endif; ?>
+        <?php endif; ?>
 
-    <?php if ($this->countModules('breadcrumbs')) : ?>
+        <?php if ($this->countModules('breadcrumbs')) : ?>
         <div id="breadcrumbs" class="<?php echo $containerClass ?>">
             <w:module type="single" name="breadcrumbs" chrome="none" />
         </div>
-    <?php endif; ?>
+        <?php endif; ?>
 
-    <div class="<?php echo $containerClass ?> container-flexbox unlimited-grid main-wrapp">
-        <div id="main-content" class="<?php echo $gridMode; ?>">
-            <!-- sidebar1 -->
-            <aside id="sidebar1">
-                <w:module name="sidebar1" chrome="xhtml" />
-            </aside>
-
-            <!-- main -->
-            <section id="main">
-                <?php if ($this->countModules('above-content')) : ?>
-                <!-- above-content -->
-                <div id="above-content">
-                    <w:module type="none" name="above-content" chrome="xhtml" />
-                </div>
-                <?php endif; ?>
-            	<!-- component -->
-            	<w:content />
-                <?php if ($this->countModules('below-content')) : ?>
-                <!-- below-content -->
-                <div id="below-content">
-                    <w:module type="none" name="below-content" chrome="xhtml" />
-                </div>
-                <?php endif; ?>
-            </section>
-
-            <!-- sidebar2 -->
-            <aside id="sidebar2">
-            	<w:module name="sidebar2" chrome="xhtml" />
-            </aside>
+        <div class="<?php echo $containerClass ?> container-flexbox unlimited-grid main-wrapp">
+            <div id="main-content" class="<?php echo $gridMode; ?>">
+                <!-- sidebar1 -->
+                <aside id="sidebar1">
+                    <w:module name="sidebar1" chrome="xhtml" />
+                </aside>
+                <!-- main -->
+                <section id="main">
+                    <?php if ($this->countModules('above-content')) : ?>
+                    <!-- above-content -->
+                    <div id="above-content">
+                        <w:module type="none" name="above-content" chrome="xhtml" />
+                    </div>
+                    <?php endif; ?>
+                	<!-- component -->
+                	<w:content />
+                    <?php if ($this->countModules('below-content')) : ?>
+                    <div id="below-content">
+                        <w:module type="none" name="below-content" chrome="xhtml" />
+                    </div>
+                    <?php endif; ?>
+                </section>
+                <!-- sidebar2 -->
+                <aside id="sidebar2">
+                	<w:module name="sidebar2" chrome="xhtml" />
+                </aside>
+            </div>
         </div>
-    </div>
 
-    <?php if ($this->countModules('grid-bottom')) : ?>
+        <?php if ($this->countModules('grid-bottom')) : ?>
         <div id="grid-bottom" class="<?php echo $containerClass; ?> container-full unlimited-grid">
             <w:module type="<?php echo $gridMode; ?>" name="grid-bottom" chrome="wrightflexgrid" />
         </div>
-    <?php endif; ?>
+        <?php endif; ?>
 
-    <?php if ($this->countModules('grid-bottom2')) : ?>
+        <?php if ($this->countModules('grid-bottom2')) : ?>
         <div id="grid-bottom2" class="<?php echo $containerClass; ?> container-flexbox unlimited-grid">
-    		<w:module type="<?php echo $gridMode; ?>" name="grid-bottom2" chrome="wrightflexgrid" />
+        	<w:module type="<?php echo $gridMode; ?>" name="grid-bottom2" chrome="wrightflexgrid" />
         </div>
-    <?php endif; ?>
+        <?php endif; ?>
 
-    <div class="wrapper-footer">
-	    <footer id="footer" <?php if ($this->params->get('stickyFooter',1)) : ?> class="sticky"<?php endif;?>>
+        <div class="wrapper-footer">
+            <footer id="footer" <?php if ($this->params->get('stickyFooter',1)) : ?> class="sticky"<?php endif;?>>
+                <?php if ($this->countModules('bottom-menu')) : ?>
+                   <w:nav containerClass="<?php echo $containerClass ?>" rowClass="<?php echo $gridMode;?>" name="bottom-menu" wrapClass="navbar-transparent" />
+                <?php endif; ?>
+                <div class="<?php echo $containerClass ?> footer-content">
+                    <?php if ($this->countModules('footer')) : ?>
+                    <w:module type="<?php echo $gridMode; ?>" name="footer" chrome="wrightflexgrid" />
+                    <?php endif; ?>
+                    <w:footer />
+                </div>
+            </footer>
+        </div>
 
-            <?php if ($this->countModules('bottom-menu')) : ?>
-               <w:nav containerClass="<?php echo $containerClass ?>" rowClass="<?php echo $gridMode;?>" name="bottom-menu" wrapClass="navbar-transparent" />
-            <?php endif; ?>
-
-	    	 <div class="<?php echo $containerClass ?> footer-content">
-	    		<?php if ($this->countModules('footer')) : ?>
-					<w:module type="<?php echo $gridMode; ?>" name="footer" chrome="wrightflexgrid" />
-			 	<?php endif; ?>
-				<w:footer />
-			</div>
-
-        </footer>
-    </div>
-
-    <?php
+        <?php
         $browser = JBrowser::getInstance();
 
         if ($browser->getBrowser() == 'msie')
@@ -175,14 +158,13 @@ defined('_JEXEC') or die('Restricted access');
             }
 
         }
-    ?>
-    <?php if(!$toolbarDisplayed): ?>
+        ?>
+        <?php if(!$toolbarDisplayed): ?>
         <script type='text/javascript' src='<?php echo JURI::root(true) ?>/templates/js_unlimited/js/jquery.animate-colors-min.js'></script>
         <script type='text/javascript' src='<?php echo JURI::root(true) ?>/templates/js_unlimited/js/toolbarDisplayed.js'></script>
-    <?php endif; ?>
-    <?php if($this->countModules('slider')): ?>
+        <?php endif; ?>
+        <?php if($this->countModules('slider')): ?>
         <script type='text/javascript' src='<?php echo JURI::root(true) ?>/templates/js_unlimited/js/unlimited.js'></script>
-    <?php endif; ?>
-
-</body>
+        <?php endif; ?>
+    </body>
 </html>
