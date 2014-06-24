@@ -971,7 +971,7 @@ code{
 
 .logo-menu{
 	position: relative;
-	z-index: 15000;
+	z-index: 1000;
 	.unlimited-grid;
 	.logo-menu-inner{
 		.box-sizing(border-box);
@@ -1749,6 +1749,12 @@ div {
 			filter : progid:DXImageTransform.Microsoft.gradient(startColorstr='#b3000000', endColorstr='#b3000000', GradientType=0)
 		}
 	}
+	.wrappToolbar .navbar-inner{
+		filter: none;
+		.toolbar-container{
+			filter : progid:DXImageTransform.Microsoft.gradient(startColorstr='#b3000000', endColorstr='#b3000000', GradientType=0)
+		}
+	}
 	#footer{
 		.footer-content{
 			.nav{
@@ -1786,6 +1792,7 @@ div {
 	color: @black;
     box-sizing: border-box;
     margin-top: 10px;
+    overflow: hidden;
     position: absolute;
     right: 0;
     top: 0;
@@ -1828,6 +1835,9 @@ div {
 		}
 	}
 }
+
+// -------------------------------------
+// slider
 
 #slider-position{
 	position: absolute;
