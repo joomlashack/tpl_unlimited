@@ -26,21 +26,21 @@ if ($responsivePage == 0) {
 // Image Background
 
 function checkImage($img, $default) {
-        if ($img == "") {
-                $img = $default;
-        }
-        elseif ($img != "-1") {
-                $img = "images/" . $img;
-        }
+    if ($img == "") {
+        $img = $default;
+    }
+    elseif ($img != "-1") {
+        $img = "images/" . $img;
+    }
 
-        if ($img != "-1") {
-                $img = JPATH_BASE . '/' . $img;
-                if (!file_exists($img)) {
-                        $img = "-1";
-                }
+    if ($img != "-1") {
+        $img = JPATH_BASE . '/' . $img;
+        if (!file_exists($img)) {
+                $img = "-1";
         }
+    }
 
-        return $img;
+    return $img;
 }
 
 $bg = checkImage($this->params->get("backgroundImage", ""), "templates/js_unlimited/images/default-bg.jpg");
@@ -72,7 +72,6 @@ if ($blog == 'blog' || $blogFt){
 }
 
 $blogClass = '';
-
 if ($blogs){
     $blogClass = ' viewBlog';
 }

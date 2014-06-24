@@ -13,6 +13,15 @@
   font-size: ~"@{remValue}rem";
 }
 
+.children-rm(){
+	> *:last-child{
+		margin-bottom: 0;
+		> *:last-child{
+			margin-bottom: 0;
+		}
+	}
+}
+
 // ---------------------------------------------
 
 h1{
