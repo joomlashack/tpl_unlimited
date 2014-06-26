@@ -3,7 +3,8 @@
  * @package     Unlimited
  * @subpackage  Functions
  *
- * @copyright   Copyright (C) 2005 - 2014 Joomlashack. Meritage Assets.  All rights reserved.
+ * @copyright   Copyright (C) 2005 - 2014 Joomlashack. Meritage Assets. 
+ *              All rights reserved.
  * @license     GNU General Public License version 2 or later; see LICENSE.txt
  */
 
@@ -43,7 +44,8 @@ function checkImage($img, $default) {
     return $img;
 }
 
-$bg = checkImage($this->params->get("backgroundImage", ""), "templates/js_unlimited/images/default-bg.jpg");
+$bg = checkImage($this->params->get("backgroundImage", ""), 
+      "templates/js_unlimited/images/default-bg.jpg");
 
 if ($bg != "-1") $bg = str_replace(JPATH_BASE, '', $bg);
 
@@ -54,13 +56,17 @@ if($bg != "-1" ){
 
 // Add class for blog/featured view
 
-$blog = (JRequest::getVar('layout','') == 'blog' ? JRequest::getVar('layout','') : '');
-$blogFtOption = (JRequest::getVar('option','') == 'com_content' ? JRequest::getVar('option','') : '');
+$blog = 
+(JRequest::getVar('layout','') == 'blog' ? JRequest::getVar('layout','') : '');
+$blogFtOption = 
+(JRequest::getVar('option','') == 'com_content' ? 
+JRequest::getVar('option','') : '');
 $blogFt = false;
 $viewFt = '';
 
 if ($blogFtOption == "com_content"){
-    $viewFt = (JRequest::getVar('view','') == 'featured' ? JRequest::getVar('view','') : '');
+    $viewFt = 
+    (JRequest::getVar('view','') == 'featured' ? JRequest::getVar('view','') : '');
     if($viewFt == 'featured'){
         $blogFt = true;
     }
@@ -90,5 +96,6 @@ if (!$this->countModules('slider') && !$this->countModules('featured')) {
 }
 
 // Toolbar Displayed
-$toolbarDisplayed = ($this->params->get('unlimited_toolbar_displayed','1') == '1' ? true : false);
+$toolbarDisplayed = 
+($this->params->get('unlimited_toolbar_displayed','1') == '1' ? true : false);
 $toolbarDisplayedClass = (!$toolbarDisplayed) ? " tollbarNoDisplayed" : "" ;

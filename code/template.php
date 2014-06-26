@@ -52,13 +52,9 @@ defined('_JEXEC') or die('Restricted access');
             </div>
             <?php endif; ?>
             <?php if ($this->countModules('toolbar')) : ?>
-            <div class="wrappToolbar<?php echo ' border-toolbar-' . $containerClass
-            . ($toolbarDisplayed ? '' : ' collapsedToolbar'); ?>">
-                <w:nav containerClass="toolbar-container
-                <?php echo ($toolbarDisplayed ? '' : ' collapsedToolbarInner'); ?>" 
-                rowClass="<?php echo $gridMode;?>" 
-                wrapClass="navbar-fixed-top navbar-inverse" type="toolbar" 
-                name="toolbar" />
+            <div class="wrappToolbar<?php echo ' border-toolbar-' . $containerClass . 
+            ($toolbarDisplayed ? '' : ' collapsedToolbar'); ?>">
+                <w:nav containerClass="toolbar-container<?php echo ($toolbarDisplayed ? '' : ' collapsedToolbarInner'); ?>" rowClass="<?php echo $gridMode;?>" wrapClass="navbar-fixed-top navbar-inverse" type="toolbar" name="toolbar" />
             </div>
             <?php endif; ?>
             <div class="<?php echo $containerClass ?> logo-menu">
@@ -88,16 +84,14 @@ defined('_JEXEC') or die('Restricted access');
         <?php if ($this->countModules('grid-top')) : ?>
         <div id="grid-top" 
         class="<?php echo $containerClass ?> container-flexbox unlimited-grid">
-            <w:module type="<?php echo $gridMode; ?>" name="grid-top" 
-            chrome="wrightflexgrid" />
+            <w:module type="<?php echo $gridMode; ?>" name="grid-top" chrome="wrightflexgrid" />
         </div>
         <?php endif; ?>
 
         <?php if ($this->countModules('grid-top2')) : ?>
         <div id="grid-top2" 
         class="<?php echo $containerClass ?> container-padding unlimited-grid">
-            <w:module type="<?php echo $gridMode; ?>" name="grid-top2" 
-            chrome="wrightflexgrid" />
+            <w:module type="<?php echo $gridMode; ?>" name="grid-top2" chrome="wrightflexgrid" />
         </div>
         <?php endif; ?>
 
@@ -140,16 +134,14 @@ defined('_JEXEC') or die('Restricted access');
         <?php if ($this->countModules('grid-bottom')) : ?>
         <div id="grid-bottom" 
         class="<?php echo $containerClass; ?> container-full unlimited-grid">
-            <w:module type="<?php echo $gridMode; ?>" name="grid-bottom" 
-            chrome="wrightflexgrid" />
+            <w:module type="<?php echo $gridMode; ?>" name="grid-bottom" chrome="wrightflexgrid" />
         </div>
         <?php endif; ?>
 
         <?php if ($this->countModules('grid-bottom2')) : ?>
         <div id="grid-bottom2" 
         class="<?php echo $containerClass; ?> container-flexbox unlimited-grid">
-        	<w:module type="<?php echo $gridMode; ?>" name="grid-bottom2" 
-            chrome="wrightflexgrid" />
+        	<w:module type="<?php echo $gridMode; ?>" name="grid-bottom2" chrome="wrightflexgrid" />
         </div>
         <?php endif; ?>
 
@@ -157,14 +149,11 @@ defined('_JEXEC') or die('Restricted access');
             <footer id="footer" <?php if ($this->params->get('stickyFooter',1)) : ?> 
             class="sticky"<?php endif;?>>
                 <?php if ($this->countModules('bottom-menu')) : ?>
-                   <w:nav containerClass="<?php echo $containerClass ?>" 
-                   rowClass="<?php echo $gridMode;?>" name="bottom-menu" 
-                   wrapClass="navbar-transparent" />
+                   <w:nav containerClass="<?php echo $containerClass ?>" rowClass="<?php echo $gridMode;?>" name="bottom-menu" wrapClass="navbar-transparent" />
                 <?php endif; ?>
                 <div class="<?php echo $containerClass ?> footer-content">
                     <?php if ($this->countModules('footer')) : ?>
-                    <w:module type="<?php echo $gridMode; ?>" name="footer" 
-                    chrome="wrightflexgrid" />
+                    <w:module type="<?php echo $gridMode; ?>" name="footer" chrome="wrightflexgrid" />
                     <?php endif; ?>
                     <w:footer />
                 </div>
