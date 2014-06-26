@@ -258,6 +258,9 @@ code{
 					.dropdown-menu{
 						margin: 0 auto;
 						width: 80%;
+						> .active > a{
+							border-top-color: @color_four;
+						} 
 					}
 				}
 			}
@@ -1328,6 +1331,16 @@ code{
 								}
 								.caret{
 									border-top-color: @textColor;
+								}
+								&:hover,
+								&:focus{
+									color: @textColor;
+									[class^="icon-"],[class*=" icon-"]{
+										color: @textColor;
+									}
+									.caret{
+										border-top-color: @textColor;
+									}	
 								}
 							}
 						}
