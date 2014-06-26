@@ -1320,6 +1320,17 @@ code{
 								}
 							}
 						}
+						&.active{
+							>a{
+								color: @textColor;
+								[class^="icon-"],[class*=" icon-"]{
+									color: @textColor;
+								}
+								.caret{
+									border-top-color: @textColor;
+								}
+							}
+						}
 					}
 				}
 			}
