@@ -34,13 +34,6 @@
 }
 
 // ---------------------------------------------
-body{
-	> .container-fluid{
-		margin-left: 20px;
-		margin-right: 20px;
-	}
-}
-// ---------------------------------------------
 
 h1{
 	.font-size(2.2);
@@ -763,16 +756,15 @@ code{
 }
 
 .container-full{
-	border-bottom: 1px solid @color_three;
+	> .row,
+	> .row-fluid {
+		border-bottom: 1px solid @color_three;
+	}
 
 	+ .wrapper-footer #bottom-menu .navbar-inner,
 	+ .container-flexbox >.row,
 	+ .container-flexbox > .row-fluid{
 		border-top: 0;
-	}
-	&.container-fluid{
-		padding-left: 0;
-		padding-right: 0;
 	}
 
 	> div {
@@ -882,6 +874,10 @@ code{
 	.container-fluid{
 		.box-sizing(border-box);
 		.unlimited-grid;
+	}
+	> .container-fluid{
+		margin-left: 20px;
+		margin-right: 20px;
 	}
 	#bottom-menu{
 		.navbar{
