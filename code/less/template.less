@@ -34,6 +34,13 @@
 }
 
 // ---------------------------------------------
+body{
+	> .container-fluid{
+		margin-left: 20px;
+		margin-right: 20px;
+	}
+}
+// ---------------------------------------------
 
 h1{
 	.font-size(2.2);
@@ -720,10 +727,6 @@ code{
 			margin: 0;
 		}
 	}
-	&.container-fluid{
-		margin-left: 20px;
-		margin-right: 20px;
-	}
 }
 
 .container-padding{
@@ -874,11 +877,6 @@ code{
 
 	&.sticky{
 		left: 0;
-	}
-	.container{
-		> .row{
-			margin-left: 0;
-		}
 	}
 	.container,
 	.container-fluid{
@@ -1750,7 +1748,6 @@ div {
 	.item-content{
 		text-align: center;
 		&[onclick]{
-			.box-sizing(border-box);
 			.children-rm-m();
 			.clearfix();
 			.transition(all .25s ease-in);
