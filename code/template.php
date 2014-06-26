@@ -151,9 +151,9 @@ defined('_JEXEC') or die('Restricted access');
                 <?php if ($this->countModules('bottom-menu')) : ?>
                    <w:nav containerClass="<?php echo $containerClass ?>" rowClass="<?php echo $gridMode;?>" name="bottom-menu" wrapClass="navbar-transparent" />
                 <?php endif; ?>
-                <div class="<?php echo $containerClass ?> footer-content">
+                <div class="<?php echo $containerClass ?>">
                     <?php if ($this->countModules('footer')) : ?>
-                    <w:module type="<?php echo $gridMode; ?>" name="footer" chrome="wrightflexgrid" />
+                    <w:module type="<?php echo $gridMode; ?> footer-content" name="footer" chrome="wrightflexgrid" />
                     <?php endif; ?>
                     <w:footer />
                 </div>
