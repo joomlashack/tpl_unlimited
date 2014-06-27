@@ -22,13 +22,20 @@
 		margin-top: 0;
 		> *:first-child{
 			margin-top: 0;
+			> *:first-child{
+				margin-top: 0;
+			}
 		}
+
 	}
 
 	> *:last-child{
 		margin-bottom: 0;
 		> *:last-child{
 			margin-bottom: 0;
+			> *:last-child{
+				margin-bottom: 0;
+			}
 		}
 	}
 }
@@ -1648,6 +1655,7 @@ div {
 
 			> .float-left,
 			> .float-right{
+				.children-rm-m();
 				> .article-image{
 					max-width: 40%;
 				}
