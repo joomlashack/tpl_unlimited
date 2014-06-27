@@ -101,8 +101,7 @@ defined('_JEXEC') or die('Restricted access');
         </div>
         <?php endif; ?>
 
-        <div class="
-        <?php echo $containerClass ?> container-flexbox unlimited-grid main-wrapp">
+        <div class="<?php echo $containerClass . $addBorder?> container-flexbox unlimited-grid main-wrapp">
             <div id="main-content" class="<?php echo $gridMode; ?>">
                 <!-- sidebar1 -->
                 <aside id="sidebar1">

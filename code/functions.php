@@ -99,3 +99,12 @@ if (!$this->countModules('slider') && !$this->countModules('featured')) {
 $toolbarDisplayed = 
 ($this->params->get('unlimited_toolbar_displayed','1') == '1' ? true : false);
 $toolbarDisplayedClass = (!$toolbarDisplayed) ? " tollbarNoDisplayed" : "" ;
+
+// Border in Main Content
+
+$addBorder = '';
+if ($this->countModules('bottom-menu')) {
+    $addBorder = ' no-bordered-bottom';
+    if ($this->countModules('grid-bottom') || $this->countModules('grid-bottom2'))
+        $addBorder = '';
+}
