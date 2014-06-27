@@ -10,16 +10,19 @@ jQuery(document).ready(function($) {
 					jQuery('.wrappToolbar .toolbar-container').removeClass('collapsedToolbarInner');
 				}
 			);
-			jQuery(this).animate({ color: '#fff'}, 1000);
+			// jQuery(this).animate({ color: '#fff'}, 1000);
+			jQuery(this).animate({ top: toolbarHeight + 'px'}, 1000);
 		}
 		else {
 			jQuery('.wrappToolbar').addClass('collapsedToolbar');
 			jQuery('.wrappToolbar.collapsedToolbar .toolbar-container').addClass('collapsedToolbarInner');
-			jQuery(this).animate({ color: '#000'}, 1000);
+			// jQuery(this).animate({ color: '#000'}, 1000);
+			jQuery(this).animate({top: '0'}, 1000);
 			jQuery('.wrappToolbar.collapsedToolbar .navbar-inner .collapsedToolbarInner').animate(
 				{ height: '0px' },1000
 			);
 		}
 		jQuery('.wrappToolbar .wrapper-toolbar').css({minHeight: toolbarHeight + 'px'});
+
 	});
 });
