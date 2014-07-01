@@ -16,7 +16,34 @@
 				}
 			}
 		}
-	}	
+	}
+	#nav-toolbar{
+		width: 1170px;
+	}
+}
+@media (min-width: 767px){
+	[class*="newsflash-horiz"]{
+		.item-content{
+			&[onclick]{
+				.transition(all .25s ease);
+				height: 100%;
+				margin: -10px;
+				padding: 10px;
+				&:hover{
+					background-color: @linkColor;
+					color: @white;
+					*{
+						color: @white;
+					}
+				}
+			}
+		}
+	}
+}
+@media (min-width: 768px) and (max-width: 979px){ 
+	#nav-toolbar{
+		width: 724px;
+	}
 }
 @media (max-width: 979px) {
 
@@ -105,7 +132,6 @@
 			}
 		}
 	}
-
 	.wrappToolbar.collapsedToolbar {
 		.navbar-inner {
 			.collapsedToolbarInner {
@@ -132,6 +158,9 @@
 			margin-left: 0;
 			margin-right: 0;
 		} 
+	}
+	#nav-toolbar{
+		width: auto;
 	}
 
 	.blog,
@@ -165,6 +194,22 @@
 			display: block;
 		}
 	}
+	.container-padding{
+		[class*="newsflash-horiz"]{
+			margin-left: -20px;
+			margin-right: -20px;
+		}
+	}
+	.container-full{
+		> div{
+			> .first[class*="span"]{
+				padding-right: 20px;
+			}
+			> .last[class*="span"]{
+				padding-left: 20px;
+			}
+		}
+	} 
     #header{
         margin-left: -20px;
         margin-right: -20px;
@@ -219,5 +264,26 @@
 
         }
     }
-
+    .header-content{
+    	padding-left: 40px;
+    	padding-right: 40px;
+    }
+    [class*="newsflash-horiz"]{
+    	> .row, 
+    	> .row-fluid{
+    		display: block;
+		    [class*="span"]{
+				border-bottom: 1px solid @color_three;
+				border-left: 0;
+				padding: 13px 20px;
+				width: 100%;
+				&:last-child{
+					border-bottom: 0;
+				}
+		    }
+    	}
+    	.item-content[onclick]{
+			margin: 0;
+    	}
+    }
 }
