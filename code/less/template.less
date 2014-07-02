@@ -1786,6 +1786,7 @@ div {
 }
 [class*="newsflash-horiz"]{
 	.unlimited-grid;
+	color: #878787;
 	margin-bottom: -10px;
 	margin-top: -10px;
 
@@ -1814,6 +1815,19 @@ div {
 	}
 	.article-separator{
 		display: none;
+	}
+	.newsflash-title{
+		.page-header{
+			border-bottom: 0;
+			margin-bottom: 10px;
+			padding-bottom: 0;
+			a{
+				color: @color_four;
+				&:hover{
+					text-decoration: none;
+				}
+			}
+		}
 	}
 }
 // .is_chrome{
