@@ -196,7 +196,20 @@
 		.items-row, 
 		.items-leading{
 			display: block;
+			.article-content{
+				.clearfix();
+			}
 		}
+		.items-row{
+			.item > [class*="float-"] > .article-content > h2 a{
+				display: block;
+			} 
+		} 
+		.items-leading{
+			[class*="leading-"] > [class*="float-"] > .article-content > h2 a{
+				display: block;
+			} 
+		} 
 	} 
 
 	.container-flexbox{
