@@ -20,6 +20,10 @@ jQuery(document).ready(function($) {
 
 	jQuery(window).load(function(){
 		sliderAlign();
+		if(jQuery('.js-slider').length)
+		{
+			jQuery('.js-header').css('min-height' , jQuery('.js-slider').height() + 'px')
+		}
 	});
 
 	jQuery(window).resize(function(){
