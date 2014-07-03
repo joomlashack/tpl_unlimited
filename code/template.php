@@ -27,15 +27,14 @@ defined('_JEXEC') or die('Restricted access');
                 background-image: url(<?php echo JURI::root(true) . $bg ?>);
             }
             .header-filter{
-                background-image: 
-                url(<?php echo 'templates/js_unlimited/images/filter-bg.png' ?>);
+                background-image: url(<?php echo 'templates/js_unlimited/images/filter-bg.png' ?>);
             }
         </style>
         <?php endif; ?>
     </head>
     <body class="<?php echo $responsive . $blogClass ?>">
 
-        <header id="header" class="<?php echo $headerBg?>">
+        <header id="header" class="<?php echo $headerBg?> js-header">
             <?php if($bg != -1): ?>
             <div class="header-bg-content">
                 <div class="full-width header-filter"></div>
@@ -63,7 +62,7 @@ defined('_JEXEC') or die('Restricted access');
                 </div>
             </div>
             <?php if ($this->countModules('slider')) : ?>
-            <div id="slider-position">
+            <div id="slider-position" class="js-slider">
                 <w:module type="none" name="slider" chrome="xhtml" />
             </div>
             <?php endif; ?>
