@@ -35,7 +35,7 @@ defined('_JEXEC') or die('Restricted access');
     <body class="<?php echo $responsive . $blogClass ?>">
 
         <header id="header" class="<?php echo $headerBg?> js-header">
-            <?php if($bg != -1): ?>
+            <?php if($bg != -1 && !$this->countModules('slider')): ?>
             <div class="header-bg-content">
                 <div class="full-width header-filter"></div>
                 <div class="full-width full-height header-bg"></div>
@@ -184,6 +184,13 @@ defined('_JEXEC') or die('Restricted access');
         <?php endif; ?>
         <?php if($this->countModules('slider')): ?>
         <script type='text/javascript' src='<?php echo JURI::root(true) ?>/templates/js_unlimited/js/unlimited.js'></script>
+        <script type="text/javascript">
+            jQuery(document).ready(function($) {
+                jQuery(window).load(function(){
+                    jQuery('.slidermanDescriptionCont').removeClass('span6').addClass('container');
+                });
+            });
+        </script>
         <?php endif; ?>
     </body>
 </html>

@@ -1,31 +1,26 @@
 jQuery(document).ready(function($) {
 
 	function sliderAlign(){
-		var toolbar =jQuery(".wrappToolbar");
+		var toolbar = jQuery(".toolbar-container");
 		var sliderPosition = jQuery("#slider-position");
 		var toolbarHeight = toolbar.height();
+		var menu = jQuery(".logo-menu");
+		var menuHeight = menu.height();
+		var headerHeight = jQuery('.shackSliderslider').height();
+		if(toolbarHeight == 0)
+			menuHeight += 55;
 
-		if(toolbar.length){
-			sliderPosition.css({
-				'margin-top' : '-' + toolbarHeight + 'px'
-			});
-		}
+		if(toolbar.length)
+			menuHeight += toolbarHeight;
 
-		if (jQuery(window).width() <= 767) {
-			sliderPosition.css({
-				'margin-top' : '0'
-			});
-		};
+		jQuery('.slidermanDescriptionText').css('padding-top' , menuHeight + 'px');
+		jQuery('.js-header').css('min-height' , headerHeight + 'px');
+		console.log(toolbarHeight);
+		console.log(menuHeight + ' menu') ;
 	}
-
 	jQuery(window).load(function(){
 		sliderAlign();
-		if(jQuery('.js-slider').length)
-		{
-			jQuery('.js-header').css('min-height' , jQuery('.js-slider').height() + 'px')
-		}
 	});
-
 	jQuery(window).resize(function(){
 		sliderAlign();
 	});

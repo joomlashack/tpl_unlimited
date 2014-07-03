@@ -2034,7 +2034,9 @@ div {
 	width: 100%;
 	z-index: 1;
 	.slidermanDescriptionCont {
-		position: absolute !important;
+		.box-sizing(border-box);
+		padding-left:20px;
+		padding-right:20px;
 	}
 	.slidermanDescriptionText {
 		.box-sizing(box-sizing);
@@ -2047,6 +2049,7 @@ div {
 	}
 	.slideTitleContent{
 		font-size: 24px;
+		line-height: 24px;
 	}
 	.shackSliderslider  {
 		margin-bottom: 0;
@@ -2054,6 +2057,29 @@ div {
 			position:absolute;
 			bottom: 0;
 			width: 100%;
+			z-index: 1500;
+			a{
+				background-color: @color_four;
+				background-image: none;
+				height: 5px;
+				margin: 0 10px;
+				padding: 0;
+				width: 5px !important;
+				.border-radius(10px);
+				.box-sizing(border-box);
+			}
+			li{
+				height: 8px;
+				width: 8px;
+			}
+			.active{
+				a{
+					background-color: transparent;
+					border: 1px solid @color_four;
+					height: 8px;
+					width: 8px !important;
+				}
+			}
 		}
 	}
 }
