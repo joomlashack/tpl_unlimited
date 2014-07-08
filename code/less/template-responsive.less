@@ -161,6 +161,25 @@
 			}
 		}
 	}
+	.blog,
+	.blog-featured{
+		.items-row,
+		.items-leading {
+			.item,
+			[class*="leading-"]{
+				> [class*="float-"]{
+					> .article-content{
+						> h2{
+							a{
+								display: block;
+								padding-right: 30px;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
 
 }
 @media (max-width: 767px) {
