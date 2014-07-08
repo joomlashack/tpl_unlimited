@@ -90,10 +90,11 @@ $menu_itemActive = $JoomlaApp->getMenu()->getActive()->title;
 // No Slider no Featured
 
 $showItemActive = false;
+$pageTitle = 
+($this->params->get('unlimited_page_title','1') == '1' ? true : false);
 
-if (!$this->countModules('slider') && !$this->countModules('featured')) {
-    $showItemActive = true;
-}
+if (!$this->countModules('slider') && !$this->countModules('featured'))
+    $showItemActive = ($pageTitle) ? true : false ; 
 
 // Toolbar Displayed
 $toolbarDisplayed = 
@@ -108,3 +109,4 @@ if ($this->countModules('bottom-menu')) {
     if ($this->countModules('grid-bottom') || $this->countModules('grid-bottom2'))
         $addBorder = '';
 }
+// Page Title
