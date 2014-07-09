@@ -15,8 +15,6 @@ jQuery(document).ready(function($) {
 
 		jQuery('.slidermanDescriptionText').css('padding-top' , menuHeight + 'px');
 		jQuery('.js-header').css('min-height' , headerHeight + 'px');
-		console.log(toolbarHeight);
-		console.log(menuHeight + ' menu') ;
 	}
 	jQuery(window).load(function(){
 		sliderAlign();

@@ -187,7 +187,10 @@ defined('_JEXEC') or die('Restricted access');
         <script type="text/javascript">
             jQuery(document).ready(function($) {
                 jQuery(window).load(function(){
-                    jQuery('.slidermanDescriptionCont').removeClass('span6').addClass('container');
+                    var num = 12;
+                    for(var i = 1; i <= num; i++) {
+                          jQuery('.slidermanDescriptionCont').removeClass('span'+i).addClass('container');
+                    }
                 });
             });
         </script>
