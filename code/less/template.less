@@ -548,7 +548,10 @@ code{
 		}
 	}
 }
-
+.btn-large{
+	padding: 8px 28px;
+	font-size: 14px;
+}
 .dropup{
 	.btn.dropdown-toggle{
 		.caret{
@@ -1092,13 +1095,15 @@ code{
 					padding-bottom: 18px;
 					padding-top: 18px;
 					&.item-desc{
-						margin-bottom: 15px;
-						margin-top: 15px;
+						margin: 15px;
 					}
 				}
 				&:last-child{
 					> a{
 						padding-right: 0;
+						&.item-desc{
+							margin-right: 0;
+						}
 					}
 				}
 			}
@@ -1986,7 +1991,7 @@ div {
     margin-top: 10px;
     overflow: hidden;
     position: absolute;
-    right: 0;
+    right: 20px;
     top: 0;
     z-index: 1031;
 	.icon-angle-down {
@@ -2045,6 +2050,14 @@ div {
 		.box-sizing(border-box);
 		padding-left:20px;
 		padding-right:20px;
+		.btn{
+			border-color: @white;
+			color: @white;
+			&:hover,
+			&:focus{
+				border-color: @color_one;
+			}
+		}
 	}
 	.slidermanDescriptionText {
 		.box-sizing(box-sizing);
@@ -2090,6 +2103,10 @@ div {
 			}
 		}
 	}
+}
+
+div.slideTitle{
+	font-family: @sansFontFamily;
 }
 
 // Easy Social Icons
