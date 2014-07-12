@@ -1097,7 +1097,7 @@ code{
 					padding-bottom: 18px;
 					padding-top: 18px;
 					&.item-desc{
-						margin: 15px;
+						margin: 13px 15px;
 					}
 				}
 				&:last-child{
@@ -1816,6 +1816,7 @@ div {
 	color: #878787;
 	margin-bottom: -10px;
 	margin-top: -10px;
+	text-align: center;
 
 	> .row , > .row-fluid{
 		.box-sizing(border-box);
@@ -1828,13 +1829,6 @@ div {
 	.img-intro-left{
 		float: none;
 		margin: 0;
-	}
-	.item-content{
-		text-align: center;
-		&[onclick]{
-			.children-rm-m();
-			.clearfix();
-		}
 	}
 	.article-separator{
 		display: none;
@@ -1919,7 +1913,19 @@ div {
 				> [class*="span"]{
 					display: block;
 					float: left;
+					overflow: visible !important;
 				}
+			}
+		}
+	}
+	[class*="newsflash-horiz"]{
+		> .row , > .row-fluid{
+			display: block;
+
+			> [class*="span"]{
+				display: block;
+				float: left;
+				overflow: visible !important;
 			}
 		}
 	}
@@ -2087,6 +2093,7 @@ div {
 				height: 5px;
 				margin: 0 10px;
 				padding: 0;
+				vertical-align: top;
 				width: 5px !important;
 				.border-radius(10px);
 				.box-sizing(border-box);
