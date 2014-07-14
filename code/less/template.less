@@ -1483,23 +1483,26 @@ div {
 }
 // ---------------------------------------------
 
-// category
-.category-title{
+// categories
+.category-title,
+.category-separator,
+.category-description{
 	float:left;
+}
+.category-title{
 	a:link{
-		color:black;
+		color: @color_four;
+	}
+	*{
+		margin-bottom: 0;
 	}
 }
-.category-separator{
-	float: left;
-	margin-top: 19px;
-	padding-left: 5px;
-}
+.category-separator,
 .category-description{
-	float: left;
 	margin-top: 19px;
 	padding-left: 5px;
 }
+
 // ---------------------------------------------
 
 .counter{
