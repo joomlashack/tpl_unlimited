@@ -5,6 +5,7 @@ jQuery(document).ready(function($) {
 		jQuery("#grid-top > div > div").equalHeights();
 		jQuery("#grid-bottom2 > div > div").equalHeights();
 		jQuery(".newsflash-horiz > div > div").equalHeights();
+		jQuery(".categories-module > div").equalHeights();
 	}
 
 	jQuery(window).load(function(){
