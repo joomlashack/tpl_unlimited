@@ -2046,12 +2046,15 @@ div {
     right: 20px;
     top: 0;
     z-index: 1031;
-	.icon-angle-down {
+	[class*="icon-"] {
 		font-size: 40px;
 		&:before{
 			line-height: @baseLineHeight;
 			vertical-align: top;
 		}
+	}
+	.icon-angle-up{
+		color: @navbarInverseLinkColor;
 	}
 	&:hover,
 	&:focus{
