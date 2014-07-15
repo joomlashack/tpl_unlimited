@@ -957,6 +957,8 @@ code{
 	position: relative;
 	color: @color_four;
 	margin-bottom: 0;
+	min-height: 500px;
+	overflow: hidden;
 	z-index: 1;
 
 	&.headerBg{
@@ -2131,6 +2133,7 @@ div {
 	}
 	.shackSliderslider  {
 		margin-bottom: 0;
+		overflow: hidden;
 		#sliderNav{
 			position:absolute;
 			bottom: 0;
@@ -2166,6 +2169,10 @@ div {
 	}
 	.slidermanImgCont{
 		.opacity(80);
+		min-height: 500px;
+	}
+	#sliderContainer{
+		height: 100% !important;
 	}
 }
 

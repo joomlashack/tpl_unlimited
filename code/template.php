@@ -179,7 +179,6 @@ defined('_JEXEC') or die('Restricted access');
         }
         ?>
         <?php if(!$toolbarDisplayed): ?>
-        <script type='text/javascript' src='<?php echo JURI::root(true) ?>/templates/js_unlimited/js/jquery.animate-colors-min.js'></script>
         <script type='text/javascript' src='<?php echo JURI::root(true) ?>/templates/js_unlimited/js/toolbarDisplayed.js'></script>
         <?php endif; ?>
         <?php if($this->countModules('slider')): ?>
@@ -194,6 +193,11 @@ defined('_JEXEC') or die('Restricted access');
                 });
             });
         </script>
+        <?php if($this->countModules('grid-top')): ?>
+        <script type='text/javascript' src='<?php echo JURI::root(true) ?>/templates/js_unlimited/js/fixedGridTop.js'></script>
+        <?php else: ?>
+        <script type='text/javascript' src='<?php echo JURI::root(true) ?>/templates/js_unlimited/js/sliderHeight.js'></script>
+        <?php endif; ?>
         <?php endif; ?>
     </body>
 </html>
