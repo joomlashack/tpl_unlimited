@@ -1831,6 +1831,9 @@ div {
 }
 // Newsflash module
 
+[class*="newsflash-"]{
+	p{font-weight: 300;}
+}
 [class*="newsflash-vert"]{
 	list-style: none;
 	margin-left: 0;
@@ -1866,7 +1869,7 @@ div {
 	margin-bottom: -10px;
 	margin-top: -10px;
 	text-align: center;
-
+	p{font-size: 18px;}
 	> .row , > .row-fluid{
 		.box-sizing(border-box);
 		.flexbox-content();
@@ -1895,6 +1898,9 @@ div {
 				}
 			}
 		}
+	}
+	h5.newsflash-title{
+		font-size: 24px;
 	}
 }
 // .is_chrome{

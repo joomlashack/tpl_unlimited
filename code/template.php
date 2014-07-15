@@ -19,8 +19,7 @@ defined('_JEXEC') or die('Restricted access');
 <html>
     <head>
         <w:head />
-        <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700' 
-        rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700' rel='stylesheet' type='text/css'>
         <?php if($bg != -1 && !$this->countModules('slider')): ?>
         <style>
             .header-bg{
