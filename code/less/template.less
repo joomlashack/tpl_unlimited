@@ -1869,8 +1869,17 @@ div {
 	> .row , > .row-fluid{
 		.box-sizing(border-box);
 		.flexbox-content();
+		@media (min-width: 767px) and (max-width: 979px) {
+			display: block;
+		}
 		> [class*="span"]{
 			padding: 10px;
+		}
+		> .span2{
+			@media (min-width: 767px) and (max-width: 979px) {
+				width: 50%;
+				float: left;
+			}
 		}
 	}
 	.img-intro-left{
