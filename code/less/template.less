@@ -2152,15 +2152,26 @@ div {
 			width: 100%;
 			z-index: 1500;
 			a{
-				background-color: @color_four;
 				background-image: none;
-				height: 5px;
-				margin: 0 10px;
+				height: 10px;
+				margin: 0 12px;
 				padding: 0;
-				vertical-align: top;
-				width: 5px !important;
+				vertical-align: middle;
+				width: 10px !important;
 				.border-radius(10px);
 				.box-sizing(border-box);
+				position: relative;
+				&:before{
+					position: absolute;
+					top: 1.5px;
+					left: 1.5px;
+					height: 6px;
+					width: 6px;
+					content: '';
+					background-color: @color_four;
+					.border-radius(10px);
+					.box-sizing(border-box);
+				}
 			}
 			li{
 				height: 8px;
@@ -2172,6 +2183,10 @@ div {
 					border: 1px solid @color_four;
 					height: 8px;
 					width: 8px !important;
+					&:before{
+						display: none;
+						content: none;
+					}
 				}
 			}
 		}
