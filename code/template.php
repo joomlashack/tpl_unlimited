@@ -198,5 +198,30 @@ defined('_JEXEC') or die('Restricted access');
         <script type='text/javascript' src='<?php echo JURI::root(true) ?>/templates/js_unlimited/js/sliderHeight.js'></script>
         <?php endif; ?>
         <?php endif; ?>
+        <script type="text/javascript">
+            jQuery(document).ready(function($) {
+                if (jQuery('.module').hasClass('img-vertical-align')) {
+                    jQuery('.bannergroup').removeClass('img-vertical-align');
+                   
+                    function bannerAlign(){
+                        jQuery('.img-vertical-align').each(function (i) {
+                            var content_height = jQuery(this).height();
+                            var banner_item = jQuery(this).children('.bannergroup');
+                            var banner_item_height = banner_item.height();
+                            var banner_item_space = (content_height - banner_item_height) / 2;
+
+                            banner_item.css('padding-top', banner_item_space + 'px');
+                        });
+                    } 
+
+                    jQuery(window).load(function(){
+                        bannerAlign();
+                    });
+                    jQuery(window).resize(function(){
+                        bannerAlign();
+                    });
+                }
+            });
+        </script>
     </body>
 </html>
