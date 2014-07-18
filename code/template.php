@@ -26,14 +26,14 @@ defined('_JEXEC') or die('Restricted access');
                 background-image: url(<?php echo JURI::root(true) . $bg ?>);
             }
             .header-filter{
-                background-image: url(<?php echo 'templates/js_unlimited/images/filter-bg.png' ?>);
+                background-image: url(<?php echo JURI::root(true) . '/templates/js_unlimited/images/filter-bg.png' ?>);
             }
         </style>
         <?php endif; ?>
     </head>
     <body class="<?php echo $responsive . $blogClass ?>">
 
-        <header id="header" class="<?php echo $headerBg?> js-header">
+        <header id="header" class="<?php echo $headerBg?> js-header <?php echo ($this->countModules('slider')) ? 'header-min-height' : '' ; ?>">
             <?php if($bg != -1 && !$this->countModules('slider')): ?>
             <div class="header-bg-content">
                 <div class="full-width header-filter"></div>
@@ -50,7 +50,7 @@ defined('_JEXEC') or die('Restricted access');
             </div>
             <?php endif; ?>
             <?php if ($this->countModules('toolbar')) : ?>
-            <div class="wrappToolbar<?php echo ' border-toolbar-' . $containerClass . 
+            <div class="wrappToolbar<?php echo ' border-toolbar-' . $containerClass .
             ($toolbarDisplayed ? '' : ' collapsedToolbar'); ?>">
                 <w:nav containerClass="toolbar-container<?php echo ($toolbarDisplayed ? '' : ' collapsedToolbarInner'); ?>" rowClass="<?php echo $gridMode;?>" wrapClass="navbar-fixed-top navbar-inverse" type="toolbar" name="toolbar" />
             </div>
@@ -80,14 +80,14 @@ defined('_JEXEC') or die('Restricted access');
         </header>
 
         <?php if ($this->countModules('grid-top')) : ?>
-        <div id="grid-top" 
+        <div id="grid-top"
         class="<?php echo $containerClass ?> container-flexbox unlimited-grid">
             <w:module type="<?php echo $gridMode; ?>" name="grid-top" chrome="wrightflexgrid" />
         </div>
         <?php endif; ?>
 
         <?php if ($this->countModules('grid-top2')) : ?>
-        <div id="grid-top2" 
+        <div id="grid-top2"
         class="<?php echo $containerClass ?> container-padding unlimited-grid">
             <w:module type="<?php echo $gridMode; ?>" name="grid-top2" chrome="wrightflexgrid" />
         </div>
@@ -129,21 +129,21 @@ defined('_JEXEC') or die('Restricted access');
         </div>
 
         <?php if ($this->countModules('grid-bottom')) : ?>
-        <div id="grid-bottom" 
+        <div id="grid-bottom"
         class="<?php echo $containerClass; ?> container-full unlimited-grid">
             <w:module type="<?php echo $gridMode; ?>" name="grid-bottom" chrome="wrightflexgrid" />
         </div>
         <?php endif; ?>
 
         <?php if ($this->countModules('grid-bottom2')) : ?>
-        <div id="grid-bottom2" 
+        <div id="grid-bottom2"
         class="<?php echo $containerClass; ?> container-flexbox unlimited-grid">
         	<w:module type="<?php echo $gridMode; ?>" name="grid-bottom2" chrome="wrightflexgrid" />
         </div>
         <?php endif; ?>
 
         <div class="wrapper-footer">
-            <footer id="footer" <?php if ($this->params->get('stickyFooter',1)) : ?> 
+            <footer id="footer" <?php if ($this->params->get('stickyFooter',1)) : ?>
             class="sticky"<?php endif;?>>
                 <?php if ($this->countModules('bottom-menu')) : ?>
                 <w:nav containerClass="<?php echo $containerClass ?>" rowClass="<?php echo $gridMode;?>" name="bottom-menu" wrapClass="navbar-transparent" />
@@ -167,11 +167,11 @@ defined('_JEXEC') or die('Restricted access');
             $major = $browser->getMajor();
 
             if ((int)$major <= 9) {
-                echo "<script type='text/javascript' src='" . JURI::root() 
-                .  "templates/" . $this->document->template 
+                echo "<script type='text/javascript' src='" . JURI::root()
+                .  "templates/" . $this->document->template
                 . "/js/jquery.equalheights.js'></script>";
-                echo "<script type='text/javascript' src='" . JURI::root() 
-                .  "templates/" . $this->document->template 
+                echo "<script type='text/javascript' src='" . JURI::root()
+                .  "templates/" . $this->document->template
                 . "/js/fallback.js'></script>";
             }
 
@@ -202,7 +202,7 @@ defined('_JEXEC') or die('Restricted access');
             jQuery(document).ready(function($) {
                 if (jQuery('.module').hasClass('img-vertical-align')) {
                     jQuery('.bannergroup').removeClass('img-vertical-align');
-                   
+
                     function bannerAlign(){
                         jQuery('.img-vertical-align').each(function (i) {
                             var content_height = jQuery(this).height();
@@ -212,7 +212,7 @@ defined('_JEXEC') or die('Restricted access');
 
                             banner_item.css('padding-top', banner_item_space + 'px');
                         });
-                    } 
+                    }
 
                     jQuery(window).load(function(){
                         bannerAlign();
