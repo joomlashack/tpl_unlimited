@@ -2194,22 +2194,22 @@ div {
 			z-index: 1500;
 			a{
 				background-image: none;
-				height: 10px;
-				margin: 0 12px;
+				height: 30px;
+				margin: 0 7px;
 				padding: 0;
 				vertical-align: middle;
-				width: 10px !important;
+				width: 30px !important;
 				.border-radius(10px);
 				.box-sizing(border-box);
 				position: relative;
 				&:before{
-					position: absolute;
-					top: 1.5px;
-					left: 1.5px;
-					height: 6px;
-					width: 6px;
-					content: '';
 					background-color: @color_four;
+					content: '';
+					height: 6px;
+					left: 13px;
+					position: absolute;
+					top: 13px;
+					width: 6px;
 					.border-radius(10px);
 					.box-sizing(border-box);
 				}
@@ -2220,13 +2220,13 @@ div {
 			}
 			.active{
 				a{
-					background-color: transparent;
-					border: 1px solid @color_four;
-					height: 8px;
-					width: 8px !important;
 					&:before{
-						display: none;
-						content: none;
+						background-color: transparent;
+						border: 1px solid @color_four;
+						height: 8px;
+						left: 11.5px;
+						top: 11.5px;
+						width: 8px;
 					}
 				}
 			}
