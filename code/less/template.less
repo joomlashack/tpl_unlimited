@@ -1910,6 +1910,23 @@ div {
 	h5.newsflash-title{
 		font-size: 24px;
 	}
+	[class*="span"]{
+		.transition(all .25s ease);
+		padding: 10px 17px;
+		&:hover{
+			background-color: @linkColor;
+			color: @white;
+			*{
+				color: @white !important;
+			}
+		}
+		> *:first-child{
+			margin-top: 20px;
+		}
+		> *:last-child{
+			margin-bottom: 20px;
+		}
+	}
 }
 // .is_chrome{
 // 	[class*="newsflash-horiz"]{
