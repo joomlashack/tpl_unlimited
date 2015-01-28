@@ -3,7 +3,7 @@
  * @package     Unlimited
  * @subpackage  Functions
  *
- * @copyright   Copyright (C) 2005 - 2014 Joomlashack. Meritage Assets. 
+ * @copyright   Copyright (C) 2005 - 2015 Joomlashack. Meritage Assets.
  *              All rights reserved.
  * @license     GNU General Public License version 2 or later; see LICENSE.txt
  */
@@ -46,7 +46,7 @@ function checkImage($img, $default) {
     return $img;
 }
 
-$bg = checkImage($this->params->get("backgroundImage", ""), 
+$bg = checkImage($this->params->get("backgroundImage", ""),
       "templates/js_unlimited/images/default-bg.jpg");
 
 if ($bg != "-1") $bg = str_replace(JPATH_BASE, '', $bg);
@@ -58,16 +58,16 @@ if($bg != "-1" ){
 
 // Add class for blog/featured view
 
-$blog = 
+$blog =
 (JRequest::getVar('layout','') == 'blog' ? JRequest::getVar('layout','') : '');
-$blogFtOption = 
-(JRequest::getVar('option','') == 'com_content' ? 
+$blogFtOption =
+(JRequest::getVar('option','') == 'com_content' ?
 JRequest::getVar('option','') : '');
 $blogFt = false;
 $viewFt = '';
 
 if ($blogFtOption == "com_content"){
-    $viewFt = 
+    $viewFt =
     (JRequest::getVar('view','') == 'featured' ? JRequest::getVar('view','') : '');
     if($viewFt == 'featured'){
         $blogFt = true;
@@ -92,14 +92,14 @@ $menu_itemActive = $JoomlaApp->getMenu()->getActive()->title;
 // No Slider no Featured
 
 $showItemActive = false;
-$pageTitle = 
+$pageTitle =
 ($this->params->get('unlimited_page_title','1') == '1' ? true : false);
 
 if (!$this->countModules('slider') && !$this->countModules('featured'))
-    $showItemActive = ($pageTitle) ? true : false ; 
+    $showItemActive = ($pageTitle) ? true : false ;
 
 // Toolbar Displayed
-$toolbarDisplayed = 
+$toolbarDisplayed =
 ($this->params->get('unlimited_toolbar_displayed','1') == '1' ? true : false);
 $toolbarDisplayedClass = (!$toolbarDisplayed) ? " tollbarNoDisplayed" : "" ;
 
