@@ -33,15 +33,15 @@ defined('_JEXEC') or die('Restricted access');
     </head>
     <body class="<?php echo $responsive . $blogClass ?>">
 
-        <header id="header" class="<?php echo $headerBg?> js-header <?php echo ($this->countModules('slider')) ? 'header-min-height' : '' ; ?>">
+        <header id="header" class="<?php echo $headerBg?> js-header">
             <?php if($bg != -1 && !$this->countModules('slider')): ?>
-            <div class="header-bg-content">
+            <div class="header-bg-content z1">
                 <div class="full-width header-filter"></div>
                 <div class="full-width full-height header-bg"></div>
             </div>
             <?php endif; ?>
             <?php if (!$toolbarDisplayed) : ?>
-            <div class="fixed fixed-top">
+            <div class="fixed fixed-top full-width z4">
                 <div class="<?php echo $containerClass ?> visible-desktop">
                     <a class="toolbar-switch" >
                         <i class="icon-angle-down"></i>
@@ -55,26 +55,24 @@ defined('_JEXEC') or die('Restricted access');
                 <w:nav containerClass="toolbar-container<?php echo ($toolbarDisplayed ? '' : ' collapsedToolbarInner'); ?>" rowClass="<?php echo $gridMode;?>" wrapClass="navbar-fixed-top navbar-inverse" type="toolbar" name="toolbar" />
             </div>
             <?php endif; ?>
-            <div class="<?php echo $containerClass ?> logo-menu">
+            <div class="<?php echo $containerClass ?> logo-menu <?php echo ($this->countModules('slider')) ? ' absolute absolute-left absolute-right' : ' relative' ; ?> z3">
                 <div class="<?php echo $gridMode; ?> logo-menu-inner">
                     <w:logo name="menu" />
                 </div>
+                <div class="header-content">
+                    <?php if ($this->countModules('featured')) : ?>
+                    <div id="featured">
+                        <w:module type="none" name="featured" chrome="xhtml" />
+                    </div>
+                    <?php endif; ?>
+                    <?php if ($showItemActive) : ?>
+                    <h1><?php echo $menu_itemActive; ?></h1>
+                    <?php endif; ?>
+                </div>
             </div>
             <?php if ($this->countModules('slider')) : ?>
-            <div id="slider-position" class="js-slider">
+            <div id="slider-position" class="js-slider relative z1">
                 <w:module type="none" name="slider" chrome="xhtml" />
-            </div>
-            <?php endif; ?>
-            <?php if ($this->countModules('featured')) : ?>
-            <div id="featured" class="header-content <?php echo $containerClass ?>">
-                <w:module type="none" name="featured" chrome="xhtml" />
-            </div>
-            <?php endif; ?>
-            <?php if ($showItemActive) : ?>
-            <div class="<?php echo $containerClass ?> header-content">
-                <div id="current-menu-item">
-                    <h1><?php echo $menu_itemActive; ?></h1>
-                </div>
             </div>
             <?php endif; ?>
         </header>
