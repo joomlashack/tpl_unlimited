@@ -20,6 +20,7 @@
 		}
 
 		div.jss-slider .owl-carousel .jss-image-container.jss-descpos-top .jss-image .jss-title-description { .span(@gridColumns); }
+		div.jss-slider .owl-carousel .jss-image-container.jss-descpos-bottom .jss-image .jss-title-description { .span(@gridColumns); }
 	}
 }
 
@@ -187,9 +188,12 @@
 		max-width: 100%;
 	}
 
-	.jss-description,
-	.jss-title {
+	.jss-slider .owl-carousel .jss-title-description.jss-alignment-left {
 		padding-left: 20px !important;
+	}
+
+	.jss-slider .owl-carousel .jss-title-description.jss-alignment-right {
+		padding-right: 20px !important;
 	}
 
 	#container-unlimited > .core(@gridColumnWidth768, @gridGutterWidth768);
@@ -425,8 +429,8 @@
 		width: auto;
 	}
 
-	.jss-description,
-	.jss-title {
+	.jss-slider .owl-carousel .jss-title-description.jss-alignment-left,
+	.jss-slider .owl-carousel .jss-title-description.jss-alignment-right {
 		padding-left: 80px !important;
 		padding-right: 80px !important;
 	}
