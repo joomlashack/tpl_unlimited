@@ -2250,7 +2250,7 @@ div {
 // -------------------------------------
 // slider
 
-#slider-position{
+#slider-position {
 	.slidermanDescriptionCont {
 		.box-sizing(border-box);
 		padding-left:20px;
@@ -2398,17 +2398,6 @@ div.jss-slider {
 	}
 }
 
-div.jss-slider .owl-carousel .jss-title-description {
-	z-index: 26;
-
-	.jss-description {
-		display: block;
-	}
-
-	p {
-		margin-bottom: 10px;
-	}
-}
 
 .jss-description {
 	.box-sizing(box-sizing);
@@ -2473,11 +2462,27 @@ div.jss-slider .owl-carousel .jss-image-container.jss-descpos-top .jss-image .js
 	}
 }
 
-.jss-slider .owl-carousel .jss-title-description.jss-alignment-center {
-	.jss-title,
-	.jss-description {
+#slider-position .jss-slider.jss-slider-template-design {
+	.owl-carousel .jss-title-description {
 		.center-block();
+		z-index: 26;
+
+		.jss-description {
+			display: block;
+		}
+
+		p {
+			margin-bottom: 10px;
+		}
+
+		&.jss-alignment-center {
+			.jss-title,
+			.jss-description {
+				.center-block();
+			}
+		}
 	}
+
 }
 
 #container-unlimited > .core(@gridColumnWidth, @gridGutterWidth);
