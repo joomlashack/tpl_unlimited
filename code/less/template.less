@@ -2485,40 +2485,41 @@ div.jss-slider .owl-carousel .jss-image-container.jss-descpos-top .jss-image .js
 		}
 
 	}
+
+	.jss-navigation .jss-navigation-dots .owl-dot {
+		> div {
+			.box-shadow(none) !important;
+			background-color: transparent !important;
+			height: auto !important;
+
+			&:before {
+				position: absolute;
+				border-radius: 10px;
+				box-sizing: border-box;
+				content: '';
+				background-color: @color_four;
+				border: 1px solid #000;
+				height: 8px;
+				left: 11.5px;
+				top: 11.5px;
+				width: 8px;
+			}
+		}
+		&.active {
+			> div {
+				&:before {
+					background-color: transparent;
+				}
+				&:after {
+					background-color: transparent !important;
+				}
+			}
+		}
+	}
 }
 
 #container-unlimited > .core(@gridColumnWidth, @gridGutterWidth);
 
-div.jss-slider .jss-navigation .jss-navigation-dots .owl-dot {
-	> div {
-		.box-shadow(none) !important;
-		background-color: transparent !important;
-		height: auto !important;
-
-		&:before {
-			position: absolute;
-			border-radius: 10px;
-			box-sizing: border-box;
-			content: '';
-			background-color: @color_four;
-			border: 1px solid #000;
-			height: 8px;
-			left: 11.5px;
-			top: 11.5px;
-			width: 8px;
-		}
-	}
-	&.active {
-		> div {
-			&:before {
-				background-color: transparent;
-			}
-			&:after {
-				background-color: transparent !important;
-			}
-		}
-	}
-}
 
 div.jss-slider .owl-carousel .jss-image .jss-title {
 	height: auto !important;
