@@ -2445,27 +2445,36 @@ div.jss-slider .owl-carousel .jss-image-container.jss-descpos-top .jss-image .js
 	top: 150px;
 }
 
-.jss-slider .owl-carousel .jss-title-description.jss-alignment-left {
-	.jss-title,
-	.jss-description {
-		float: right;
-		padding-left: 171px !important;
-	}
-}
-
-.jss-slider .owl-carousel .jss-title-description.jss-alignment-right {
-	.jss-title,
-	.jss-description {
-		float: right;
-		padding-right: 171px !important;
-		width: 100%;
-	}
-}
 
 #slider-position .jss-slider.jss-slider-template-design {
 	.owl-carousel .jss-title-description {
 		.center-block();
 		z-index: 26;
+
+		&.jss-alignment-left {
+			.jss-title,
+			.jss-description {
+				float: left;
+				padding-left: 171px !important;
+				width: 100%;
+			}
+		}
+
+		&.jss-alignment-right {
+			.jss-title,
+			.jss-description {
+				float: right;
+				padding-right: 171px !important;
+				width: 100%;
+			}
+		}
+
+		&.jss-alignment-center {
+			.jss-title,
+			.jss-description {
+				.center-block();
+			}
+		}
 
 		.jss-description {
 			display: block;
@@ -2475,14 +2484,7 @@ div.jss-slider .owl-carousel .jss-image-container.jss-descpos-top .jss-image .js
 			margin-bottom: 10px;
 		}
 
-		&.jss-alignment-center {
-			.jss-title,
-			.jss-description {
-				.center-block();
-			}
-		}
 	}
-
 }
 
 #container-unlimited > .core(@gridColumnWidth, @gridGutterWidth);
