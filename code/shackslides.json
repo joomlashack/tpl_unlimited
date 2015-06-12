@@ -1,13 +1,14 @@
 {
-  "description_show": true,
-  "description_bgcolor_flag": false,
   "title_show": true,
   "title_bgcolor_flag": false,
+  "title_description_position": "top",
+  "description_show": true,
+  "description_bgcolor_flag": false,
   "navigation_show": 1,
-  "navigation_buttons_show": 2,
+  "navigation_buttons_show": 0,
   "buttons_theme": "none",
   "buttons_left_right_position": 1,
-  "title_description_position": "top",
+  "description_color": "000",
   "title_description_alignment": "left",
   "navigation_buttons_custom_width": 30,
   "navigation_buttons_custom_height": 30
