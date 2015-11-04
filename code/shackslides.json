@@ -11,5 +11,7 @@
   "description_color": "000",
   "title_description_alignment": "left",
   "navigation_buttons_custom_width": 30,
+  "navigation_effect_theme": "none",
+  "buttons_theme": "none",
   "navigation_buttons_custom_height": 30
 }
