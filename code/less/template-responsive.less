@@ -47,6 +47,7 @@
 			width: 1130px;
 		}
 	}
+
 }
 
 @media(min-width: 940px) {
@@ -460,6 +461,20 @@
 				}
 			}
 		}
+
+		.logo-menu {
+			.navbar {
+				.navbar-inner {
+					.btn-navbar {
+						background-color: transparent;
+						background-image: none;
+						filter: none;
+						padding-left: 0;
+						padding-right: 0;
+					}
+				}
+			}
+		}
 	}
 
 	.navbar-inverse .nav-collapse .nav>li>a:hover,
@@ -615,16 +630,12 @@
 			.navbar{
 				.navbar-inner{
 					.btn-navbar {
-						background-color: transparent;
-						background-image: none;
-						filter: none;
 						margin-bottom: 10px;
 						margin-top: 10px;
-						padding-left: 0;
-						padding-right: 0;
 					}
 				}
 			}
+
 			.logo-menu-inner{
 				margin-left: 20px !important;
 				margin-right: 20px;
