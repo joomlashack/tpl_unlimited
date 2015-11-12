@@ -1,17 +1,26 @@
 {
-  "title_show": true,
+
+  "title_description_alignment": "left",
+
+  "description_bgcolor_flag": false,
+  "description_color": "000",
+  "description_height": "140",
+  "description_show": true,
+
   "title_bgcolor_flag": false,
   "title_description_position": "top",
-  "description_show": true,
-  "description_bgcolor_flag": false,
-  "navigation_show": 1,
-  "navigation_buttons_show": 0,
-  "buttons_theme": "none",
-  "buttons_left_right_position": 1,
-  "description_color": "000",
-  "title_description_alignment": "left",
+  "title_height": "60",
+  "title_show": true,
+
+  "navigation_buttons_custom_height": 30,
   "navigation_buttons_custom_width": 30,
+  "navigation_buttons_show": 0,
+
   "navigation_effect_theme": "none",
+  "navigation_show": 1,
+
   "buttons_theme": "none",
-  "navigation_buttons_custom_height": 30
+  "buttons_theme": "none",
+  "buttons_left_right_position": 1
+
 }
