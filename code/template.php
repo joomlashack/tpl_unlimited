@@ -192,8 +192,6 @@ defined('_JEXEC') or die('Restricted access');
         </script>
         <?php if($this->countModules('grid-top')): ?>
         <script type='text/javascript' src='<?php echo JURI::root(true) ?>/templates/js_unlimited/js/fixedGridTop.js'></script>
-        <?php else: ?>
-        <script type='text/javascript' src='<?php echo JURI::root(true) ?>/templates/js_unlimited/js/sliderHeight.js'></script>
         <?php endif; ?>
         <?php endif; ?>
         <script type="text/javascript">
