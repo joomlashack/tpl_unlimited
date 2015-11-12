@@ -1126,6 +1126,10 @@ code{
 			}
 		}
 	}
+
+	.navbar-inner {
+		background-color: transparent;
+	}
 }
 
 .full-width{
@@ -1210,6 +1214,7 @@ code{
 .navbar-inner{
 	.border-radius(0);
 	.box-shadow(none);
+	background-image: none;
 }
 
 .navbar-transparent .navbar-inner{
@@ -1233,6 +1238,8 @@ code{
 	.nav{
 		li {
 			> a{
+				text-shadow: none;
+
 				&.item-desc{
 					.border-radius(5px);
 					background-color: @color_one;
@@ -1240,6 +1247,7 @@ code{
 					padding: 5px 20px !important;
 					margin-bottom: 5px;
 					margin-top: 5px;
+
 					&:hover,
 					&:focus{
 						background-color: darken(@color_one, 10%) !important;
@@ -1389,8 +1397,10 @@ code{
 	margin-bottom: 0;
 
 	.navbar-inner{
+		border: 0;
 		border-bottom: 1px solid @textColor;
 		border-top: 1px solid @textColor;
+
 		.nav{
 			border: 0;
 			display: table;
