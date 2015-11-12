@@ -1126,6 +1126,10 @@ code{
 			}
 		}
 	}
+
+	.navbar-inner {
+		background-color: transparent;
+	}
 }
 
 .full-width{
@@ -1210,6 +1214,7 @@ code{
 .navbar-inner{
 	.border-radius(0);
 	.box-shadow(none);
+	background-image: none;
 }
 
 .navbar-transparent .navbar-inner{
@@ -1233,6 +1238,8 @@ code{
 	.nav{
 		li {
 			> a{
+				text-shadow: none;
+
 				&.item-desc{
 					.border-radius(5px);
 					background-color: @color_one;
@@ -1240,6 +1247,7 @@ code{
 					padding: 5px 20px !important;
 					margin-bottom: 5px;
 					margin-top: 5px;
+
 					&:hover,
 					&:focus{
 						background-color: darken(@color_one, 10%) !important;
@@ -1389,8 +1397,10 @@ code{
 	margin-bottom: 0;
 
 	.navbar-inner{
+		border: 0;
 		border-bottom: 1px solid @textColor;
 		border-top: 1px solid @textColor;
+
 		.nav{
 			border: 0;
 			display: table;
@@ -2380,73 +2390,10 @@ div.slideTitle{
 
 #slider-position .jss-slider.jss-slider-template-design {
 	.owl-carousel {
-		.jss-image-container.jss-descpos-bottom .jss-image .jss-title-description.jss-alignment-left,
-		.jss-image-container.jss-descpos-top .jss-image .jss-title-description.jss-alignment-left {
-			.center-block();
-			right: 0;
-		}
-
-		.jss-image-container.jss-descpos-bottom .jss-image .jss-title-description.jss-alignment-right,
-		.jss-image-container.jss-descpos-top .jss-image .jss-title-description.jss-alignment-right {
-			.center-block();
-			right: 0;
-		}
-
-		.jss-image-container.jss-descpos-top .jss-image .jss-title-description {
-			top: 150px;
-		}
-
-		.jss-image .jss-title {
-			height: auto;
-		}
-
 		.jss-title-description {
-			.center-block();
 			z-index: 26;
 
-			&.jss-alignment-left {
-				.jss-title,
-				.jss-description {
-					float: left;
-					padding-left: 171px;
-					width: 100%;
-				}
-			}
-
-			&.jss-alignment-right {
-				.jss-title,
-				.jss-description {
-					float: right;
-					padding-right: 171px;
-					width: 100%;
-				}
-			}
-
-			&.jss-alignment-center {
-				.jss-title,
-				.jss-description {
-					.center-block();
-				}
-			}
-
-			.jss-title {
-				.box-sizing(box-sizing);
-				max-width: 70%;
-				padding-top: 80px;
-
-				h3{
-					font-size: 33px;
-				}
-			}
-
 			.jss-description {
-				.box-sizing(box-sizing);
-				display: block;
-				font-size: @baseFontSize + 10;
-				line-height: @baseFontSize + 10;
-				max-width: 70%;
-				padding-left: 171px;
-
 				.btn {
 					border-color: @white;
 					color: @white;
@@ -2496,8 +2443,10 @@ div.slideTitle{
 	}
 }
 
-#container-unlimited > .core(@gridColumnWidth, @gridGutterWidth);
-
-
+.jss-slider .owl-carousel .jss-image .jss-image-int {
+	background-position: center center !important;
+	background-repeat: no-repeat !important;
+	background-size: cover !important;
+}
 
 
