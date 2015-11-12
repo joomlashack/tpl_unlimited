@@ -224,7 +224,7 @@
 			}
 			.nav{
 				.box-sizing(border-box);
-				background-color: @dropdownBackground;
+				background-color: fade(@bodyBackground, 90%);
 				float: none;
 				padding: 0 10px 10px;
 				width: 100%;
@@ -390,6 +390,10 @@
 			margin-left: 0;
 			margin-right: 0;
 		}
+
+		.btn-navbar {
+			margin-right: 20px;
+		}
 	}
 	#nav-toolbar{
 		width: auto;
@@ -464,6 +468,10 @@
         margin-right: -20px;
 
 		.logo-menu{
+			&.absolute {
+				position: static;
+			}
+
 			#logo, #menu{
 				float: left;
 			}
@@ -500,6 +508,7 @@
 				margin-right: 20px;
 				position: relative;
 				width: auto;
+				z-index: 2;
 			}
 			&.container-fluid{
 				.logo-menu-inner{
@@ -508,17 +517,12 @@
 				}
 			}
 		}
-
-        &.logo-menu-absolute {
-        	.logo-menu {
-				.logo-menu-inner{
-					left: 10%;
-					width: 80%;
-				}
-	        }
-
-        }
     }
+
+    .wrappToolbar~.js-slider {
+    	margin-top: 0;
+    }
+
    	.logo-menu{
 		&.container{
 			width: auto;
