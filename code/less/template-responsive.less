@@ -229,11 +229,11 @@
 				padding: 0 10px 10px;
 				width: 100%;
 				>li{
-					>a{
-						padding-left: 0;
-						padding-right: 0;
+					>a {
+						padding: 10px 0;
 					}
-					> .dropdown-menu{
+
+					> .dropdown-menu {
 						margin: 0;
 					}
 				}
@@ -268,19 +268,16 @@
 			}
 		}
 	}
-	.navbar-inverse .nav-collapse .nav>li>a,
-	.navbar-inverse .nav-collapse .dropdown-menu a{
+
+	.navbar-inverse .nav-collapse .nav>li>a {
 		padding-left: 10px;
 		padding-right: 10px;
 	}
+
 	#toolbar {
 		.navbar .nav>li{
 			margin-left: 0;
 			margin-right: 0;
-			a{
-				padding-left: 10px;
-				padding-right: 10px;
-			}
 		}
 
 		.navbar-fixed-top{
@@ -374,7 +371,129 @@
 		padding-left: 0;
 	}
 
+	.nav-collapse .nav {
+		> li {
+			> a {
+				&:hover, &:focus{
+					color: @linkColor;
+				}
+			}
+
+			> .dropdown-toggle {
+				&:hover, &:focus{
+					.caret {
+						border-top-color: @linkColor;
+					}
+				}
+			}
+
+			&.active {
+				> a {
+					color: @linkColor;
+
+					&:hover, &:focus{
+						color: @linkColor;
+					}
+				}
+
+				> .dropdown-toggle {
+					.caret {
+						border-top-color: @linkColor;
+					}
+
+					&:hover, &:focus{
+						.caret {
+							border-top-color: @linkColor;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	.nav-collapse .nav>li>a:hover,
+	.nav-collapse .nav>li>a:focus,
+	.nav-collapse .dropdown-menu a:hover,
+	.nav-collapse .dropdown-menu a:focus {
+		background-color: transparent;
+	}
+
+	#header {
+		&.headerBg {
+			.navbar .nav {
+				> li {
+					> a {
+						&:hover, &:focus{
+							color: @linkColor;
+						}
+					}
+
+					> .dropdown-toggle {
+						&:hover, &:focus{
+							.caret {
+								border-top-color: @linkColor;
+							}
+						}
+					}
+
+					&.active {
+						> a {
+							color: @linkColor;
+
+							&:hover, &:focus{
+								color: @linkColor;
+							}
+						}
+
+						> .dropdown-toggle {
+							.caret {
+								border-top-color: @linkColor;
+							}
+
+							&:hover, &:focus{
+								.caret {
+									border-top-color: @linkColor;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+	.navbar-inverse .nav-collapse .nav>li>a:hover,
+	.navbar-inverse .nav-collapse .nav>li>a:focus,
+	.navbar-inverse .nav-collapse .dropdown-menu a:hover,
+	.navbar-inverse .nav-collapse .dropdown-menu a:focus {
+		background-color: transparent;
+		color: @linkColor;
+	}
+
+	.navbar-inverse .nav li.dropdown .dropdown-menu li>a,
+	.navbar-inverse .navbar-inner li.dropdown .dropdown-menu li>a,
+	.navbar-inverse .nav .navbar-inner li.dropdown .dropdown-menu li>a,
+	.navbar-inverse .navbar .nav li.dropdown .dropdown-menu li>a,
+	.navbar-inverse .navbar .nav .navbar-inner li.dropdown .dropdown-menu li>a {
+		&:hover, &:focus {
+			color: @linkColor;
+		}
+	}
+
+	.navbar-inverse {
+		.dropdown-submenu>a {
+			&:after {
+				border-left-color: @white;
+			}
+
+			&:hover, &:focus {
+				border-left-color: @linkColor;
+			}
+		}
+	}
+
 }
+
 @media (max-width: 767px) {
 
 	#toolbar{
