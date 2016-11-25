@@ -151,10 +151,6 @@ code{
 			&.item-desc{
 				margin-bottom: 11px;
 				margin-top: 11px;
-				&:hover,
-				&:focus{
-					text-decoration: none;
-				}
 			}
 		}
 	}
@@ -175,10 +171,6 @@ code{
 			&:hover,
 			&:focus{
 				background-color: transparent;
-				text-decoration: underline;
-				[class^="icon-"],[class*=" icon-"]{
-					text-decoration: underline;
-				}
 			}
 		}
 		&.dropdown{
@@ -212,11 +204,6 @@ code{
 					position: absolute;
 					width: 100%;
 				}
-
-				&:hover,
-				&:focus{
-					text-decoration: none;
-				}
 			}
 		}
 	}
@@ -239,7 +226,6 @@ code{
 			&:focus{
 				background-color: transparent;
 				border: 0;
-				text-decoration: none;
 			}
 		}
 	}
@@ -298,7 +284,6 @@ code{
 					&:focus{
 						background-color: transparent;
 						border: 0;
-						text-decoration: none;
 					}
 				}
 			}
@@ -319,7 +304,6 @@ code{
 					&:focus{
 						background-color: transparent;
 						border: 0;
-						text-decoration: none;
 					}
 				}
 			}
@@ -828,8 +812,6 @@ code{
 
 .container-padding{
 	.box-sizing(border-box);
-	padding-left: 20px;
-	padding-right: 20px;
 	border-bottom: 1px solid @color_three;
 	border-top: 1px solid @color_three;
 
@@ -844,8 +826,9 @@ code{
 	> div {
 		margin-left: 0;
 		> [class*="span"]{
-			padding-bottom: 10px;
-			padding-top: 10px;
+			.box-sizing(border-box);
+			padding: 1rem;
+
 			> h3{
 				margin-top: 0;
 			}
@@ -858,8 +841,8 @@ code{
 		}
 	}
 	[class*="newsflash-horiz"]{
-		margin-bottom: -10px !important;
-		margin-top: -10px;
+		margin-bottom: -1rem !important;
+		margin-top: -1rem;
 	}
 }
 
@@ -879,14 +862,7 @@ code{
 		margin-left: 0;
 		> [class*="span"]{
 			.box-sizing(border-box);
-			padding: 10px;
-
-			&.first{
-				padding-left: 20px;
-			}
-			&.last{
-				padding-right: 20px;
-			}
+			padding: 1rem;
 
 			> h3{
 				margin-top: 0;
@@ -918,13 +894,12 @@ code{
 		.flexbox-content();
 		border-bottom: 1px solid @color_three;
 		border-top: 1px solid @color_three;
-		padding-left: 10px;
-		padding-right: 10px;
 		margin-left: 0;
 
 		> [class*="span"]{
 			border-left: 1px solid @color_three;
-			padding: 10px;
+			padding: 1rem;
+
 			&.no-padding{
 				padding: 0;
 			}
@@ -1138,24 +1113,11 @@ code{
 	.unlimited-grid;
 	.center-block();
 
-	.logo-menu-inner{
-		.box-sizing(border-box);
-		border: 1px solid @navbarBorder;
-		margin-bottom: 20px;
-		margin-left: 0 !important;
-		margin-top: 20px;
-		padding: 0 10px;
-		> [class*="span"]{
-			.box-sizing(border-box);
-		}
-	}
-	&.container{
-		width: 900px;
-	}
 	&.container-fluid{
 		margin-left: 20px;
 		margin-right: 20px;
 	}
+
 	.navbar-inner{
 		border: 0;
 		min-height: 20px;
@@ -1405,12 +1367,6 @@ code{
 				>a{
 					padding-left: 3em;
 					padding-right: 3em;
-					&.item-desc{
-						&:hover,
-						&:focus{
-							text-decoration: none;
-						}
-					}
 				}
 			}
 		}
@@ -1739,7 +1695,6 @@ div {
 							&:hover,
 							&:focus{
 								color: @color_one;
-								text-decoration: none;
 							}
 							&:after{
 								content: "\f105";
@@ -1791,14 +1746,14 @@ div {
 .category-description{
 	float:left;
 }
-.category-title{
-	a{
-		&:hover,
-		&:focus{
-			text-decoration: none;
-		}
+
+a{
+	&:hover,
+	&:focus{
+		text-decoration: none;
 	}
 }
+
 .category-title,
 .category-description{
 	a{
@@ -1844,10 +1799,6 @@ div {
 	.newsflash-title {
 		a{
 			color: @color_four;
-
-			&:hover{
-				text-decoration: none;
-			}
 		}
 	}
 }
@@ -2216,7 +2167,6 @@ div {
 	&:hover,
 	&:focus{
 		cursor: pointer;
-		text-decoration: none;
 	}
 }
 
