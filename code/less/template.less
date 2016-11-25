@@ -1195,6 +1195,7 @@ code{
 	.nav{
 		li {
 			> a{
+				font-size: 1.2rem;
 				text-shadow: none;
 
 				&.item-desc{
@@ -1218,7 +1219,6 @@ code{
 
 			&.dropdown {
 				.dropdown-menu {
-					border: 1px solid @color_four;
 
 					&:before,
 					&:after{
@@ -1280,53 +1280,11 @@ code{
 	}
 }
 
-.navbar-inverse {
-	.nav {
-		li {
-			&.dropdown {
-				.dropdown-menu {
-					border: 1px solid @color_four;
-
-					&:before,
-					&:after{
-						display: none;
-					}
-					> li {
-						a{
-							&:hover,
-							&:focus{
-								background-image: none;
-								background-color: transparent;
-								filter: none;
-								.caret{
-									border-bottom-color: transparent;
-									border-top-color: transparent;
-								}
-							}
-						}
-						&.active{
-							a{
-								background-color: transparent;
-							}
-						}
-						.sub-menu{
-							&:before,
-							&:after{
-								display: none;
-							}
-						}
-					}
-				}
-			}
-		}
-	}
-}
 
 .dropdown-menu {
 	.box-shadow(none);
 	.border-radius(0);
-	border: 1px solid @color_four;
-	border-top-width: 2px !important;
+	border: 0 !important;
 
 	&:before,
 	&:after{
@@ -1993,21 +1951,6 @@ a{
 }
 
 .is_internet.v_8{
-	.navbar-inverse{
-		.navbar-inner{
-			filter :
-			progid:DXImageTransform.Microsoft.gradient(startColorstr='#b3000000',
-			endColorstr='#b3000000', GradientType=0)
-		}
-	}
-	.wrappToolbar .navbar-inner{
-		filter: none;
-		.toolbar-container{
-			filter :
-			progid:DXImageTransform.Microsoft.gradient(startColorstr='#b3000000',
-			endColorstr='#b3000000', GradientType=0)
-		}
-	}
 	#footer{
 		.footer-content{
 			.nav{
