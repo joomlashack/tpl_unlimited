@@ -1010,44 +1010,6 @@ code{
 	margin-bottom: 0;
  	z-index: 1;
 
-	&.headerBg{
-		h1,h2,h3,h4,h5,h6{
-			color: @white;
-		}
-		.navbar .nav{
-			>li{
-				>a{
-					&:focus, &:hover{
-						color: @white;
-
-						[class^="icon-"],
-						[class*=" icon-"]{
-							color: @white;
-						}
-						.caret{
-							border-top-color: @white;
-						}
-					}
-				}
-
-				&.active{
-					> a{
-						color: @white;
-
-						[class^="icon-"],
-						[class*=" icon-"]{
-							color: @white;
-						}
-						.caret{
-							border-top-color: @white;
-						}
-					}
-				}
-
-			}
-		}
-	}
-
 	+ .container-flexbox > .row,
 	+ .container-flexbox > .row-fluid,
 	+ .container-padding,
@@ -1069,7 +1031,7 @@ code{
             top: 0;
         }
         .header-filter{
-			height: 259px;
+						height: 259px;
             z-index: 4;
         }
         .header-bg{
@@ -1080,10 +1042,6 @@ code{
             z-index: 3;
         }
 
-	}
-
-	.navbar-inner {
-		background-color: transparent;
 	}
 }
 
@@ -1174,6 +1132,17 @@ code{
 				}
 			}
 		}
+	}
+}
+
+.navbar-center {
+	.nav-collapse {
+		text-align: center;
+	}
+
+	.nav {
+		display: inline-block;
+		float: none;
 	}
 }
 
@@ -2240,5 +2209,4 @@ div.slideTitle{
 	background-repeat: no-repeat !important;
 	background-size: cover !important;
 }
-
 

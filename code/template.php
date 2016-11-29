@@ -52,17 +52,17 @@ defined('_JEXEC') or die('Restricted access');
             <?php if ($this->countModules('toolbar')) : ?>
             <div class="wrappToolbar<?php echo ' border-toolbar-' . $wrightContainerClass .
             ($toolbarDisplayed ? '' : ' collapsedToolbar'); ?>">
-                <w:nav containerClass="toolbar-container<?php echo ($toolbarDisplayed ? '' : ' collapsedToolbarInner'); ?>" rowClass="<?php echo $wrightGridMode;?>" wrapClass="navbar-fixed-top navbar-inverse" type="toolbar" name="toolbar" />
+                <w:nav containerClass="toolbar-container<?php echo ($toolbarDisplayed ? '' : ' collapsedToolbarInner'); ?>" rowClass="<?php echo $wrightGridMode;?>" wrapClass="navbar-fixed-top navbar-inverse navbar-transparent" type="toolbar" name="toolbar" />
             </div>
             <?php endif; ?>
             <div class="<?php echo $wrightContainerClass ?> logo-menu <?php echo ($this->countModules('slider')) ? ' absolute absolute-left absolute-right' : ' relative' ; ?> z3">
-                <div class="<?php echo $wrightGridMode; ?> logo-menu-inner m-b-1">
+                <div class="<?php echo $wrightGridMode; ?> logo-menu-inner m-b-2">
                     <w:logo name="top" />
                 </div>
                 <?php
                     if ($this->countModules('menu')) :
                 ?>
-                <w:nav containerClass="" rowClass="<?php echo $wrightGridMode;?>" wrapClass="navbar-inverse" type="menu" name="menu" />
+                <w:nav containerClass="" rowClass="<?php echo $wrightGridMode;?>" wrapClass="navbar-transparent navbar-center" type="menu" name="menu" />
                 <?php
                     endif;
                 ?>
