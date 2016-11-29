@@ -1082,21 +1082,6 @@ code{
 
 	}
 
-	.moduletable,
-	.module{
-		&:last-child{
-			margin-bottom: 0;
-		}
-	}
-	#featured{
-		.moduletable,
-		.module{
-			&:last-child{
-				margin-bottom: 20px;
-			}
-		}
-	}
-
 	.navbar-inner {
 		background-color: transparent;
 	}
@@ -1109,61 +1094,12 @@ code{
 	height: 100%;
 }
 
-.logo-menu{
-	.unlimited-grid;
-	.center-block();
-
-	&.container-fluid{
-		margin-left: 20px;
-		margin-right: 20px;
-	}
-
-	.navbar-inner{
-		border: 0;
-		min-height: 20px;
-		padding: 0;
-	}
-
-	#logo{
-		margin-bottom: 15px;
-		margin-top: 15px;
-	}
-
-	#menu{
-		margin-bottom: 0;
-	}
-
-	.navbar {
-		margin: 0;
-		.nav{
-			float: right;
-			left: auto;
-			margin: 0;
-
-			> li{
-				> a{
-					padding-bottom: 18px;
-					padding-top: 18px;
-					&.item-desc{
-						margin: 13px 15px;
-					}
-				}
-				&:last-child{
-					> a{
-						padding-right: 0;
-						&.item-desc{
-							margin-right: 0;
-						}
-					}
-				}
-			}
-		}
-	}
-}
-
 .header-content{
 	.box-sizing(border-box);
-	padding: 0 20px;
+}
+
+#logo.span12 {
+	text-align: center;
 }
 
 // ---------------------------------------------
@@ -1171,7 +1107,6 @@ code{
 .navbar-inner{
 	.border-radius(0);
 	.box-shadow(none);
-	background-image: none;
 }
 
 .navbar-transparent .navbar-inner{
@@ -1180,15 +1115,6 @@ code{
 
 .navbar-fixed-top .navbar-inner, .navbar-static-top .navbar-inner{
 	.box-shadow(none);
-}
-
-.container-fluid{
-	.wrapp-logo-menu{
-		#logo{
-			margin-bottom: 13px;
-			margin-top: 13px;
-		}
-	}
 }
 
 .navbar {
@@ -1992,30 +1918,6 @@ a{
 			}
 		}
 	}
-	.logo-menu{
-		.navbar {
-			.nav{
-				> li{
-					> a{
-						padding-left: 30px;
-						padding-right: 0;
-						&.item-desc{
-							margin-left: 30px;
-							margin-right: 0;
-						}
-					}
-					&:first-child{
-						> a{
-							padding-left: 0;
-							&.item-desc{
-								margin-left: 0;
-							}
-						}
-					}
-				}
-			}
-		}
-	}
 	div div.lifestream {
 		margin: 0;
 		ul.stream li{
@@ -2121,12 +2023,6 @@ a{
 			    overflow: hidden;
 			}
 		}
-	}
-	.navbar-inner{
-		background-color: transparent;
-		background-image: none;
-		border: 0;
-		filter: none;
 	}
 }
 
