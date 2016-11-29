@@ -1101,23 +1101,15 @@ code{
 				}
 			}
 
-			&.dropdown {
-				.dropdown-menu {
+			.dropdown-menu {
+				&:before,
+				&:after{
+					display: none;
+				}
 
-					&:before,
-					&:after{
-						display: none;
-					}
-
-					> li {
-						a{
-							&:hover,
-							&:focus{
-								background-image: none;
-								background-color: transparent;
-								filter: none;
-							}
-						}
+				> li {
+					a{
+						font-size: 1rem;
 					}
 				}
 			}
@@ -1179,7 +1171,6 @@ code{
 .dropdown-menu {
 	.box-shadow(none);
 	.border-radius(0);
-	border: 0 !important;
 
 	&:before,
 	&:after{
@@ -1188,13 +1179,7 @@ code{
 
 	> li{
 		a{
-			border-top: 1px solid @color_four;
-		}
-
-		&:first-child{
-			a{
-				border-top: 0;
-			}
+			font-size: 1rem;
 		}
 	}
 }
