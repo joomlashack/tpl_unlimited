@@ -56,10 +56,17 @@ defined('_JEXEC') or die('Restricted access');
             </div>
             <?php endif; ?>
             <div class="<?php echo $wrightContainerClass ?> logo-menu <?php echo ($this->countModules('slider')) ? ' absolute absolute-left absolute-right' : ' relative' ; ?> z3">
-                <div class="<?php echo $wrightGridMode; ?> logo-menu-inner">
-                    <w:logo name="menu" />
+                <div class="<?php echo $wrightGridMode; ?> logo-menu-inner m-b-1">
+                    <w:logo name="top" />
                 </div>
-                <div class="header-content">
+                <?php
+                    if ($this->countModules('menu')) :
+                ?>
+                <w:nav containerClass="" rowClass="<?php echo $wrightGridMode;?>" wrapClass="navbar-inverse" type="menu" name="menu" />
+                <?php
+                    endif;
+                ?>
+                <div class="header-content p-l-2 p-r-2">
                     <?php if ($this->countModules('featured')) : ?>
                     <div id="featured">
                         <w:module type="none" name="featured" />
