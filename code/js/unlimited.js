@@ -1,26 +1,14 @@
 jQuery(document).ready(function($) {
 
-	function slider_align(){
-		var toolbar = jQuery(".toolbar-container");
-		var toolbar_height = toolbar.height();
-		var menu = jQuery(".logo-menu");
-		var menu_height = menu.height();
+	var slider_container = jQuery('.jss-slider');
+	var slider_id = [];
 
-		if(toolbar_height == 0)
-			menu_height += 55;
+	slider_container.each(function() {
+		slider_id.push('#' + jQuery(this).attr('id'));
+	});
 
-		if(toolbar.length)
-			menu_height += toolbar_height;
-
-		jQuery('.slidermanDescriptionText').css('padding-top' , menu_height + 'px');
+	for (var i = 0; i < slider_id.length; i++) {
+		jQuery('#slider-position').find(slider_id[i] + ' .jss-image').css('height', '100vh');
 	}
-
-	jQuery(window).load(function(){
-		slider_align();
-	});
-
-	jQuery(window).resize(function(){
-		slider_align();
-	});
 
 });
