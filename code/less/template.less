@@ -2018,8 +2018,18 @@ a{
 	background-size: cover !important;
 }
 
+.bg-transform {
+	border-color: transparent @grayLighter transparent transparent;
+	border-style: solid solid solid dashed;
+	border-width: 250px 1170px 0px 0px;
+	height: 0;
+	top: -250px;
+	width: 0;
+	z-index: -1;
+}
+
 .bg-color-one {
-	background-color: @color_two;
+	background-color: @color_one;
 }
 
 .bg-color-two {
@@ -2036,6 +2046,10 @@ a{
 
 .bg-color-five {
 	background-color: @color_five;
+}
+
+.bg-color-gray {
+	background-color: @grayLighter;
 }
 
 .p-t-5 {
@@ -2068,4 +2082,8 @@ a{
 
 .p-r-6 {
 	padding-right: 6rem;
+}
+
+.overflow-hidden {
+	overflow: hidden;
 }
