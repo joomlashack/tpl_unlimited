@@ -32,7 +32,6 @@ defined('_JEXEC') or die('Restricted access');
         <?php endif; ?>
     </head>
     <body class="<?php echo $responsive . $blogClass ?>">
-
         <header id="header" class="<?php echo $headerBg?> js-header">
             <?php if($bg != -1 && !$this->countModules('slider')): ?>
             <div class="header-bg-content z1">
@@ -68,9 +67,7 @@ defined('_JEXEC') or die('Restricted access');
                 ?>
                 <div class="header-content p-l-2 p-r-2">
                     <?php if ($this->countModules('featured')) : ?>
-                    <div id="featured">
-                        <w:module type="none" name="featured" />
-                    </div>
+                    <w:module type="none" name="featured" />
                     <?php endif; ?>
                     <?php if ($showItemActive) : ?>
                     <h1><?php echo $menu_itemActive; ?></h1>
@@ -85,26 +82,22 @@ defined('_JEXEC') or die('Restricted access');
         </header>
 
         <?php if ($this->countModules('grid-top')) : ?>
-        <div id="grid-top"
-        class="<?php echo $wrightContainerClass ?> container-flexbox unlimited-grid">
-            <w:module type="<?php echo $wrightGridMode; ?>" name="grid-top" chrome="wrightflexgrid" />
+        <div class="p-t-6 p-b-6">
+          <div id="grid-top" class="<?php echo $wrightContainerClass ?> container-flexbox unlimited-grid">
+              <w:module type="<?php echo $wrightGridMode; ?>" name="grid-top" chrome="wrightflexgrid" />
+          </div>
         </div>
         <?php endif; ?>
 
         <?php if ($this->countModules('grid-top2')) : ?>
-        <div id="grid-top2"
-        class="<?php echo $wrightContainerClass ?> container-padding unlimited-grid">
-            <w:module type="<?php echo $wrightGridMode; ?>" name="grid-top2" chrome="wrightflexgrid" />
+        <div class="p-t-6 p-b-6 bg-color-two">
+          <div id="grid-top2" class="<?php echo $wrightContainerClass ?> container-padding unlimited-grid">
+              <w:module type="<?php echo $wrightGridMode; ?>" name="grid-top2" chrome="wrightflexgrid" />
+          </div>
         </div>
         <?php endif; ?>
 
-        <?php if ($this->countModules('breadcrumbs')) : ?>
-        <div id="breadcrumbs" class="<?php echo $wrightContainerClass ?>">
-            <w:module type="single" name="breadcrumbs" chrome="none" />
-        </div>
-        <?php endif; ?>
-
-        <div class="<?php echo $wrightContainerClass . $addBorder?> container-flexbox unlimited-grid main-wrapp">
+        <div class="<?php echo $wrightContainerClass . $addBorder?> container-flexbox unlimited-grid main-wrapp p-t-6 p-b-6">
             <div id="main-content" class="<?php echo $wrightGridMode; ?>">
                 <!-- sidebar1 -->
                 <aside id="sidebar1">
@@ -112,6 +105,11 @@ defined('_JEXEC') or die('Restricted access');
                 </aside>
                 <!-- main -->
                 <section id="main">
+                    <?php if ($this->countModules('breadcrumbs')) : ?>
+                    <div id="breadcrumbs" class="<?php echo $wrightContainerClass ?>">
+                        <w:module type="single" name="breadcrumbs" chrome="none" />
+                    </div>
+                    <?php endif; ?>
                     <?php if ($this->countModules('above-content')) : ?>
                     <!-- above-content -->
                     <div id="above-content">
@@ -134,18 +132,22 @@ defined('_JEXEC') or die('Restricted access');
         </div>
 
         <?php if ($this->countModules('grid-bottom')) : ?>
-        <div id="grid-bottom"
-        class="<?php echo $wrightContainerClass; ?> container-full unlimited-grid">
-            <w:module type="<?php echo $wrightGridMode; ?>" name="grid-bottom" chrome="wrightflexgrid" />
+        <div class="p-t-6 p-b-6 bg-color-four">
+          <div id="grid-bottom"
+          class="<?php echo $wrightContainerClass; ?> container-full unlimited-grid">
+              <w:module type="<?php echo $wrightGridMode; ?>" name="grid-bottom" chrome="wrightflexgrid" />
+          </div>
         </div>
         <?php endif; ?>
 
         <?php if ($this->countModules('grid-bottom2')) : ?>
-        <div id="grid-bottom2"
-        class="<?php echo $wrightContainerClass; ?> container-flexbox unlimited-grid">
-        	<w:module type="<?php echo $wrightGridMode; ?>" name="grid-bottom2" chrome="wrightflexgrid" />
-        </div>
-        <?php endif; ?>
+          <div class="p-t-6 p-b-6 bg-color-five">
+            <div id="grid-bottom2"
+            class="<?php echo $wrightContainerClass; ?> container-flexbox unlimited-grid">
+            	<w:module type="<?php echo $wrightGridMode; ?>" name="grid-bottom2" chrome="wrightflexgrid" />
+            </div>
+          </div>
+          <?php endif; ?>
 
         <div class="wrapper-footer">
             <footer id="footer" <?php if ($this->params->get('stickyFooter',1)) : ?>
@@ -187,16 +189,6 @@ defined('_JEXEC') or die('Restricted access');
         <?php endif; ?>
         <?php if($this->countModules('slider')): ?>
         <script type='text/javascript' src='<?php echo JURI::root(true) ?>/templates/js_unlimited/js/unlimited.js'></script>
-        <script type="text/javascript">
-            jQuery(document).ready(function($) {
-                jQuery(window).load(function(){
-                    var num = 12;
-                    for(var i = 1; i <= num; i++) {
-                          jQuery('.slidermanDescriptionCont').removeClass('span'+i).addClass('container');
-                    }
-                });
-            });
-        </script>
         <?php endif; ?>
         <script type="text/javascript">
             jQuery(document).ready(function($) {
