@@ -1562,7 +1562,7 @@ div {
 .category-title,
 .category-separator,
 .category-description{
-	float:left;
+	display: inline-block;
 }
 
 a{
@@ -1594,8 +1594,9 @@ a{
 	&[class*="categories-module"]{
 		.flexbox-content();
 		> [class*="span"]{
-			padding: 10px;
+			padding: 0 1rem;
 			border-left: 1px solid @color_three;
+
 			&:first-child{
 				border-left: 0;
 			}
