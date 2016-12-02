@@ -61,7 +61,7 @@ defined('_JEXEC') or die('Restricted access');
                 <?php
                     if ($this->countModules('menu')) :
                 ?>
-                <w:nav containerClass="" rowClass="<?php echo $wrightGridMode;?>" wrapClass="navbar-transparent navbar-center" type="menu" name="menu" />
+                <w:nav containerClass="" rowClass="<?php echo $wrightGridMode;?>" wrapClass="navbar-transparent navbar-center navbar-medium" type="menu" name="menu" />
                 <?php
                     endif;
                 ?>

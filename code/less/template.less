@@ -934,6 +934,13 @@ code{
 	}
 }
 
+.navbar-medium {
+	.nav > li > a {
+		font-size: 1.5rem;
+		line-height: 1.5rem;
+	}
+}
+
 // ---------------------------------------------
 
 .module_ms1,
@@ -1047,16 +1054,14 @@ code{
 	.nav{
 		li {
 			> a{
-				font-size: 1.2rem;
-				text-shadow: none;
 
 				&.item-desc{
 					.border-radius(5px);
 					background-color: @color_one;
 					color: @white !important;
-					padding: 5px 20px !important;
-					margin-bottom: 5px;
-					margin-top: 5px;
+					padding: 7px 20px !important;
+					margin-bottom: 4px;
+					margin-top: 4px;
 
 					&:hover,
 					&:focus{
@@ -1073,12 +1078,6 @@ code{
 				&:before,
 				&:after{
 					display: none;
-				}
-
-				> li {
-					a{
-						font-size: 1rem;
-					}
 				}
 			}
 		}
@@ -1957,27 +1956,16 @@ a{
 	margin-top: -40px;
 }
 
+.jss-image {
+	background-color: @color_one;
+	> div {
+		.opacity(95);
+	}
+}
+
 #slider-position .jss-slider.jss-slider-template-design {
-	.owl-carousel {
-		.jss-title-description {
-			z-index: 26;
-
-			.jss-description {
-				.btn {
-					border-color: @white;
-					color: @white;
-
-					&:hover, &:focus {
-						border-color: @color_one;
-					}
-				}
-			}
-
-			p {
-				margin-bottom: 10px;
-			}
-
-		}
+	.jss-navigation-dots {
+		padding-bottom: 2rem !important;
 	}
 
 	.jss-navigation .jss-navigation-dots .owl-dot {
@@ -1993,12 +1981,12 @@ a{
 				content: '';
 				background-color: @color_four;
 				border: 1px solid #000;
-				height: 8px;
+				height: 14px;
 				left: 11.5px;
-				top: 11.5px;
-				width: 8px;
+				width: 14px;
 			}
 		}
+
 		&.active {
 			> div {
 				&:before {
@@ -2010,6 +1998,10 @@ a{
 			}
 		}
 	}
+}
+
+.owl-dot > div:hover {
+	box-shadow: none !important; 
 }
 
 .jss-slider .owl-carousel .jss-image .jss-image-int {
