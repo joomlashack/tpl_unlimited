@@ -34,12 +34,13 @@
 @navbarInverseDropdownLinkBackgroundHover : @dropdownLinkBackgroundHover;
 @navbarInverseDropdownLinkBackgroundActive : @dropdownLinkBackgroundActive;
 
+// --------------------------------------------------
 
 @color_one : @orange;
 @color_two : #FEDACC;
 @color_three : #bbb;
 @color_four : @black;
-@color_five : fade(@white, 70%);
+@color_five : fade(@white, 90%);
 
 // Global values
 // --------------------------------------------------
@@ -71,7 +72,7 @@
 // Scaffolding
 // -------------------------
 @bodyBackground:        @white;
-@textColor:             @grayLight;
+@textColor:             @gray;
 
 
 // Links
@@ -158,13 +159,13 @@
 // Dropdowns
 // -------------------------
 @dropdownBackground:            @color_five;
-@dropdownBorder:                rgba(0,0,0,.2);
+@dropdownBorder:                transparent;
 @dropdownDividerTop:            #e5e5e5;
 @dropdownDividerBottom:         @white;
 
-@dropdownLinkColor:             @color_four;
-@dropdownLinkColorHover:        @linkColor;
-@dropdownLinkColorActive:       @linkColor;
+@dropdownLinkColor:             @gray;
+@dropdownLinkColorHover:        @color_four;
+@dropdownLinkColorActive:       @color_four;
 
 @dropdownLinkBackgroundActive:  transparent;
 @dropdownLinkBackgroundHover:   transparent;
@@ -221,12 +222,12 @@
 @navbarHeight:                    40px;
 @navbarBackgroundHighlight:       fade(@white, 90%);
 @navbarBackground:                fade(@white, 90%);
-@navbarBorder:                    @color_four;
+@navbarBorder:                    transparent;
 
-@navbarText:                      @color_four;
-@navbarLinkColor:                 @color_four;
-@navbarLinkColorHover:            @linkColor;
-@navbarLinkColorActive:           @linkColor;
+@navbarText:                      @gray;
+@navbarLinkColor:                 @gray;
+@navbarLinkColorHover:            @color_four;
+@navbarLinkColorActive:           @color_four;
 @navbarLinkBackgroundHover:       transparent;
 @navbarLinkBackgroundActive:      transparent;
 
@@ -235,7 +236,7 @@
 // Inverted navbar
 @navbarInverseBackground:                fade(@color_four, 70%);
 @navbarInverseBackgroundHighlight:       fade(@color_four, 70%);
-@navbarInverseBorder:                    fade(@color_four, 70%);
+@navbarInverseBorder:                    transparent;
 
 @navbarInverseText:                      #EEEBE2;
 @navbarInverseLinkColor:                 #EEEBE2;
@@ -261,7 +262,7 @@
 
 // Hero unit
 // -------------------------
-@heroUnitBackground:              @color_two;
+@heroUnitBackground:              @color_one;
 @heroUnitHeadingColor:            inherit;
 @heroUnitLeadColor:               inherit;
 
@@ -337,4 +338,3 @@
 // 768px-979px
 @fluidGridColumnWidth768:      percentage(@gridColumnWidth768/@gridRowWidth768);
 @fluidGridGutterWidth768:      percentage(@gridGutterWidth768/@gridRowWidth768);
-
