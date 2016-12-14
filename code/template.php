@@ -106,7 +106,7 @@ defined('_JEXEC') or die('Restricted access');
                 <!-- main -->
                 <section id="main">
                     <?php if ($this->countModules('breadcrumbs')) : ?>
-                    <div id="breadcrumbs" class="<?php echo $wrightContainerClass ?>">
+                    <div id="breadcrumbs" class="<?php echo $wrightContainerClass ?> p-l-1 p-r-1">
                         <w:module type="single" name="breadcrumbs" chrome="none" />
                     </div>
                     <?php endif; ?>
