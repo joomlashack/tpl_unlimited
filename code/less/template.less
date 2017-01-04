@@ -139,8 +139,6 @@ code{
 
 #bottom-menu .nav,
 .nav.nav-tabs{
-	border-bottom: 1px solid @textColor;
-	border-top: 1px solid @textColor;
 
 	dt{
 		span{
@@ -803,6 +801,17 @@ code{
 	}
 }
 
+#menu  {
+	.navbar {
+		.m-0;
+	}
+
+	.navbar-inner {
+		padding-left: 0;
+		padding-right: 0;
+	}
+}
+
 // ---------------------------------------------
 
 .module_ms1,
@@ -916,6 +925,8 @@ code{
 	.nav{
 		li {
 			> a{
+				text-transform: uppercase;
+				
 				&.btn{
 					color: @btnBorder;
 					margin: 0;
@@ -1666,7 +1677,7 @@ a{
 		}
 	}
 
-	.wrappToolbar,
+	.wrapp-toolbar,
 	.logo-menu{
 		.navbar{
 			.nav  li.parent {
@@ -1742,62 +1753,6 @@ a{
 .z4 {
 	z-index: 1031;
 }
-
-// Toolbar Swich
-
-.fixed .container,.fixed .container-fluid{
-	position:relative
-}
-
-.toolbar-switch {
-    .transition(none 0s ease 0s);
-	color: @black;
-    box-sizing: border-box;
-    margin-top: 10px;
-    overflow: hidden;
-    position: absolute;
-    right: 20px;
-    top: 0;
-    z-index: 1031;
-	[class*="icon-"] {
-		font-size: 40px;
-		&:before{
-			line-height: @baseLineHeight;
-			vertical-align: top;
-		}
-	}
-	.icon-angle-up{
-		color: @navbarInverseLinkColor;
-	}
-	&:hover,
-	&:focus{
-		cursor: pointer;
-	}
-}
-
-.wrappToolbar{
-	&.collapsedToolbar{
-		.navbar-inner{
-			.collapsedToolbarInner {
-			    height: 0;
-			    overflow: hidden;
-			}
-		}
-	}
-}
-
-.wrapper-toolbar{
-	.toolbar-container{
-		background-color: @navbarBackground;
-	}
-
-	.navbar-inverse{
-		.toolbar-container{
-			background-color: @navbarInverseBackground;
-		}
-	}
-}
-
 // -------------------------------------
 // Easy Social Icons
 
@@ -1825,10 +1780,6 @@ a{
 
 // -------------------------------------
 // Shackslides 3
-
-.wrappToolbar ~ .js-slider {
-	margin-top: -40px;
-}
 
 .jss-image {
 	background-color: @color_one;
