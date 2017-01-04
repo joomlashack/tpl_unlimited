@@ -39,29 +39,20 @@ defined('_JEXEC') or die('Restricted access');
                 <div class="full-width full-height header-bg"></div>
             </div>
             <?php endif; ?>
-            <?php if (!$toolbarDisplayed) : ?>
-            <div class="fixed fixed-top full-width z4">
-                <div class="<?php echo $wrightContainerClass ?> visible-desktop">
-                    <a class="toolbar-switch" >
-                        <i class="icon-angle-down"></i>
-                    </a>
-                </div>
-            </div>
-            <?php endif; ?>
             <?php if ($this->countModules('toolbar')) : ?>
-            <div class="wrappToolbar<?php echo ' border-toolbar-' . $wrightContainerClass .
+            <div class="wrapp-toolbar<?php echo ' border-toolbar-' . $wrightContainerClass .
             ($toolbarDisplayed ? '' : ' collapsedToolbar'); ?>">
-                <w:nav containerClass="toolbar-container<?php echo ($toolbarDisplayed ? '' : ' collapsedToolbarInner'); ?>" rowClass="<?php echo $wrightGridMode;?>" wrapClass="navbar-fixed-top navbar-inverse navbar-transparent" type="toolbar" name="toolbar" />
+                <w:nav containerClass="toolbar-container" rowClass="<?php echo $wrightGridMode;?>" wrapClass="navbar-fixed-top navbar-inverse" type="toolbar" name="toolbar" />
             </div>
             <?php endif; ?>
-            <div class="<?php echo $wrightContainerClass ?> logo-menu <?php echo ($this->countModules('slider')) ? ' absolute absolute-left absolute-right' : ' relative' ; ?> z3">
-                <div class="<?php echo $wrightGridMode; ?> logo-menu-inner m-b-2 p-t-1">
-                    <w:logo name="top" />
+            <div class="<?php echo $wrightContainerClass ?> wrapp-logo-menu">
+                <div class="<?php echo $wrightGridMode; ?> p-b-2 p-t-2 flex">
+                    <w:logo name="menu" />
                 </div>
                 <?php
-                    if ($this->countModules('menu')) :
+                    if ($this->countModules('top')) :
                 ?>
-                <w:nav containerClass="" rowClass="<?php echo $wrightGridMode;?>" wrapClass="navbar-transparent navbar-center navbar-medium" type="menu" name="menu" />
+                    <w:module type="<?php echo $wrightGridMode; ?>" name="top" chrome="wrightflexgrid" />
                 <?php
                     endif;
                 ?>
@@ -83,7 +74,7 @@ defined('_JEXEC') or die('Restricted access');
 
         <?php if ($this->countModules('grid-top')) : ?>
         <div class="p-t-6 p-b-6">
-          <div id="grid-top" class="<?php echo $wrightContainerClass ?> container-flexbox unlimited-grid">
+          <div id="grid-top" class="<?php echo $wrightContainerClass ?> container-flexbox m-b-0">
               <w:module type="<?php echo $wrightGridMode; ?>" name="grid-top" chrome="wrightflexgrid" />
           </div>
         </div>
@@ -91,14 +82,14 @@ defined('_JEXEC') or die('Restricted access');
 
         <?php if ($this->countModules('grid-top2')) : ?>
         <div class="p-t-6 p-b-6 bg-color-two">
-          <div id="grid-top2" class="<?php echo $wrightContainerClass ?> container-padding unlimited-grid">
+          <div id="grid-top2" class="<?php echo $wrightContainerClass ?> container-padding m-b-0">
               <w:module type="<?php echo $wrightGridMode; ?>" name="grid-top2" chrome="wrightflexgrid" />
           </div>
         </div>
         <?php endif; ?>
 
         <div class="<?php echo $wrightContainerClass . $addBorder?> container-flexbox unlimited-grid main-wrapp p-t-6 p-b-6">
-            <div id="main-content" class="<?php echo $wrightGridMode; ?>">
+            <div id="main-content" class="<?php echo $wrightGridMode; ?> m-b-0">
                 <!-- sidebar1 -->
                 <aside id="sidebar1">
                     <w:module name="sidebar1" />
@@ -134,7 +125,7 @@ defined('_JEXEC') or die('Restricted access');
         <?php if ($this->countModules('grid-bottom')) : ?>
         <div class="p-t-6 p-b-6">
           <div id="grid-bottom"
-          class="<?php echo $wrightContainerClass; ?> container-full unlimited-grid">
+          class="<?php echo $wrightContainerClass; ?> container-full m-b-0">
               <w:module type="<?php echo $wrightGridMode; ?>" name="grid-bottom" chrome="wrightflexgrid" />
           </div>
         </div>
@@ -144,7 +135,7 @@ defined('_JEXEC') or die('Restricted access');
           <div class="bg-transform absolute">
           </div>
           <div id="grid-bottom2"
-          class="<?php echo $wrightContainerClass; ?> container-flexbox unlimited-grid">
+          class="<?php echo $wrightContainerClass; ?> container-flexbox m-b-0">
           	<w:module type="<?php echo $wrightGridMode; ?>" name="grid-bottom2" chrome="wrightflexgrid" />
           </div>
         </div>
@@ -184,9 +175,7 @@ defined('_JEXEC') or die('Restricted access');
 
         }
         ?>
-        <?php if(!$toolbarDisplayed): ?>
-        <script type='text/javascript' src='<?php echo JURI::root(true) ?>/templates/js_unlimited/js/toolbarDisplayed.js'></script>
-        <?php endif; ?>
+
         <?php if ($this->countModules('grid-bottom2')) : ?>
         <script type='text/javascript' src='<?php echo JURI::root(true) ?>/templates/js_unlimited/js/triangle.js'></script>
         <?php endif; ?>
