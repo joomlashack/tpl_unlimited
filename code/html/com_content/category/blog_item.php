@@ -33,31 +33,22 @@ if ($this->item->wrightType == 'leading') {
 
 if ($this->item->wrightType == 'intro') {
 
-	$classFloat = 'float-' . getIntroImageFloat($this->item);
+	$classFloat = 'flex';
 
-	if ($classFloat == 'float-right') {
+	if (getIntroImageFloat($this->item) == 'right') {
 		$this->item->wrightElementsStructure =
 			Array(
 				"div." . $classFloat,
-					"div.visible-phone",
-						"div.article-image",
-							"image",
-						"/div",
-					"/div",
-
-					"div.article-content",
+					"div.span6",
 						"title",
 						"icons",
 						"article-info",
 						"content",
 					"/div",
 
-					"div.hidden-phone",
-						"div.article-image",
-							"image",
-						"/div",
-					"/div",
-				"/div"
+					"div.span6",
+						"image",
+					"/div"
 			);
 	}
 	else{
