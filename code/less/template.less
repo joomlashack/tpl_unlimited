@@ -1199,6 +1199,12 @@ div {
 	margin-top: 20px;
 }
 
+.finder {
+	* + * {
+		margin-left: 4px;
+	}
+}
+
 // ---------------------------------------------
 
 // Blogs
@@ -1211,7 +1217,6 @@ div {
 	> .row-fluid{
 		.box-sizing(border-box);
 		margin-left: 0;
-		border-bottom: 1px solid @color_three;
 
 		&:before,
 		&:after{
@@ -1220,7 +1225,6 @@ div {
 
 		> [class*="span"]{
 			.box-sizing(border-box);
-			border-left: 1px solid @color_three;
 			float: none;
 			padding: 1rem;
 
@@ -1245,19 +1249,19 @@ div {
 
 	> .category-desc{
 		.clearfix();
-		border-bottom: 1px solid @color_three;
 		padding-bottom: 15px;
 	}
 
 	.items-leading {
 		.box-sizing(border-box);
-		border-bottom: 1px solid @color_three;
-		padding-left: 20px;
-		padding-right: 20px;
 		[class*="leading-"]{
 			.clearfix();
-			padding-bottom: 15px;
-			padding-top: 15px;
+			padding-bottom: 3rem;
+			padding-top: 3rem;
+
+			&:first-child {
+				padding-top: 0;
+			}
 
 			> h2{
 				a{
@@ -1292,7 +1296,6 @@ div {
 	.items-row{
 		.flexbox-content();
 		.item{
-
 			&.span4,
 			&.span3,
 			&.span2{
@@ -1329,14 +1332,12 @@ div {
 
 	.items-row,
 	.items-leading {
-
 		&:last-child{
 			border-bottom: 0;
 		}
 
 		.item,
 		[class*="leading-"]{
-
 			> [class*="float-"]{
 				> .article-content{
 					> h2{
