@@ -128,10 +128,10 @@ defined('_JEXEC') or die('Restricted access');
           <footer id="footer" class="<?php if ($this->params->get('stickyFooter',1)) : ?>
             sticky<?php endif;?> bg-color-gray">
             <?php if ($this->countModules('bottom-menu')) : ?>
-              <w:nav containerClass="<?php echo $wrightContainerClass ?>" rowClass="<?php echo $wrightGridMode;?>" wrapClass="navbar-transparent navbar-center m-b-3" name="bottom-menu" type="menu" />
+              <w:nav containerClass="<?php echo $wrightContainerClass ?>" rowClass="<?php echo $wrightGridMode;?>" wrapClass="navbar-transparent navbar-center" name="bottom-menu" type="menu" />
             <?php endif; ?>
             <div class="<?php echo $wrightContainerClass ?>">
-              <div class="<?php echo $wrightGridMode . ' footer-content m-b-3' ?>">
+              <div class="<?php echo $wrightGridMode . ' footer-content p-t-3 p-b-3' ?>">
                 <?php if ($this->countModules('footer')) : ?>
                   <w:module type="none" name="footer" chrome="wrightflexgrid" />
                 <?php endif; ?>

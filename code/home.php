@@ -42,7 +42,7 @@ defined('_JEXEC') or die('Restricted access');
             </div>
             <?php endif; ?>
             <div class="<?php echo $wrightContainerClass ?> wrapp-logo-menu">
-                <div class="<?php echo $wrightGridMode; ?> p-b-2 p-t-2 flex">
+                <div class="<?php echo $wrightGridMode; ?> p-b-3 p-t-3 flex">
                     <w:logo name="menu" />
                 </div>
                 <?php
@@ -103,7 +103,7 @@ defined('_JEXEC') or die('Restricted access');
                 	<!-- component -->
                 	<w:content />
                     <?php if ($this->countModules('below-content')) : ?>
-                    <div id="below-content" class="m-t-2">
+                    <div id="below-content" class="m-t-3">
                         <w:module type="none" name="below-content" />
                     </div>
                     <?php endif; ?>
@@ -137,10 +137,10 @@ defined('_JEXEC') or die('Restricted access');
           <footer id="footer" class="<?php if ($this->params->get('stickyFooter',1)) : ?>
             sticky<?php endif;?> bg-color-gray">
             <?php if ($this->countModules('bottom-menu')) : ?>
-              <w:nav containerClass="<?php echo $wrightContainerClass ?>" rowClass="<?php echo $wrightGridMode;?>" wrapClass="navbar-transparent navbar-center m-b-2" name="bottom-menu" type="menu" />
+              <w:nav containerClass="<?php echo $wrightContainerClass ?>" rowClass="<?php echo $wrightGridMode;?>" wrapClass="navbar-transparent navbar-center" name="bottom-menu" type="menu" />
             <?php endif; ?>
             <div class="<?php echo $wrightContainerClass ?>">
-              <div class="<?php echo $wrightGridMode . ' footer-content' ?>">
+              <div class="<?php echo $wrightGridMode . ' footer-content p-t-3 p-b-3' ?>">
                 <?php if ($this->countModules('footer')) : ?>
                   <w:module type="none" name="footer" chrome="wrightflexgrid" />
                 <?php endif; ?>
