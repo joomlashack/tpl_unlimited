@@ -1,16 +1,23 @@
 jQuery(document).ready(function($) {
 
-	function triangle_width () {
+	function triangle_width ()
+	{
 		var triangle = jQuery('.bg-transform');
+		var isTriangle = triangle.length > 0;
 
-		triangle.each(function () {
-			jQuery(this).css('border-right-width', jQuery('body').width() + 'px');
-		});
+		if (isTriangle)
+		{
+			triangle.each(function ()
+			{
+				jQuery(this).css('border-right-width', jQuery('body').width() + 'px');
+			});
+		}
 	}
 
 	triangle_width();
 
-	jQuery(window).resize(function () {
+	jQuery(window).resize(function ()
+	{
 		triangle_width();
 	});
 });
