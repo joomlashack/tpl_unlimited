@@ -351,7 +351,6 @@ code{
 	ul.submenu {
 		> li {
 			> a {
-				border-top: 1px solid @color_four;
 				color: @color_four;
 
 				.caret {
@@ -364,12 +363,6 @@ code{
 					.caret {
 						border-top-color: @textColor;
 					}
-				}
-			}
-
-			&:first-child {
-				> a {
-					border-top: 0;
 				}
 			}
 
@@ -394,9 +387,7 @@ code{
 	}
 }
 
-
 // ---------------------------------------------
-
 
 .breadcrumb{
 	.border-radius(0);
@@ -893,6 +884,94 @@ code{
 
 // ---------------------------------------------
 
+.nav {
+	li {
+		> a {
+			&.btn {
+				color: @btnBorder;
+
+				&.dropdown-toggle{
+					.caret{
+						border-top-color: @color_four ;
+					}
+					&:hover,
+					&:focus{
+						.caret{
+							border-top-color: @white;
+						}
+					}
+				}
+
+				&:hover,
+				&:focus{
+					background-color: @color_one;
+					border-color: @color_one;
+					color: @white;
+				}
+
+				&.btn-primary{
+					&:hover,
+					&:focus{
+						background-color: @color_one;
+						border-color: @color_one;
+					}
+				}
+
+				&.btn-danger{
+					&:hover,
+					&:focus{
+						background-color: @btnDangerBackground;
+						border-color: @btnDangerBackground;
+					}
+				}
+				&.btn-info{
+					&:hover,
+					&:focus{
+						background-color: @btnInfoBackground;
+						border-color: @btnInfoBackground;
+					}
+				}
+				&.btn-success{
+					&:hover,
+					&:focus{
+						background-color: @btnSuccessBackground;
+						border-color: @btnSuccessBackground;
+					}
+				}
+				&.btn-warning{
+					&:hover,
+					&:focus{
+						background-color: @btnWarningBackground;
+						border-color: @btnWarningBackground;
+					}
+				}
+				&.btn-inverse{
+					&:hover,
+					&:focus{
+						background-color: @btnInverseBackground;
+						border-color: @btnInverseBackground;
+					}
+				}
+				&.btn-link{
+					border: 0;
+					&:hover,
+					&:focus{
+						background-color: transparent;
+						border: 0;
+						color: @color_four;
+					}
+				}
+			}
+		}
+	}
+}
+
+.nav-stacked, .nav-list {
+	.btn {
+		margin-top: 5px;
+	}
+}
+
 .navbar-inner{
 	.border-radius(0);
 	.box-shadow(none);
@@ -912,81 +991,8 @@ code{
 			> a{
 				text-transform: uppercase;
 
-				&.btn{
-					color: @btnBorder;
+				&.btn {
 					margin: 0 0 0 10px;
-
-					&.dropdown-toggle{
-						.caret{
-							border-top-color: @color_four ;
-						}
-						&:hover,
-						&:focus{
-							.caret{
-								border-top-color: @white;
-							}
-						}
-					}
-
-					&:hover,
-					&:focus{
-						background-color: @color_one;
-						border-color: @color_one;
-						color: @white;
-					}
-
-					&.btn-primary{
-						&:hover,
-						&:focus{
-							background-color: @color_one;
-							border-color: @color_one;
-						}
-					}
-
-					&.btn-danger{
-						&:hover,
-						&:focus{
-							background-color: @btnDangerBackground;
-							border-color: @btnDangerBackground;
-						}
-					}
-					&.btn-info{
-						&:hover,
-						&:focus{
-							background-color: @btnInfoBackground;
-							border-color: @btnInfoBackground;
-						}
-					}
-					&.btn-success{
-						&:hover,
-						&:focus{
-							background-color: @btnSuccessBackground;
-							border-color: @btnSuccessBackground;
-						}
-					}
-					&.btn-warning{
-						&:hover,
-						&:focus{
-							background-color: @btnWarningBackground;
-							border-color: @btnWarningBackground;
-						}
-					}
-					&.btn-inverse{
-						&:hover,
-						&:focus{
-							background-color: @btnInverseBackground;
-							border-color: @btnInverseBackground;
-						}
-					}
-					&.btn-link{
-						border: 0;
-						&:hover,
-						&:focus{
-							background-color: transparent;
-							border: 0;
-							color: @color_four;
-						}
-					}
 				}
 			}
 
@@ -1803,6 +1809,8 @@ a{
 			}
 		}
 
+		&:hover,
+		&:focus,
 		&.active {
 			> div {
 				&:before {
