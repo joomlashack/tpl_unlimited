@@ -33,24 +33,24 @@ defined('_JEXEC') or die('Restricted access');
                 <w:nav containerClass="toolbar-container" rowClass="<?php echo $wrightGridMode;?>" wrapClass="navbar-fixed-top navbar-inverse" type="toolbar" name="toolbar" />
             </div>
             <?php endif; ?>
-            <div class="container-flexbox <?php echo $wrightContainerClass ?> wrapp-logo-menu">
-                <div class="<?php echo $wrightGridMode; ?> p-b-3 p-t-3">
+            <div class="container-flexbox <?php echo $wrightContainerClass ?> wrapp-logo-menu p-t-3 p-b-3">
+                <div class="<?php echo $wrightGridMode; ?> p-t-3">
                     <w:logo name="menu" />
                 </div>
                 <?php
                     if ($this->countModules('top')) :
                 ?>
-                  <div class="container-flexbox p-b-3">
-                    <w:module type="<?php echo $wrightGridMode; ?>" name="top" chrome="wrightflexgrid" />
-                  </div>
+                <div class="container-flexbox p-t-3">
+                  <w:module type="<?php echo $wrightGridMode; ?>" name="top" chrome="wrightflexgrid" />
+                </div>
                 <?php
                     endif;
                 ?>
-                <div class="header-content p-l-1 p-r-1">
-                    <?php if ($this->countModules('featured')) : ?>
+                <?php if ($this->countModules('featured')) : ?>
+                <div class="header-content p-l-1 p-r-1 p-t-3">
                     <w:module type="none" name="featured" />
-                    <?php endif; ?>
                 </div>
+                <?php endif; ?>
             </div>
             <?php if ($this->countModules('slider')) : ?>
             <div id="slider-position" class="js-slider relative z1">
