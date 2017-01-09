@@ -33,7 +33,7 @@ defined('_JEXEC') or die('Restricted access');
                 <w:nav containerClass="toolbar-container" rowClass="<?php echo $wrightGridMode;?>" wrapClass="navbar-fixed-top navbar-inverse" type="toolbar" name="toolbar" />
             </div>
             <?php endif; ?>
-            <div class="container-flexbox <?php echo $wrightContainerClass ?> wrapp-logo-menu p-t-3 p-b-3">
+            <div class="container-flexbox <?php echo $wrightContainerClass ?> wrapp-logo-menu sp-b-3">
                 <div class="<?php echo $wrightGridMode; ?> p-t-3">
                     <w:logo name="menu" />
                 </div>
