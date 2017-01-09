@@ -66,7 +66,7 @@ defined('_JEXEC') or die('Restricted access');
         </header>
 
         <?php if ($this->countModules('grid-top')) : ?>
-        <div class="p-t-6 p-b-6">
+        <div class="p-t-3 p-b-6">
           <div id="grid-top" class="<?php echo $wrightContainerClass ?> container-flexbox m-b-0">
               <w:module type="<?php echo $wrightGridMode; ?>" name="grid-top" chrome="wrightflexgrid" />
           </div>
@@ -81,7 +81,7 @@ defined('_JEXEC') or die('Restricted access');
         </div>
         <?php endif; ?>
 
-        <div class="<?php echo $wrightContainerClass . $addBorder?> container-flexbox unlimited-grid main-wrapp p-t-6 p-b-6">
+        <div class="<?php echo $wrightContainerClass . $addBorder?> container-flexbox unlimited-grid main-wrapp <?php echo ($this->countModules('grid-top2')) ? 'p-t-6' : ' ' ; ?> p-b-6">
             <div id="main-content" class="<?php echo $wrightGridMode; ?> m-b-0">
                 <!-- sidebar1 -->
                 <aside id="sidebar1">
