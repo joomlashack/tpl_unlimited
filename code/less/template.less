@@ -829,43 +829,6 @@ code{
 	}
 }
 
-#header{
-	position: relative;
-	color: @color_four;
-
-	+ .container-flexbox > .row,
-	+ .container-flexbox > .row-fluid,
-	+ .container-padding,
-	+ .container-full {
-		border-top: 0;
-	}
-
-	.header-bg-content{
-		height: 100%;
-		overflow: hidden;
-		position: absolute;
-		top: 0;
-		width: 100%;
-
-        .header-filter,
-        .header-bg{
-            position: absolute;
-            top: 0;
-        }
-        .header-filter{
-						height: 259px;
-            z-index: 4;
-        }
-        .header-bg{
-            .opacity(80);
-            background-repeat: no-repeat;
-            -webkit-background-size: cover;
-            background-size: cover;
-            z-index: 3;
-        }
-
-	}
-}
 
 .full-width{
 	width: 100%;
@@ -1098,91 +1061,7 @@ code{
 	width: 940px;
 }
 
-// Lifestream
 // ---------------------------------------------
-
-div {
-
-	div.lifestream{
-		ul.stream{
-			box-shadow: none;
-			background-color: transparent;
-			background-image: none;
-			border: 0;
-			filter: none;
-			padding: 0;
-			color: @textColor;
-			li{
-				box-shadow: none;
-				background-color: transparent;
-				background-image: none;
-				border: 0;
-				filter: none;
-				font-size: 24px;
-				margin-bottom: 15px;
-				padding: 0;
-
-				.icon{
-					margin-right: 20px;
-				}
-
-				&.list_twitter,
-				&.list_rss{
-					img{
-						display: none;
-					}
-				}
-				&.list_twitter{
-					.icon{
-						&:before{
-							background-image: url(../images/cyan/icon-twitter.png);
-							content: '';
-							display: inline-block;
-							height: 68px;
-							width: 67px;
-						}
-					}
-				}
-				&.list_rss{
-					.icon{
-						&:before{
-							border-radius: 60px;
-							border: 2px solid;
-							content: "\f09e";
-							display: inline-block;
-							font-family: FontAwesome;
-							font-size: 34px;
-							height: 64px;
-							line-height: 68px;
-							text-align: center;
-							width: 63px;
-						}
-					}
-				}
-			}
-		}
-	}
-
-}
-
-// ---------------------------------------------
-
-.counter{
-	line-height: 30px;
-	margin-bottom: 0;
-
-	&.pull-right{
-		display: inline-block;
-		float: none;
-		vertical-align: top;
-	}
-}
-
-#contact-form{
-	input, textarea{
-		margin-bottom: 10px;
-	}
-}
 
 // ---------------------------------------------
 
@@ -1195,11 +1074,6 @@ div {
 	.border-radius(0);
 	.p-t-6;
 	.p-b-6;
-
-	.hero-unit{
-		.p-0;
-		margin-bottom: 0;
-	}
 }
 
 .pagination{
@@ -1593,7 +1467,6 @@ a{
 .is_internet.v_8,
 .is_internet.v_9{
 	.container-flexbox{
-		border-bottom: 1px solid @color_three;
 		display: table;
 		> .row , > .row-fluid{
 			display: table-row;
@@ -1655,38 +1528,10 @@ a{
 }
 
 .is_internet.v_8{
-	#footer{
-		.footer-content{
-			.nav{
-				li{
-					border-left-color: @grayLight;
-				}
-			}
-		}
-	}
 	.dropdown-menu{
 		background-color: @grayLighter;
 	}
 
-	.blog,
-	.blog-feautred{
-		> .row-fluid{
-			border-bottom: 0;
-		}
-	}
-
-	.wrapp-toolbar,
-	.logo-menu{
-		.navbar{
-			.nav  li.parent {
-				a:hover,
-				a:focus{
-					background-image: url(../images/filter-bg.png);
-					background-position: left bottom;
-				}
-			}
-		}
-	}
 	div div.lifestream {
 		margin: 0;
 		ul.stream li{
