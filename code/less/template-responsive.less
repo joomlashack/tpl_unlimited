@@ -210,10 +210,6 @@
 		}
 	}
 	
-	.nav-collapse .nav>li>a, .nav-collapse .dropdown-menu a{
-		.border-radius(0);
-	}
-
 	#toolbar {
 		.navbar .nav>li{
 			margin-left: 0;
@@ -283,75 +279,6 @@
 		padding-left: 0;
 	}
 
-	.nav-collapse .nav {
-		> li {
-			> a {
-				&:hover, &:focus{
-					color: @linkColor;
-				}
-			}
-
-			> .dropdown-toggle {
-			}
-
-			&.active {
-				> a {
-					color: @linkColor;
-
-					&:hover, &:focus{
-						color: @linkColor;
-					}
-				}
-
-				> .dropdown-toggle {
-					&:hover, &:focus{
-					}
-				}
-			}
-		}
-	}
-
-	.nav-collapse .nav>li>a:hover,
-	.nav-collapse .nav>li>a:focus,
-	.nav-collapse .dropdown-menu a:hover,
-	.nav-collapse .dropdown-menu a:focus {
-		background-color: transparent;
-	}
-
-	#header {
-		&.headerBg {
-			.navbar .nav {
-				> li {
-					> a {
-						&:hover, &:focus{
-							color: @linkColor;
-						}
-					}
-
-					> .dropdown-toggle {
-						&:hover, &:focus{
-						}
-					}
-
-					&.active {
-						> a {
-							color: @linkColor;
-
-							&:hover, &:focus{
-								color: @linkColor;
-							}
-						}
-
-						> .dropdown-toggle {
-							&:hover, &:focus{
-							}
-						}
-					}
-				}
-			}
-		}
-	}
-
 	.navbar-inverse .nav-collapse .nav>li>a:hover,
 	.navbar-inverse .nav-collapse .nav>li>a:focus,
 	.navbar-inverse .nav-collapse .dropdown-menu a:hover,
@@ -360,34 +287,9 @@
 		color: @linkColor;
 	}
 
-	.navbar-inverse .nav li.dropdown .dropdown-menu li>a,
-	.navbar-inverse .navbar-inner li.dropdown .dropdown-menu li>a,
-	.navbar-inverse .nav .navbar-inner li.dropdown .dropdown-menu li>a,
-	.navbar-inverse .navbar .nav li.dropdown .dropdown-menu li>a,
-	.navbar-inverse .navbar .nav .navbar-inner li.dropdown .dropdown-menu li>a {
-		&:hover, &:focus {
-			color: @linkColor;
-		}
-	}
-
-	.navbar-inverse {
-		.dropdown-submenu>a {
-			&:after {
-				border-left-color: @white;
-			}
-
-			&:hover, &:focus {
-				border-left-color: @linkColor;
-			}
-		}
-	}
-
 }
 
-
 @media (max-width: 767px) {
-
-
 
 	#toolbar{
 		.nav-collapse, #menu .nav-collapse{
