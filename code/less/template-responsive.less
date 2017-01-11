@@ -318,7 +318,11 @@
 	.container-flexbox{
 		> .row , > .row-fluid{
 			> [class*="span"]{
-				margin-bottom: 0;
+				margin-bottom: 2rem;
+
+				&:last-child {
+					margin-bottom: 0;
+				}
 			}
 		}
 	}
@@ -396,9 +400,7 @@
     	&[class*="categories-module"]{
     		display: block;
     		> [class*="span"]{
-    			border-left: 0;
-    			padding-left: 20px;
-    			padding-right: 20px;
+    			padding: 0 2rem 2rem;
     		}
     	}
     }
