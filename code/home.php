@@ -42,7 +42,7 @@ defined('_JEXEC') or die('Restricted access');
             </div>
             <?php endif; ?>
             <div class="<?php echo $wrightContainerClass ?> wrapp-logo-menu">
-                <div class="<?php echo $wrightGridMode; ?> p-b-3 p-t-3 flex">
+                <div class="<?php echo $wrightGridMode; ?> p-b-3 p-t-3 flex-md">
                     <w:logo name="menu" />
                 </div>
                 <?php
