@@ -37,7 +37,7 @@ if ($this->item->wrightType == 'leading') {
 
 if ($this->item->wrightType == 'intro') {
 
-	$classFloat = 'flex';
+	$classFloat = 'article-intro';
 
 	if (getIntroImageFloat($this->item) == 'right') {
 		$this->item->wrightElementsStructure =
