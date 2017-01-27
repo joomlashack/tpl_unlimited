@@ -75,7 +75,7 @@ defined('_JEXEC') or die('Restricted access');
         </div>
         <?php endif; ?>
 
-        <div class="<?php echo $wrightContainerClass . $addBorder?> unlimited-grid main-wrapp <?php echo ($this->countModules('grid-top2')) ? 'p-t-6' : ' ' ; ?> p-b-6">
+        <div class="<?php echo $wrightContainerClass . $addBorder?> unlimited-grid main-wrapp <?php echo ($this->countModules('grid-top2')) ? 'p-t-6' : ' ' ; ?> p-b-3">
             <div id="main-content" class="<?php echo $wrightGridMode; ?> m-b-0">
                 <!-- sidebar1 -->
                 <aside id="sidebar1">
