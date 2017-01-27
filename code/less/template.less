@@ -473,7 +473,6 @@ dl.article-info {
 }
 
 .btn {
-	padding: 4px 12px 3px;
 	.box-shadow(none);
 	.transition(all ease .2s);
 	background-color: @color_one;
@@ -890,77 +889,104 @@ dl.article-info {
 // ---------------------------------------------
 
 .nav {
-	li {
-		> a {
-			&.btn {
-				color: @btnBorder;
 
-				&.dropdown-toggle{
-					.caret{
+	li {
+
+		> a {
+
+			&.btn {
+				color: @white;
+				padding: 8px 13px 6px;
+
+				&.dropdown-toggle {
+
+					.caret {
 						border-top-color: @color_four ;
 					}
+
 					&:hover,
-					&:focus{
-						.caret{
+					&:focus,
+					&:active {
+
+						.caret {
 							border-top-color: @white;
 						}
 					}
 				}
 
 				&:hover,
-				&:focus{
+				&:focus,
+				&:active {
 					background-color: @color_one !important;
 					border-color: @color_one !important;
 					color: @white !important;
 				}
 
-				&.btn-primary{
+				&.btn-primary {
 					&:hover,
-					&:focus{
+					&:focus,
+					&:active {
 						background-color: @color_one !important;
 						border-color: @color_one !important;
 					}
 				}
 
-				&.btn-danger{
+				&.btn-danger {
+
 					&:hover,
-					&:focus{
+					&:focus,
+					&:active {
 						background-color: @btnDangerBackground !important;
 						border-color: @btnDangerBackground !important;
 					}
 				}
-				&.btn-info{
+
+				&.btn-info {
+
 					&:hover,
-					&:focus{
+					&:focus,
+					&:active {
 						background-color: @btnInfoBackground !important;
 						border-color: @btnInfoBackground !important;
 					}
 				}
+
 				&.btn-success{
+
 					&:hover,
-					&:focus{
+					&:focus,
+					&:active {
 						background-color: @btnSuccessBackground !important;
 						border-color: @btnSuccessBackground !important;
 					}
 				}
-				&.btn-warning{
+
+				&.btn-warning {
+
 					&:hover,
-					&:focus{
+					&:focus,
+					&:active {
 						background-color: @btnWarningBackground !important;
 						border-color: @btnWarningBackground !important;
 					}
 				}
-				&.btn-inverse{
+
+				&.btn-inverse {
+
 					&:hover,
-					&:focus{
+					&:focus,
+					&:active {
 						background-color: @btnInverseBackground !important;
 						border-color: @btnInverseBackground !important;
 					}
 				}
-				&.btn-link{
+
+				&.btn-link {
 					border: 0 !important;
+
 					&:hover,
-					&:focus{
+					&:focus,
+					&:active {
 						background-color: transparent !important;
 						border: 0 !important;
 						color: @color_four !important;
@@ -991,10 +1017,13 @@ dl.article-info {
 }
 
 .navbar {
-	.nav{
+
+	.nav {
+
 		li {
-			> a{
+			> a {
 				text-transform: uppercase;
+				text-shadow: none;
 
 				&.btn {
 					margin: 0 0 0 10px;
