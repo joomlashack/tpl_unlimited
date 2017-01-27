@@ -26,7 +26,11 @@ if ($this->item->wrightType == 'leading') {
 			"div.article-content",
 				"icons",
 				"article-info",
+                "legendtop",
 				"content",
+                "legendbottom",
+                "article-info-below",
+                "article-info-split",
 			"/div"
 		);
 }
@@ -43,7 +47,11 @@ if ($this->item->wrightType == 'intro') {
 						"title",
 						"icons",
 						"article-info",
+                        "legendtop",
 						"content",
+                        "legendbottom",
+                        "article-info-below",
+                        "article-info-split",
 					"/div",
 
 					"div.span6",
@@ -64,7 +72,11 @@ if ($this->item->wrightType == 'intro') {
 						"title",
 						"icons",
 						"article-info",
+                        "legendtop",
 						"content",
+                        "legendbottom",
+                        "article-info-below",
+                        "article-info-split",
 					"/div",
 				"/div"
 			);
