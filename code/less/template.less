@@ -125,6 +125,59 @@ code{
 
 // ---------------------------------------------
 
+.text-center,
+.text-left,
+.text-right {
+
+	#easy-social-icons {
+
+		ul.jssocialicons-horizontal {
+			display: inline-block;
+
+			li {
+				float: none;
+				display: inline;
+			}
+		}
+	}
+}
+
+// ---------------------------------------------
+
+#grid-top2 {
+	color: @white;
+
+	p,
+	div,
+	span,
+	strong,
+	ul li,
+	ol li,
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6,
+	em,
+	small {
+		color: @white;
+	}
+
+	a {
+		color: @white;
+		font-weight: bold;
+
+		&:hover,
+		&:focus,
+		&:active {
+			color: @grayLighter;
+		}
+	}
+}
+
+// ---------------------------------------------
+
 #bottom-menu .nav,
 .nav.nav-tabs{
 
@@ -1230,15 +1283,19 @@ a{
 }
 
 .category-title,
-.category-description{
-	a{
-		color: @color_four;
+.category-description {
+
+	a {
+		color: @color_one;
+
 		&:hover,
-		&:focus{
-			color: @linkColor;
+		&:focus,
+		&:active {
+			color: darken(@color_one, 10%);
 		}
 	}
-	*{
+
+	* {
 		margin-bottom: 0;
 	}
 }
