@@ -957,6 +957,24 @@ dl.article-info {
 
 // ---------------------------------------------
 
+#nav-menu,
+#nav-bottom-menu {
+
+	.nav {
+
+		li {
+
+			> a {
+
+				&.btn {
+					color: @white;
+					padding: 8px 13px 6px;
+				}
+			}
+		}
+	}
+}
+
 .nav {
 
 	li {
@@ -964,8 +982,6 @@ dl.article-info {
 		> a {
 
 			&.btn {
-				color: @white;
-				padding: 8px 13px 6px;
 
 				&.dropdown-toggle {
 
@@ -1179,19 +1195,8 @@ dl.article-info {
     border-radius: 0;
 }
 
-#bottom-menu{
+#bottom-menu {
 	margin-bottom: 0;
-
-	.navbar-inner{
-		.nav{
-			li{
-				>a{
-					padding-left: 3em;
-					padding-right: 3em;
-				}
-			}
-		}
-	}
 }
 
 #nav-toolbar{
