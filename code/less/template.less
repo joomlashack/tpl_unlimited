@@ -410,9 +410,11 @@ code{
 		}
 	}
 }
-.pager{
+.pager {
+
 	li {
-		>a,>span{
+		>a,
+		>span {
 			.transition(all ease .2s);
 			.border-radius(5px);
 			border-color: @color_one;
@@ -422,44 +424,92 @@ code{
 		}
 	}
 }
-.label, .badge{
+
+.label,
+.badge{
 	font-size: 12px;
 	font-weight: 400;
 	text-shadow: none;
+	padding: 3px 6px 2px;
 }
+
+
+ul.tags {
+	padding-top: 0;
+	padding-bottom: 0;
+
+	li {
+		padding-left: 0;
+		padding-right: 5px;
+
+		.label {
+			border: 1px solid @color_one;
+			background: transparent;
+			color: @color_one;
+
+			&:hover,
+			&:focus,
+			&:active {
+				border-color: darken(@color_one, 10%);
+				background: transparent;
+				color: darken(@color_one, 10%);
+			}
+		}
+	}
+}
+
 // ---------------------------------------------
 
-.btn{
+dl.article-info {
+	padding-top: 0;
+
+	dd {
+		margin: 0 10px 0 0;
+
+		> div {
+			margin: 0 10px 0 0;
+		}
+	}
+}
+
+.btn {
+	padding: 4px 12px 3px;
 	.box-shadow(none);
 	.transition(all ease .2s);
-	background-color: transparent;
-	border-color: @color_four;
-	color: @color_four;
+	background-color: @color_one;
+	border-color: @color_one;
+	color: @white;
 	text-shadow: none;
 
-	&.dropdown-toggle{
-		.caret{
-			border-top-color: @color_four ;
+	&.dropdown-toggle {
+
+		.caret {
+			border-top-color: @white;
 		}
+
 		&:hover,
-		&:focus{
-			.caret{
+		&:focus,
+		&:active {
+
+			.caret {
 				border-top-color: @white;
 			}
 		}
 	}
 
 	&:hover,
-	&:focus{
+	&:focus,
+	&:active {
 		.transition(all ease .2s);
-		background-color: @color_one;
-		border-color: @color_one;
+		background-color: darken(@color_one, 10%);
+		border-color: darken(@color_one, 10%);
 		color: @white;
 	}
 
 	&.btn-primary{
 		&:hover,
-		&:focus{
+		&:focus,
+		&:active {
 			background-color: @color_one;
 			border-color: @color_one;
 		}
@@ -467,21 +517,24 @@ code{
 
 	&.btn-danger{
 		&:hover,
-		&:focus{
+		&:focus,
+		&:active {
 			background-color: @btnDangerBackground;
 			border-color: @btnDangerBackground;
 		}
 	}
 	&.btn-info{
 		&:hover,
-		&:focus{
+		&:focus,
+		&:active {
 			background-color: @btnInfoBackground;
 			border-color: @btnInfoBackground;
 		}
 	}
 	&.btn-success{
 		&:hover,
-		&:focus{
+		&:focus,
+		&:active {
 			background-color: @btnSuccessBackground;
 			border-color: @btnSuccessBackground;
 		}
@@ -495,7 +548,8 @@ code{
 	}
 	&.btn-inverse{
 		&:hover,
-		&:focus{
+		&:focus,
+		&:active {
 			background-color: @btnInverseBackground;
 			border-color: @btnInverseBackground;
 		}
@@ -503,16 +557,19 @@ code{
 	&.btn-link{
 		border: 0;
 		&:hover,
-		&:focus{
+		&:focus,
+		&:active {
 			background-color: transparent;
 			border: 0;
 			color: @color_four;
 		}
 	}
 	&[disabled],
-	&.disabled{
+	&.disabled {
+
 		&:hover,
-		&:focus{
+		&:focus,
+		&:active {
 			background-color: @color_four;
 			border-color: @color_four;
 			color: @grayDark;
@@ -520,38 +577,46 @@ code{
 
 		&.btn-primary{
 			&:hover,
-			&:focus{
+			&:focus,
+			&:active {
 				color: @white
 			}
 		}
 
 		&.btn-danger{
 			&:hover,
-			&:focus{
+			&:focus,
+			&:active {
 				color: @white;
 			}
 		}
 		&.btn-info{
+
 			&:hover,
-			&:focus{
+			&:focus,
+			&:active {
 				color: @white;
 			}
 		}
 		&.btn-success{
+
 			&:hover,
-			&:focus{
+			&:focus,
+			&:active {
 				color: @white;
 			}
 		}
-		&.btn-warning{
+		&.btn-warning {
 			&:hover,
-			&:focus{
+			&:focus,
+			&:active {
 				color: @white;
 			}
 		}
-		&.btn-inverse{
+		&.btn-inverse {
 			&:hover,
-			&:focus{
+			&:focus,
+			&:active {
 				color: @white;
 			}
 		}
@@ -1083,6 +1148,11 @@ code{
 	> .category-desc{
 		.clearfix();
 		padding-bottom: 15px;
+	}
+
+	.items-leading > div,
+	.items-row {
+		margin-bottom: 30px;
 	}
 }
 
