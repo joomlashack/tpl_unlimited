@@ -545,10 +545,9 @@ dl.article-info {
 .btn {
 	.box-shadow(none);
 	.transition(all ease .2s);
-	background-color: @color_one;
-	border-color: @color_one;
 	color: @white;
 	text-shadow: none;
+	border-color: @color_one;
 
 	&.dropdown-toggle {
 
@@ -575,55 +574,72 @@ dl.article-info {
 		color: @white;
 	}
 
-	&.btn-primary{
+	&.btn-primary {
+		border-color: @btnPrimaryBackground;
+
 		&:hover,
 		&:focus,
 		&:active {
-			background-color: @color_one;
-			border-color: @color_one;
+			background-color: lighten(@btnPrimaryBackground, 10%);
+			border-color: lighten(@btnPrimaryBackground, 10%);
 		}
 	}
 
-	&.btn-danger{
+	&.btn-danger {
+		border-color: @btnDangerBackground;
+
 		&:hover,
 		&:focus,
 		&:active {
-			background-color: @btnDangerBackground;
-			border-color: @btnDangerBackground;
+			background-color: darken(@btnDangerBackground, 10%);
+			border-color: darken(@btnDangerBackground, 10%);
 		}
 	}
-	&.btn-info{
+
+	&.btn-info {
+		border-color: @btnInfoBackground;
+
 		&:hover,
 		&:focus,
 		&:active {
-			background-color: @btnInfoBackground;
-			border-color: @btnInfoBackground;
+			background-color: darken(@btnInfoBackground, 10%);
+			border-color: darken(@btnInfoBackground, 10%);
 		}
 	}
-	&.btn-success{
+
+	&.btn-success {
+		border-color: @btnSuccessBackground;
+
 		&:hover,
 		&:focus,
 		&:active {
-			background-color: @btnSuccessBackground;
-			border-color: @btnSuccessBackground;
+			background-color: darken(@btnSuccessBackground, 10%);
+			border-color: darken(@btnSuccessBackground, 10%);
 		}
 	}
-	&.btn-warning{
+
+	&.btn-warning {
+		border-color: @btnWarningBackground;
+
 		&:hover,
 		&:focus{
-			background-color: @btnWarningBackground;
-			border-color: @btnWarningBackground;
+			background-color: darken(@btnWarningBackground, 10%);
+			border-color: darken(@btnWarningBackground, 10%);
 		}
 	}
-	&.btn-inverse{
+
+	&.btn-inverse {
+		border-color: @btnInverseBackground;
+
 		&:hover,
 		&:focus,
 		&:active {
-			background-color: @btnInverseBackground;
-			border-color: @btnInverseBackground;
+			background-color: darken(@btnInverseBackground, 10%);
+			border-color: darken(@btnInverseBackground, 10%);
 		}
 	}
-	&.btn-link{
+
+	&.btn-link {
 		border: 0;
 		&:hover,
 		&:focus,
@@ -633,6 +649,7 @@ dl.article-info {
 			color: @color_four;
 		}
 	}
+
 	&[disabled],
 	&.disabled {
 
@@ -1321,11 +1338,6 @@ a{
 	* {
 		margin-bottom: 0;
 	}
-}
-.category-separator,
-.category-description{
-	margin-top: 19px;
-	padding-left: 5px;
 }
 
 // Newsflash module
