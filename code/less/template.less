@@ -205,42 +205,45 @@ a > [class*="icon-"] {
 			margin-top: 0;
 		}
 	}
-	li{
-		> a{
+	li {
+		> a {
+
 			&.item-desc{
 				margin-bottom: 11px;
 				margin-top: 11px;
 			}
 		}
 	}
-	> li , h3 , p{
-		> a{
+
+	> li {
+
+		> a {
 			border: 0;
-			color: @textColor;
+			color: @black;
 			display: block;
 			font-size: @baseFontSize;
 			font-weight: 400;
-			padding: 1em 1.5em;
-			padding: 1rem 1.5rem;
-
-			[class^="icon-"],[class*=" icon-"]{
-				color: @textColor;
-			}
 
 			&:hover,
-			&:focus{
+			&:focus,
+			&:active {
 				background-color: transparent;
+				color: @grayLight;
 			}
 		}
+
 		&.dropdown{
 
-			a{
-				.caret{
+			a {
+				.caret {
 					border-top-color: @textColor;
 				}
+
 				&:hover,
-				&:focus{
-					.caret{
+				&:focus,
+				&:active {
+
+					.caret {
 						border-top-color: @textColor;
 					}
 				}
@@ -266,23 +269,16 @@ a > [class*="icon-"] {
 			}
 		}
 	}
-	> li.active{
-		> a{
+	> li.active {
+
+		> a {
 			border: 0;
 			color: @textColor;
 			position: relative;
 
-			&:after{
-				border-bottom: 2px solid @color_one;
-				bottom: 0;
-				content: '';
-				left: 0;
-				position: absolute;
-				width: 100%;
-			}
-
 			&:hover,
-			&:focus{
+			&:focus,
+			&:active {
 				background-color: transparent;
 				border: 0;
 			}
@@ -986,7 +982,6 @@ dl.article-info {
 
 				&.btn {
 					color: @white;
-					/*padding: 8px 13px 6px;*/
 				}
 			}
 		}
@@ -1215,6 +1210,17 @@ dl.article-info {
 
 #bottom-menu {
 	margin-bottom: 0;
+	margin-top: 20px;
+
+	a {
+		color: @black;
+
+		&:hover,
+		&:focus,
+		&:active {
+			color: @grayLight;
+		}
+	}
 }
 
 #nav-toolbar{
