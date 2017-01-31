@@ -58,6 +58,13 @@ defined('_JEXEC') or die('Restricted access');
                 <?php endif; ?>
             </div>
         </div>
+        <?php if ($this->countModules('breadcrumbs')) : ?>
+            <div class="p-t-2 p-b-2 bg-color-one breadcrumbs-content">
+                <div id="breadcrumbs" class="<?php echo $wrightContainerClass ?>">
+                    <w:module type="single" name="breadcrumbs" chrome="none" />
+                </div>
+            </div>
+        <?php endif; ?>
         <?php if ($this->countModules('slider')) : ?>
             <div id="slider-position" class="js-slider relative z1">
                 <w:module type="none" name="slider" />
@@ -74,7 +81,7 @@ defined('_JEXEC') or die('Restricted access');
     <?php endif; ?>
 
     <?php if ($this->countModules('grid-top2')) : ?>
-        <div class="p-t-2 p-b-2 bg-color-one">
+        <div class="p-t-6 p-b-6 bg-color-one">
             <div id="grid-top2" class="<?php echo $wrightContainerClass ?> m-b-0">
                 <w:module type="<?php echo $wrightGridMode; ?>" name="grid-top2" chrome="wrightflexgrid" />
             </div>
@@ -89,11 +96,6 @@ defined('_JEXEC') or die('Restricted access');
             </aside>
             <!-- main -->
             <section id="main">
-                <?php if ($this->countModules('breadcrumbs')) : ?>
-                    <div id="breadcrumbs" class="<?php echo $wrightContainerClass ?>">
-                        <w:module type="single" name="breadcrumbs" chrome="none" />
-                    </div>
-                <?php endif; ?>
                 <?php if ($this->countModules('above-content')) : ?>
                     <!-- above-content -->
                     <div id="above-content">

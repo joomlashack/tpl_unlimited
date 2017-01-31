@@ -160,7 +160,8 @@ a > [class*="icon-"] {
 
 // ---------------------------------------------
 
-#grid-top2 {
+#grid-top2,
+#breadcrumbs {
 	color: @white;
 
 	p,
@@ -441,18 +442,14 @@ a > [class*="icon-"] {
 
 // ---------------------------------------------
 
-#grid-top2 {
+.breadcrumbs-content {
+	margin-bottom: 3rem;
+}
+
+#breadcrumbs {
 
 	.breadcrumb {
 		margin-bottom: 0;
-	}
-
-	.categories-module {
-
-		.category-description {
-			padding-top: 4rem;
-			padding-bottom: 4rem;
-		}
 	}
 }
 
@@ -543,6 +540,17 @@ dl.article-info {
 		> div {
 			margin: 0 10px 0 0;
 		}
+	}
+
+	+ .item-image {
+		padding-top: 10px;
+	}
+}
+
+.icons {
+
+	+ .item-image {
+		padding-top: 35px;
 	}
 }
 
