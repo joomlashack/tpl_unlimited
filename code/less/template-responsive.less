@@ -6,33 +6,9 @@
 }
 
 @media (min-width: 1200px) {
-	#toolbar{
-		.navbar {
-			.nav{
-				>li{
-					margin-left: 45px;
-					margin-right: 45px;
-				}
-			}
-		}
-	}
+
 	#nav-toolbar{
 		width: 1170px;
-	}
-}
-
-@media (min-width: 980px) {
-
-	#header {
-
-		.navbar .navbar-inner .nav {
-			float: right;
-			margin-right: 0;
-
-			.dropdown-menu {
-				text-align: right;
-			}
-		}
 	}
 }
 
@@ -203,6 +179,11 @@
 }
 
 @media (max-width: 979px) {
+
+	#toolbar .navbar-fixed-top {
+		position: static;
+	}
+
 	body {
 		padding-left: 0;
 		padding-right: 0;
@@ -213,7 +194,8 @@
 		text-align: center;
 	}
 
-	#menu {
+	#menu,
+	#bottom-menu {
 		max-width: 80%;
 		margin-left: auto;
 		margin-right: auto;
@@ -221,6 +203,13 @@
 		.btn-navbar {
 			margin-left: 0;
 			margin-right: 0;
+			background: @color_one;
+			border-color: @color_one;
+
+			.icon-bar {
+				background-color: @white;
+				.box-shadow(none);
+			}
 		}
 	}
 
