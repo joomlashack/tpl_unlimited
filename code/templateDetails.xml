@@ -46,6 +46,7 @@
 		<position>debug</position>
 		<position>featured</position>
 		<position>footer</position>
+        <position>grid-extra</position>
 		<position>grid-bottom2</position>
 		<position>grid-bottom</position>
 		<position>grid-top2</position>

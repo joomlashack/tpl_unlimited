@@ -161,6 +161,7 @@ a > [class*="icon-"] {
 // ---------------------------------------------
 
 #grid-top2,
+#grid-extra,
 #breadcrumbs {
 	color: @white;
 
@@ -190,6 +191,12 @@ a > [class*="icon-"] {
 		&:focus,
 		&:active {
 			color: @grayLighter;
+		}
+	}
+
+	p {
+		&:last-of-type {
+			margin-bottom: 0;
 		}
 	}
 }
@@ -593,8 +600,8 @@ dl.article-info {
 		&:hover,
 		&:focus,
 		&:active {
-			background-color: lighten(@btnPrimaryBackground, 10%);
-			border-color: lighten(@btnPrimaryBackground, 10%);
+			background-color: lighten(@btnPrimaryBackground, 15%);
+			border-color: lighten(@btnPrimaryBackground, 15%);
 		}
 	}
 
@@ -721,10 +728,7 @@ dl.article-info {
 		}
 	}
 }
-.btn-large{
-	padding: 8px 28px;
-	font-size: 14px;
-}
+
 .dropup{
 	.btn.dropdown-toggle{
 		.caret{
@@ -1264,6 +1268,7 @@ dl.article-info {
 
 .pagination{
 	margin-top: 20px;
+	display: block;
 }
 
 .finder {
@@ -1281,13 +1286,7 @@ dl.article-info {
 }
 
 .blog,
-.blog-featured{
-
-	> .cat-children,
-	> .category-desc{
-		padding-left: 20px;
-		padding-right: 20px;
-	}
+.blog-featured {
 
 	> .category-desc{
 		.clearfix();
