@@ -36,10 +36,7 @@ defined('_JEXEC') or die('Restricted access');
         <?php if($bg != -1 && !$this->countModules('slider')): ?>
         <?php endif; ?>
         <?php if ($this->countModules('toolbar')) : ?>
-            <div class="wrapp-toolbar<?php echo ' border-toolbar-' . $wrightContainerClass .
-                ($toolbarDisplayed ? '' : ' collapsedToolbar'); ?>">
-                <w:nav containerClass="toolbar-container" rowClass="<?php echo $wrightGridMode;?>" wrapClass="navbar-fixed-top navbar-inverse" type="toolbar" name="toolbar" />
-            </div>
+            <w:nav containerClass="toolbar-container" rowClass="<?php echo $wrightGridMode;?>" wrapClass="<?php echo $unlimitedToolbarDisplayed; ?> navbar-inverse" type="toolbar" name="toolbar" />
         <?php endif; ?>
         <div class="<?php echo $wrightContainerClass ?> wrapp-logo-menu">
             <div class="<?php echo $wrightGridMode; ?> p-b-3 p-t-3 flex-md">

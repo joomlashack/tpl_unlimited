@@ -19,36 +19,6 @@ if ($responsivePage == 0) {
     $responsive = ' no-responsive';
 }
 
-// Image Background
-
-function checkImage($img, $default) {
-    if ($img == "") {
-        $img = $default;
-    }
-    elseif ($img != "-1") {
-        $img = "images/" . $img;
-    }
-
-    if ($img != "-1") {
-        $img = JPATH_BASE . '/' . $img;
-        if (!file_exists($img)) {
-                $img = "-1";
-        }
-    }
-
-    return $img;
-}
-
-$bg = checkImage($this->params->get("backgroundImage", ""),
-      "templates/js_unlimited/images/default-bg.jpg");
-
-if ($bg != "-1") $bg = str_replace(JPATH_BASE, '', $bg);
-
-$headerBg = '';
-if($bg != "-1" ){
-    $headerBg = ' headerBg';
-}
-
 // Add class for blog/featured view
 
 $blog =
@@ -92,9 +62,7 @@ if (!$this->countModules('slider') && !$this->countModules('featured'))
     $showItemActive = ($pageTitle) ? true : false ;
 
 // Toolbar Displayed
-$toolbarDisplayed =
-($this->params->get('unlimited_toolbar_displayed','1') == '1' ? true : false);
-$toolbarDisplayedClass = (!$toolbarDisplayed) ? " tollbarNoDisplayed" : "" ;
+$unlimitedToolbarDisplayed = $this->params->get('unlimited_toolbar_displayed', 'navbar-fixed-top');
 
 // Border in Main Content
 
