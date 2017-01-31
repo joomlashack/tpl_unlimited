@@ -126,7 +126,7 @@ defined('_JEXEC') or die('Restricted access');
         </div>
     <?php endif; ?>
     <?php if ($this->countModules('grid-bottom2')) : ?>
-        <div class="p-t-6 p-b-6 relative bg-color-gray">
+        <div class="p-t-3 relative bg-color-gray">
             <div class="bg-transform absolute hidden-phone">
             </div>
             <div id="grid-bottom2"
