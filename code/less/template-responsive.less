@@ -96,10 +96,25 @@
 				.jss-description {
 					.box-sizing(box-sizing);
 					display: block;
-					font-size: @baseFontSize + 10;
-					line-height: @baseFontSize + 10;
 					max-width: 70%;
 					padding-left: 171px;
+
+					h1,
+					h2,
+					h3,
+					h4,
+					h5,
+					h6 {
+						margin-bottom: 10px;
+					}
+
+					p {
+						margin-bottom: 20px;
+
+						&:last-of-type {
+							margin-bottom: 0;
+						}
+					}
 				}
 			}
 		}
@@ -180,8 +195,6 @@
 				.jss-description {
 					.box-sizing(box-sizing);
 					display: block;
-					font-size: @baseFontSize + 10;
-					line-height: @baseFontSize + 10;
 					padding-left: 171px;
 				}
 			}
