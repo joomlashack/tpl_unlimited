@@ -74,7 +74,7 @@ defined('_JEXEC') or die('Restricted access');
     <?php endif; ?>
 
     <?php if ($this->countModules('grid-top2')) : ?>
-        <div class="p-t-6 p-b-6 bg-color-one">
+        <div class="p-t-2 p-b-2 bg-color-one">
             <div id="grid-top2" class="<?php echo $wrightContainerClass ?> m-b-0">
                 <w:module type="<?php echo $wrightGridMode; ?>" name="grid-top2" chrome="wrightflexgrid" />
             </div>

@@ -441,24 +441,32 @@ a > [class*="icon-"] {
 
 // ---------------------------------------------
 
+#grid-top2 {
+
+	.breadcrumb {
+		margin-bottom: 0;
+	}
+
+	.categories-module {
+
+		.category-description {
+			padding-top: 4rem;
+			padding-bottom: 4rem;
+		}
+	}
+}
+
 .breadcrumb {
 	.border-radius(0);
 	background-color: transparent;
 	padding: 0;
 
-	li {
+	> li {
+		text-shadow: none;
 
 		a,
 		span {
-			color: @color_four;
-			display: inline-block;
-			vertical-align: middle;
-		}
-
-		span {
-			font-weight: 700;
-			&.divider:not(.hasTip){
-			}
+			text-shadow: none;
 		}
 	}
 }
