@@ -11,7 +11,5 @@
 // Restrict Access to within Joomla
 defined('_JEXEC') or die('Restricted access');
 
-JLoader::import('joomla.environment.browser');
-
-// Toolbar Displayed
+// Toolbar
 $unlimitedToolbarDisplayed = $this->params->get('unlimited_toolbar_displayed', 'navbar-fixed-top');
