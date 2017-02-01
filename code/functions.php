@@ -12,4 +12,5 @@
 defined('_JEXEC') or die('Restricted access');
 
 // Toolbar
-$unlimitedToolbarDisplayed = $this->params->get('unlimited_toolbar_displayed', 'navbar-fixed-top');
+$unlimitedToolbarDisplayed  = $this->params->get('unlimited_toolbar_displayed', 'navbar-fixed-top');
+$unlimitedSlant             = $this->params->get('unlimited_slant', 0);

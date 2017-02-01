@@ -121,6 +121,10 @@
                     <option value="navbar-fixed-top">TPL_JS_UNLIMITED_TOOLBAR_FIXED</option>
                     <option value="navbar-static-top">TPL_JS_UNLIMITED_TOOLBAR_STATIC</option>
                 </field>
+                <field name="unlimited_slant" type="radio" class="btn-group btn-group-yesno" default="0" label="TPL_JS_UNLIMITED_SLANT" description="TPL_JS_UNLIMITED_SLANT_DESC">
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
 			</fieldset>
 		</fields>
 	</config>
