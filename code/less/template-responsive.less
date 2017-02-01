@@ -31,11 +31,11 @@
 
 			.article-content-right {
 				width: 50%;
-				right: 0;
 			}
 
 			.article-content-left {
 				width: 50%;
+				right: 0;
 			}
 		}
 	}
@@ -391,6 +391,17 @@
 		.items-leading{
 			[class*="leading-"] > [class*="float-"] > .article-content > h2 a{
 				display: block;
+			}
+		}
+	}
+
+	.blog-featured {
+
+		.items-row > [class*="span"] {
+			margin-bottom: 30px;
+
+			&:last-of-type {
+				margin-bottom: 0;
 			}
 		}
 	}
