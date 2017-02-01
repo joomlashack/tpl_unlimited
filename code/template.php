@@ -20,7 +20,7 @@ defined('_JEXEC') or die('Restricted access');
     <head>
         <w:head />
     </head>
-    <body class="<?php echo $responsive . $blogClass ?>">
+    <body>
     <header id="header" class="js-header m-b-0">
         <?php if ($this->countModules('toolbar')) : ?>
             <w:nav containerClass="toolbar-container" rowClass="<?php echo $wrightGridMode;?>" wrapClass="<?php echo $unlimitedToolbarDisplayed; ?> navbar-inverse" type="toolbar" name="toolbar" />
@@ -72,7 +72,7 @@ defined('_JEXEC') or die('Restricted access');
         </div>
     <?php endif; ?>
 
-    <div class="<?php echo $wrightContainerClass . $addBorder?> unlimited-grid main-wrapp <?php echo ($this->countModules('grid-top2')) ? 'p-t-4' : ' ' ; ?> p-b-4">
+    <div class="<?php echo $wrightContainerClass; ?> unlimited-grid main-wrapp <?php echo ($this->countModules('grid-top2')) ? 'p-t-4' : ' ' ; ?> p-b-4">
         <div id="main-content" class="<?php echo $wrightGridMode; ?> m-b-0">
             <!-- sidebar1 -->
             <aside id="sidebar1">

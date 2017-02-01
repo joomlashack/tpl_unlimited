@@ -121,10 +121,6 @@
                     <option value="navbar-fixed-top">TPL_JS_UNLIMITED_TOOLBAR_FIXED</option>
                     <option value="navbar-static-top">TPL_JS_UNLIMITED_TOOLBAR_STATIC</option>
                 </field>
-				<field name="unlimited_page_title" type="radio" class="btn-group btn-group-yesno" default="1" label="TPL_JS_UNLIMITED_PAGE_TITLE" description="TPL_JS_UNLIMITED_PAGE_TITLE_DESC">
-					<option value="0">JNo</option>
-					<option value="1">JYes</option>
-				</field>
 			</fieldset>
 		</fields>
 	</config>
