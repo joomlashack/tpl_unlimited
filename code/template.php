@@ -19,22 +19,9 @@ defined('_JEXEC') or die('Restricted access');
     <html>
     <head>
         <w:head />
-        <link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700' rel='stylesheet' type='text/css'>
-        <?php if($bg != -1 && !$this->countModules('slider')): ?>
-            <style>
-                .header-bg{
-                    background-image: url(<?php echo JURI::root(true) . $bg ?>);
-                }
-                .header-filter{
-                    background-image: url(<?php echo JURI::root(true) . '/templates/js_unlimited/images/filter-bg.png' ?>);
-                }
-            </style>
-        <?php endif; ?>
     </head>
     <body class="<?php echo $responsive . $blogClass ?>">
-    <header id="header" class="<?php echo $headerBg?> js-header m-b-0">
-        <?php if($bg != -1 && !$this->countModules('slider')): ?>
-        <?php endif; ?>
+    <header id="header" class="js-header m-b-0">
         <?php if ($this->countModules('toolbar')) : ?>
             <w:nav containerClass="toolbar-container" rowClass="<?php echo $wrightGridMode;?>" wrapClass="<?php echo $unlimitedToolbarDisplayed; ?> navbar-inverse" type="toolbar" name="toolbar" />
         <?php endif; ?>
