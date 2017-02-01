@@ -20,6 +20,25 @@
 			text-align: right;
 		}
 	}
+
+	.blog-featured {
+
+		.article-content-wrapper {
+
+			.article-content-none {
+				width: 100%;
+			}
+
+			.article-content-right {
+				width: 50%;
+				right: 0;
+			}
+
+			.article-content-left {
+				width: 50%;
+			}
+		}
+	}
 }
 
 @media(min-width: 940px) {
@@ -189,6 +208,18 @@
 }
 
 @media (max-width: 979px) {
+
+	.blog-featured {
+
+		.article-content-wrapper {
+
+			.article-content-none,
+			.article-content-right,
+			.article-content-left {
+				width: 100%;
+			}
+		}
+	}
 
 	body {
 		padding-left: 0;

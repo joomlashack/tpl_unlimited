@@ -102,7 +102,7 @@ defined('_JEXEC') or die('Restricted access');
     </div>
 
     <?php if ($this->countModules('grid-extra')) : ?>
-        <div class="p-t-2 p-b-2 bg-color-four">
+        <div class="p-t-2 p-b-2 bg-color-one">
             <div id="grid-extra" class="<?php echo $wrightContainerClass ?> m-b-0">
                 <w:module type="<?php echo $wrightGridMode; ?>" name="grid-extra" chrome="wrightflexgrid" />
             </div>

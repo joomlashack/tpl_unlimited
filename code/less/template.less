@@ -206,7 +206,7 @@ a > [class*="icon-"] {
 // ---------------------------------------------
 
 #bottom-menu .nav,
-.nav.nav-tabs{
+.nav.nav-tabs {
 
 	dt{
 		span{
@@ -230,7 +230,6 @@ a > [class*="icon-"] {
 
 		> a {
 			border: 0;
-			color: @black;
 			display: block;
 			font-size: @baseFontSize;
 			font-weight: 400;
@@ -239,7 +238,6 @@ a > [class*="icon-"] {
 			&:focus,
 			&:active {
 				background-color: transparent;
-				color: @grayLight;
 			}
 		}
 
@@ -451,10 +449,6 @@ a > [class*="icon-"] {
 }
 
 // ---------------------------------------------
-
-.breadcrumbs-content {
-	margin-bottom: 3rem;
-}
 
 #breadcrumbs {
 
@@ -1278,9 +1272,14 @@ dl.article-info {
 	.p-b-6;
 }
 
-.pagination{
+.pagination {
 	margin-top: 20px;
 	display: block;
+	text-align: left;
+
+	ul > li > span {
+		color: @grayLight;
+	}
 }
 
 .finder {
@@ -1311,6 +1310,14 @@ dl.article-info {
 		.item {
 			background: #f2f2f2;
 		}
+
+		&:last-of-type {
+			margin-bottom: 0;
+		}
+
+		+ .items-more {
+			margin-top: 30px;
+		}
 	}
 
 	.article-content-wrapper {
@@ -1324,14 +1331,27 @@ dl.article-info {
 
 			.article-content-inner {
 				padding: 40px;
+				.transition(all 0.2s linear 0s);
 
-				.item-title a {
-					color: @white;
+				&:hover {
+					background: rgba(0, 0, 0, 0.9);
 
-					&:hover,
-					&:focus,
-					&:active {
+					.item-title a {
 						color: lighten(@color_one, 20%);
+					}
+				}
+
+				.item-title {
+					margin-top: 0;
+
+					a {
+						color: @white;
+
+						&:hover,
+						&:focus,
+						&:active {
+							color: lighten(@color_one, 20%);
+						}
 					}
 				}
 
@@ -1344,30 +1364,21 @@ dl.article-info {
 						border-color: lighten(@color_one, 20%);
 					}
 				}
+
+				p:last-of-type {
+					margin-bottom: 0;
+				}
 			}
-		}
-
-		.article-content-none {
-			width: 100%;
-		}
-
-		.article-content-right {
-			width: 50%;
-			right: 0;
-		}
-
-		.article-content-left {
-			width: 50%;
 		}
 	}
 
-	.pull-right,
-	.pull-left,
-	.pull-none {
-		float: none;
+	.item-image {
 
-		&.item-image {
+		&.pull-right,
+		&.pull-left,
+		&.pull-none {
 			margin: 0 !important;
+			float: none;
 
 			img {
 				width: 100%;
@@ -1674,11 +1685,12 @@ a{
 
 // J3 override
 
-.items-more{
+.items-more {
+
 	.nav li a,
-	h3{
-		padding-left: 20px;
-		padding-right: 20px;
+	h3 {
+		padding-left: 0;
+		padding-right: 0;
 	}
 }
 
