@@ -1158,12 +1158,19 @@ dl.article-info {
 			}
 		}
 
-		>.active{
-			>a{
+		> .active {
+
+			> a {
 				.box-shadow(none);
+
 				&:hover,
-				&:focus{
+				&:focus {
 					.box-shadow(none);
+				}
+
+				&.btn {
+					background: @textColor;
+					border-color: @textColor;
 				}
 			}
 		}
