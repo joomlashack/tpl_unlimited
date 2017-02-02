@@ -29,18 +29,14 @@ defined('_JEXEC') or die('Restricted access');
             <div class="<?php echo $wrightGridMode; ?> p-b-3 p-t-3 flex-md">
                 <w:logo name="menu" />
             </div>
-            <?php
-            if ($this->countModules('top')) :
-                ?>
+            <?php if ($this->countModules('top')) : ?>
                 <w:module type="<?php echo $wrightGridMode; ?>" name="top" chrome="wrightflexgrid" />
-            <?php
-            endif;
-            ?>
-            <div class="header-content p-b-3">
-                <?php if ($this->countModules('featured')) : ?>
-                    <w:module type="none" name="featured" />
-                <?php endif; ?>
-            </div>
+            <?php endif; ?>
+            <?php if ($this->countModules('featured')) : ?>
+                <div class="header-content p-b-3">
+                        <w:module type="none" name="featured" />
+                </div>
+            <?php endif; ?>
         </div>
         <?php if ($this->countModules('breadcrumbs')) : ?>
             <div class="p-t-2 p-b-2 bg-color-one breadcrumbs-content">
@@ -82,7 +78,7 @@ defined('_JEXEC') or die('Restricted access');
             <section id="main">
                 <?php if ($this->countModules('above-content')) : ?>
                     <!-- above-content -->
-                    <div id="above-content">
+                    <div id="above-content" class="p-b-3">
                         <w:module type="none" name="above-content" />
                     </div>
                 <?php endif; ?>
