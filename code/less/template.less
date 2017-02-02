@@ -1,4 +1,4 @@
-@import url(//fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700);
+@import url(//fonts.googleapis.com/css?family=Lato:400,700,400italic,300);
 
 .font-size(@sizeValue) {
   @remValue: @sizeValue;
@@ -42,6 +42,10 @@
 }
 
 // ---------------------------------------------
+
+p {
+	margin: 0 0 15px;
+}
 
 h1 {
 	.font-size(2.5);
@@ -1007,6 +1011,19 @@ dl.article-info {
 }
 
 // ---------------------------------------------
+
+#nav-menu {
+
+	.nav {
+
+		> li {
+
+			> a {
+				font-weight: 700;
+			}
+		}
+	}
+}
 
 #nav-menu,
 #nav-bottom-menu {
