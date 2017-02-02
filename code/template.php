@@ -36,7 +36,7 @@ defined('_JEXEC') or die('Restricted access');
             <?php
             endif;
             ?>
-            <div class="header-content p-l-2 p-r-2">
+            <div class="header-content p-b-3">
                 <?php if ($this->countModules('featured')) : ?>
                     <w:module type="none" name="featured" />
                 <?php endif; ?>
