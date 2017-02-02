@@ -113,13 +113,14 @@ defined('_JEXEC') or die('Restricted access');
             </div>
         </div>
     <?php endif; ?>
+    <?php if($unlimitedSlant) : ?>
+        <div class="relative">
+            <div class="bg-transform absolute hidden-phone"></div>
+        </div>
+    <?php endif; ?>
     <?php if ($this->countModules('grid-bottom2')) : ?>
-        <div class="p-t-3 relative bg-color-gray">
-            <?php if($unlimitedSlant) : ?>
-                <div class="bg-transform absolute hidden-phone"></div>
-            <?php endif; ?>
-            <div id="grid-bottom2"
-                 class="<?php echo $wrightContainerClass; ?> m-b-0">
+        <div class="p-t-3 bg-color-gray">
+            <div id="grid-bottom2" class="<?php echo $wrightContainerClass; ?> m-b-0">
                 <w:module type="<?php echo $wrightGridMode; ?>" name="grid-bottom2" chrome="wrightflexgrid" />
             </div>
         </div>
@@ -160,7 +161,7 @@ defined('_JEXEC') or die('Restricted access');
     }
     ?>
 
-    <?php if ($this->countModules('grid-bottom2') && $unlimitedSlant) : ?>
+    <?php if ($unlimitedSlant) : ?>
         <script type='text/javascript' src='<?php echo JURI::root(true) ?>/templates/js_unlimited/js/triangle.js'></script>
     <?php endif; ?>
     <?php if($this->countModules('slider')): ?>
