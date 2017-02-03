@@ -43,7 +43,8 @@
 		<position>below-content</position>
 		<position>bottom-menu</position>
 		<position>breadcrumbs</position>
-		<position>debug</position>
+        <position>debug</position>
+        <position>top</position>
 		<position>featured</position>
 		<position>footer</position>
         <position>grid-extra</position>
