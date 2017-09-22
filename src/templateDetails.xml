@@ -115,7 +115,12 @@
 					<option value="0">JNO</option>
 				</field>
                 <!-- End of default Wright params -->
-			</fieldset>
+			                
+                <field
+                    type="customfooter"
+                    name="customfooter"
+                    media="tpl_js_unlimited" />
+            </fieldset>
 			<fieldset name="TPL_JS_UNLIMITED_OPTIONS">
 				<field name="unlimited_toolbar_displayed" type="radio" class="btn-group" default="navbar-fixed-top" label="TPL_JS_UNLIMITED_TOOLBAR_DISPLAYED" description="TPL_JS_UNLIMITED_TOOLBAR_DISPLAYED_DESC">
                     <option value="navbar-fixed-top">TPL_JS_UNLIMITED_TOOLBAR_FIXED</option>
@@ -128,4 +133,42 @@
 			</fieldset>
 		</fields>
 	</config>
+
+    <scriptfile>script.installer.php</scriptfile>
+
+    <updateservers>
+        <server type="extension" priority="1" name="Unlimited"><![CDATA[https://deploy.ostraining.com/client/update/pro/stable/tpl_js_unlimited]]></server>
+    </updateservers>
+
+    <variant>PRO</variant>
+
+    <alledia>
+        <element>tpl_js_unlimited</element>
+        <namespace>JS_Unlimited</namespace>
+        <name>JS Unlimited</name>
+        <license>pro</license>
+        <targetplatform>3.*</targetplatform>
+
+        <relatedExtensions>
+            <extension
+                type="library"
+                element="allediaframework">AllediaFramework</extension>
+
+            <extension
+                type="plugin"
+                group="system"
+                element="ossystem"
+                publish="true"
+                ordering="first">OSSystem</extension>
+
+            <extension
+                type="plugin"
+                group="system"
+                element="osmylicensesmanager"
+                publish="true"
+                ordering="last">OSMyLicensesManager</extension>
+        </relatedExtensions>
+
+        <include>AllediaFreeDefaultFiles</include>
+    </alledia>
 </extension>
