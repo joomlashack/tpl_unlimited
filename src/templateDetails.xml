@@ -118,12 +118,7 @@
 					<option value="0">JNO</option>
 				</field>
                 <!-- End of default Wright params -->
-			                
-                <field
-                    type="customfooter"
-                    name="customfooter"
-                    media="tpl_js_unlimited" />
-            </fieldset>
+			</fieldset>
 			<fieldset name="TPL_JS_UNLIMITED_OPTIONS">
 				<field name="unlimited_toolbar_displayed" type="radio" class="btn-group" default="navbar-fixed-top" label="TPL_JS_UNLIMITED_TOOLBAR_DISPLAYED" description="TPL_JS_UNLIMITED_TOOLBAR_DISPLAYED_DESC">
                     <option value="navbar-fixed-top">TPL_JS_UNLIMITED_TOOLBAR_FIXED</option>
@@ -134,6 +129,12 @@
                     <option value="0">JNO</option>
                 </field>
 			</fieldset>
+			<fieldset name="footer" addfieldpath="/templates/js_unlimited/form/fields">     
+                <field
+                    type="customfooter"
+                    name="customfooter"
+                    media="tpl_js_unlimited" />
+            </fieldset>
 		</fields>
 	</config>
 
