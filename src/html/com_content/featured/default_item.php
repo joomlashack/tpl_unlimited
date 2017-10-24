@@ -18,22 +18,45 @@ $params     = &$this->item->params;
 $images     = json_decode($this->item->images);
 $imgfloat   = (empty($images->float_intro)) ? 'none' : $images->float_intro;
 
-$this->item->wrightElementsStructure = Array(
-    "div.article-content-wrapper",
+if(isset($images->image_intro) && !empty($images->image_intro)) {
+
+    $this->item->wrightElementsStructure = Array(
+        "div.article-content-wrapper",
         "div.article-content-" . htmlspecialchars($imgfloat),
-            "div.article-content-inner",
-                "title",
-                "icons",
-                "article-info",
-                "legendtop",
-                "content",
-                "legendbottom",
-                "article-info-bottom",
-                "article-info-split",
-            "/div",
+        "div.article-content-inner",
+        "title",
+        "icons",
+        "article-info",
+        "legendtop",
+        "content",
+        "legendbottom",
+        "article-info-bottom",
+        "article-info-split",
+        "/div",
         "/div",
         "image",
-    "/div"
-);
+        "/div"
+    );
+}
+else
+{
+
+    $this->item->wrightElementsStructure = Array(
+        "div.article-content-wrapper-noimage",
+        "div.article-content-" . htmlspecialchars($imgfloat),
+        "div.article-content-inner",
+        "title",
+        "icons",
+        "article-info",
+        "legendtop",
+        "content",
+        "legendbottom",
+        "article-info-bottom",
+        "article-info-split",
+        "/div",
+        "/div",
+        "/div"
+    );
+}
 
 include Overrider::getOverride('com_content.featured', 'default_item');
