@@ -141,6 +141,8 @@ defined('_JEXEC') or die('Restricted access');
             </div>
         </footer>
     </div>
+        
+    <w:module type="none" name="debug" chrome="none" />
 
     <?php
     $browser = JBrowser::getInstance();
