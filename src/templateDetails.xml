@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE install PUBLIC "-//Joomla! 1.5//DTD template 1.0//EN" "http://www.joomla.org/xml/dtd/1.5/template-install.dtd">
 <extension version="3.0" type="template" method="upgrade" client="site">
 	<name>js_unlimited</name>
     <creationDate>January 29 2018</creationDate>
@@ -121,7 +120,7 @@
                     <option value="0">JNO</option>
                 </field>
 			</fieldset>
-			<fieldset name="footer" addfieldpath="/templates/js_unlimited/form/fields">     
+			<fieldset name="footer" addfieldpath="/templates/js_unlimited/form/fields">
                 <field
                     type="customfooter"
                     name="customfooter"
@@ -134,7 +133,7 @@
         <folder>css</folder>
         <folder>js</folder>
         <folder>images</folder>
-    </media>	
+    </media>
 
     <scriptfile>script.installer.php</scriptfile>
 
