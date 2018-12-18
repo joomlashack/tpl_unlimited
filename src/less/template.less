@@ -1790,6 +1790,32 @@ a{
 	}
 }
 
+// Simple Renew
+.ost-container  {
+
+	input[type="text"],
+	input[type="email"],
+	input[type="password"],
+	textarea,
+	select,
+	input[type="submit"],
+	button,
+	a.btn-main,
+	span.simplerenew-plan {
+		.border-radius(@baseBorderRadius);
+	}
+
+	#content_card,
+	#content_paypal {
+		.border-radius(0  @baseBorderRadius @baseBorderRadius @baseBorderRadius);
+	}
+
+	#tab_paypal,
+	#tab_card {
+		.border-radius(@baseBorderRadius @baseBorderRadius 0 0);
+	}
+}
+
 // -------------------------------------
 // Shackslides 3
 
