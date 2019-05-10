@@ -10,7 +10,8 @@
         "name"           : "Unlimited",
         "client"         : "site",
         "package-license": "pro",
-        "target-platform": "3.*"
+        "target-platform": "3.*",
+        "infourl"        : "/changelog/unlimited/"
     },
     "authors"          : [
         {
