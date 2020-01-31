@@ -4,8 +4,9 @@
 /**
  * @package		Joomla.Site
  * @subpackage	mod_articles_news
- * @copyright	Copyright (C) 2005 - 2014 Open Source Matters, Inc. All rights reserved.
- * @license		GNU General Public License version 2 or later; see LICENSE.txt
+ *
+ * @copyright   Copyright (C) 2005 - 2020 Joomlashack. All rights reserved.
+ * @license     GNU General Public License version 2 or later; see LICENSE.txt
  */
 
 // no direct access
